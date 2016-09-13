@@ -11,20 +11,8 @@
             $('.siderbar').animate({'left':0},speed)
             $('.tabbar-wrap,.main,.footer').animate({'left':240},speed)     
         })
-        $('.tabbar a').hover(function(){
-            $(this).find('span').hide();
-        },function(){
-            $(this).find('span').show();
-        })
-        $('.tabbar .b2b').hover(function(){
-            $(this).siblings('.user_center').find('span').hide();
-        },function(){
-            $(this).siblings('.user_center').find('span').show();
-        })
-        $('.tabbar .b2c').hover(function(){
-            $(this).siblings('.b2b').find('span').hide();
-        },function(){
-            $(this).siblings('.b2b').find('span').show();
+        $('.tabbar a').click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
         })
         $('.panel-title').click(function(){
             if($(this).parent().siblings('.panel-collapse').hasClass('collapse')){
