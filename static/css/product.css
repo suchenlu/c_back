@@ -1,0 +1,154 @@
+ul,li{
+	padding: 0;
+	list-style: none
+}
+h1,h2,h3,h4,h5{
+	margin: 0
+}
+.page-title {
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ccc
+}
+.page-title h2{
+	width: 150px;
+	padding: 5px 0;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	background: #008BDC
+}
+.nav-tabs>li>a {
+	margin-right: 0;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+}
+.tab-content{
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-top: 0;
+}
+.tab-options{
+	margin: 5px 0;
+}
+.tab-options>*{
+	display: inline-block;
+	vertical-align: top;
+}
+.tab-options h4{
+	width: 90px;
+}
+.tab-options .more{
+	margin: 0 20px;
+	cursor: pointer;
+
+}
+.option-list {
+	width: 65%;
+	height: 30px;
+	margin-top: -2px;	
+	overflow: hidden;
+}
+.height-auto{
+	height: auto
+}
+.option-list, .option-list li{
+	display: inline-block	
+}
+.option-list li{
+	margin: 0 8px 5px;
+	line-height: 1.8
+}
+.option-list li a{
+	color: #666;
+}
+.date h4{
+	margin-top: 5px;
+}
+.date .option-list{
+	height: auto
+}
+.date .option-list li{
+	width: 200px;
+}
+.date .option-list span{
+	color: #ccc;
+}
+.btn-warning{
+	margin-left: 30px;
+}
+.search input{
+	display: inline-block;
+	width: 400px
+}
+.search .btn{
+	color: #f60;
+}
+.table {
+	border: 1px solid #ccc;
+}
+.table > thead > tr > th{
+	font-weight: normal;
+	color: #fff;
+	background: #66BAE9;
+	border-right: 1px solid #f0f0f0;
+	border-bottom: 0
+}
+.table > thead > tr > th:last-child{
+	border: 0
+}
+.table > thead > tr > th,
+.table > tbody > tr > td{
+	text-align: center
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #E5F4FB;
+}
+td.operate span {
+	font-size: 16px;
+	cursor: pointer
+}
+td.operate:hover span{
+	color: #f60;
+}
+td.operate:hover .operate-list{
+	display: block;
+}
+td.operate .operate-list{
+	display: none;
+	position: absolute;
+	z-index: 1;
+	margin-top: -30px;
+	margin-left: -70px;
+	color: #333;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 1px 5px #333
+}
+.operate-list li{
+	width: 80px;
+	padding: 5px 0;
+	border-bottom: 1px solid #ddd
+}
+.operate-list li:last-child{
+	border: 0
+}
+.operate-list li a{
+	color: inherit;
+}
+.operate-list li a:hover{
+	color: #f60
+}
+.pager-wrap ul{
+	float: left;
+	margin-right: 20px
+}
+.page-jump {
+	margin: 20px 0;
+}
+.page-jump li {
+	display: inline-block;
+}
+.page-jump li input{
+	display: inline-block;
+	width: 60px
+}

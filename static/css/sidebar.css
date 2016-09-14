@@ -466,12 +466,11 @@ li {
 }
 
 .modal {
-    background: rgba(0, 0, 0, .8)
+    background: rgba(0, 0, 0, .5)
 }
 
 .modal-content {
-    top: -1000px;
-    min-height: 300px
+    top: -1000px
 }
 
 .modal-header {
@@ -488,5 +487,6 @@ li {
 }
 
 .modal-body {
+   padding: 50px;
     font-size: 20px
 }

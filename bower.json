@@ -1,0 +1,14 @@
+{
+  "name": "c_back",
+  "homepage": "https://github.com/suchenlu/c_back",
+  "authors": [
+    "transformGit <2630243397@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery-ui": "^1.12.0"
+  }
+}
