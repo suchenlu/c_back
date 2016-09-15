@@ -11,10 +11,17 @@ a:focus {
     outline: 0
 }
 
-li {
+ul,li {
     list-style: none
 }
-
+label, 
+input[type=checkbox],
+input[type=radio]{
+    cursor: pointer
+}
+label{
+    font-weight: normal;
+}
 .fl {
     float: left
 }
@@ -231,7 +238,7 @@ li {
 
 .siderbar-head span {
     font-size: 17px;
-    color: #555;
+    color: #fff;
     letter-spacing: 1px
 }
 
@@ -468,25 +475,75 @@ li {
 .modal {
     background: rgba(0, 0, 0, .5)
 }
-
+.modal-dialog{
+    width: 400px
+}
 .modal-content {
     top: -1000px
 }
 
 .modal-header {
-    padding: 10px 15px
+    padding: 5px 10px;
+    background: #008CDC;
+    border-radius: 5px 5px 0 0
 }
-
+.modal-header .close {
+    opacity: 1;
+    color: #fff;
+    font-weight: normal;
+    text-shadow: none
+}
 .modal-header .close span {
-    font-size: 30px
+    font-size: 35px
 }
 
 .modal-title {
-    text-align: center;
-    font-size: 24px
+    text-indent: 1em;
+    font-size: 20px;
+    color: #fff;
 }
 
 .modal-body {
-   padding: 50px;
-    font-size: 20px
+   padding: 30px 30px 0 30px;
+   font-size: 16px
+}
+.modal-footer {
+    border: 0;
+    text-align: center;
+}
+.modal-footer .btn{
+    margin: 0 25px;
+    padding: 3px;
+    letter-spacing: 10px;
+    text-indent: 10px;
+    font-size: 16px;
+    background: #e6e6e6
+}
+.modal-footer .confirm{
+    color: #008CDC
+}
+.modal-footer .cancel{
+    color: #f60
+}
+.price-add .form-control{
+    display: inline-block;
+    width: 60px;
+}
+.price-add label:last-child{
+    margin-left: 10px;
+}
+.price-add .per{
+    display: none
+}
+.cancel-agent{
+    padding: 30px 0;
+    text-align: center;
+    letter-spacing: 4px;
+    color: #666;
+}
+.cancel-agent em{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    color: #f60;
 }

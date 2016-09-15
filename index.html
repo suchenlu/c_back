@@ -103,7 +103,7 @@
                 </div>
                 <div id="collapse2" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <a href="../manage/wares/alist/1/100" target="content">一键代理
+                        <a href="product/onekey-agent.html" target="content">一键代理
                        <span></span>
                       </a>
                     </div>
@@ -114,7 +114,7 @@
                         </a>
                     </div>
                     <div class="panel-body">
-                        <a href="../manage/wares/batchcash0p=1" target="content">平台管理
+                        <a href="product/platform-recommend.html" target="content">平台推荐
                         <span></span>
                         </a>
                     </div>
@@ -214,12 +214,27 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">标题</h4>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
                 </div>
-                <div class="modal-body"></div>
+                <div class="modal-body">
+                    <!-- <form class="price-add">
+                        <p>同行价：2000元</p>
+                        <p>加价类型：
+                        <label>
+                            <input type="radio" name="type" id="interge" checked="checked"> 
+                            整数加价
+                        </label>
+                        <label>
+                            <input type="radio" name="type" id="percentage">百分比加价
+                        </label> 
+                        </p>
+                        <p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p>
+                    </form> -->
+                    <!-- <p class="cancel-agent">确认取消代理该产品<em>？</em></p> -->
+                </div>
                 <div class="modal-footer">
-                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">关闭</button>      
-                    <button class="btn btn-success" type="submit">提交</button>
+                    <button class="btn btn-default confirm" type="submit">确认</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button> 
                 </div>
             </div>
         </div>
@@ -230,8 +245,45 @@
     <script>
     function modal(){
         $('#myModal').show().find('.modal-content').animate({'top':100},500)
-        $('.close, .cancel').click(function(){
+        $('.close, .cancel, .confirm').click(function(){
           $('#myModal').hide().find('.modal-content').css('top',-1000);       
+        }) 
+        var original = parseInt($('.original').text());
+        var add = parseInt($('.add').val()) || 0;
+        $('.result').text(original+add)
+        function result(){
+            $('.add').blur(function(){
+                add = parseInt($(this).val()) || 0;
+                $('.result').text(original+add)
+            })
+        }
+        result()
+        $(".price-add input[type='radio']").change(function(){
+            var type = $(this).attr('id');
+            if(type == 'interge'){
+                $('.int').show();
+                $('.per').hide();
+                original = parseInt($('.original').text());
+                add = parseInt($('.add').val()) || 0;
+                $('.result').text(original+add)
+                result()
+            }else if(type == 'percentage'){
+                $('.per').show();
+                $('.int').hide();
+                add = parseInt($('.add').val())/100 || 0;
+                original = parseInt($('.original').text());
+                $('.result').text(original*(1+add))
+                $('.add').blur(function(){
+                    add = parseInt($(this).val())/100 || 0;
+                    $('.result').text(original*(1+add))
+                })
+            }else{
+                return false
+            }
+        })
+        var cancelAgent = $('.cancel-agent').parent().siblings('.modal-footer').find('.confirm');
+        cancelAgent.click(function(){
+            content.window.cancelAgent();
         })
     }
     //modal()

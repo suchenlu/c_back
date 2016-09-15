@@ -5,6 +5,9 @@ ul,li{
 h1,h2,h3,h4,h5{
 	margin: 0
 }
+label, input[type=checkbox]{
+	cursor: pointer
+}
 .page-title {
 	margin-bottom: 30px;
 	border-bottom: 1px solid #ccc
@@ -23,6 +26,7 @@ h1,h2,h3,h4,h5{
 	border-bottom: 0;
 }
 .tab-content{
+	margin-bottom: 50px;
 	padding: 20px;
 	border: 1px solid #ccc;
 	border-top: 0;
@@ -76,6 +80,9 @@ h1,h2,h3,h4,h5{
 .btn-warning{
 	margin-left: 30px;
 }
+.price-ajust{
+	color: #666;
+}
 .search input{
 	display: inline-block;
 	width: 400px
@@ -98,22 +105,44 @@ h1,h2,h3,h4,h5{
 }
 .table > thead > tr > th,
 .table > tbody > tr > td{
-	text-align: center
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: middle
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: #E5F4FB;
+    background-color: #E5F4FB
 }
-td.operate span {
+.table > tbody > tr > td:nth-child(1){
+	padding: 0 10px
+}
+.table > tbody > tr > td:nth-child(2){
+	padding: 0 20px
+}
+.recommend > td{
+	color: #f60
+}
+.recommend > td:nth-child(2):before{
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px 0 -20px;
+	vertical-align: middle;
+	background: url(../images/recommend.png)no-repeat center;
+}
+.operate span {
 	font-size: 16px;
+	color: #666;
 	cursor: pointer
 }
-td.operate:hover span{
-	color: #f60;
+.operate:hover span{
+	color: #f60
 }
-td.operate:hover .operate-list{
-	display: block;
+.operate:hover .operate-list{
+	display: block
 }
-td.operate .operate-list{
+.operate-list{
 	display: none;
 	position: absolute;
 	z-index: 1;
@@ -145,10 +174,9 @@ td.operate .operate-list{
 .page-jump {
 	margin: 20px 0;
 }
-.page-jump li {
+.page-jump li, .page-jump li input{
 	display: inline-block;
 }
 .page-jump li input{
-	display: inline-block;
 	width: 60px
 }
