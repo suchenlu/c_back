@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>order-center</title>
+    <link rel="stylesheet" href="../static/libs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/libs/jquery-ui/themes/flick/jquery-ui.css">
+    <link rel="stylesheet" href="../static/css/product.css">
+</head>
+
+<body>
+    <div class="page-title">
+        <h2>订单列表</h2>
+    </div>
+    <div class="order-tab-content">
+        <ul class="tab-list">
+            <li class="tab-options">
+                <h4>订单状态：</h4>
+                <ul class="option-list">
+                    <li class="active">
+                        <a href="javascript:;">全部</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">已取消</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">待支付</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">已支付</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">已出团</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">已回团</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="tab-options">
+                <ul class="option-list order-list">
+                    <li>
+                        <label for="">订单号：</label>
+                        <input type="text" class="form-control">
+                    </li>
+                    <li>
+                        <label for="">产品名称：</label>
+                        <input type="text" class="form-control">
+                    </li>
+                    <li>
+                        <label for="">供应商名称：</label>
+                        <input type="text" class="form-control">
+                    </li>
+                    <li>
+                        <label for="">所属门市：</label>
+                        <select class="form-control">
+                            <option value="">所有门市</option>
+                            <option value="">总部</option>
+                            <option value="">门市1</option>
+                            <option value="">门市2</option>
+                            <option value="">门市3</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="">顾问姓名：</label>
+                        <select class="form-control">
+                            <option value="">姓名1</option>
+                            <option value="">姓名2</option>
+                            <option value="">姓名3</option>
+                        </select>
+                    </li>
+                </ul>
+            </li>
+            <li class="tab-options date">
+                <h4>下单日期：</h4>
+                <input type="text" class="datepicker form-control" placeholder="请选择日期">
+                <span class="line">——</span>
+                <input type="text" class="datepicker form-control" placeholder="请选择日期">
+            </li>
+            <li class="tab-options date">
+                <h4>出团日期：</h4>
+                <input type="text" class="datepicker form-control" placeholder="请选择日期">
+                <span class="line">——</span>
+                <input type="text" class="datepicker form-control" placeholder="请选择日期">
+            </li>
+            <li class="tab-options date">
+                <h4>出团日期：</h4>
+                <input type="text" class="datepicker form-control" placeholder="请选择日期">
+                <span class="line">——</span>
+                <input type="text" class="datepicker form-control" placeholder="请选择日期">
+            </li>
+            <button class="btn btn-primary">搜索</button>
+        </ul>
+        <table class="table table-hover table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>订单号</th>
+                    <th>顾问</th>
+                    <th>所属门市</th>
+                    <th>下单时间</th>
+                    <th>支付时间</th>
+                    <th>订单状态</th>
+                    <th>产品名称</th>
+                    <th>供应商名称</th>
+                    <th>订单总价</th>
+                    <th>出团时间</th>
+                    <th>回团时间</th>
+                    <th>下单人</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">00001</a></td>
+                    <td>李哈哈</td>
+                    <td>康辉旅行社-中兴路</td>
+                    <td>2016-08-15 17:05:36</td>
+                    <td>2016-08-15 17:25:36</td>
+                    <td>已支付</td>
+                    <td><a href="#">北京一日游</a></td>
+                    <td>北京五洲行国际旅行社有限责任公司</td>
+                    <td>600</td>
+                    <td>2016-08-16</td>
+                    <td>2016-08-16</td>
+                    <td>张三</td>
+                    <td class="operate">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                        <ul class="operate-list">
+                            <li><a href="#">价格调整</a></li>
+                            <li class="bdsharebuttonbox">
+                                <a href="#" class="bds_more" data-cmd="more">分享</a>
+                            </li>
+                            <li><a href="#">取消代理</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">00001</a></td>
+                    <td>李哈哈</td>
+                    <td>康辉旅行社-中兴路</td>
+                    <td>2016-08-15 17:05:36</td>
+                    <td>2016-08-15 17:25:36</td>
+                    <td>已支付</td>
+                    <td><a href="#">北京一日游</a></td>
+                    <td>北京五洲行国际旅行社有限责任公司</td>
+                    <td>600</td>
+                    <td>2016-08-16</td>
+                    <td>2016-08-16</td>
+                    <td>张三</td>
+                    <td class="operate">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                        <ul class="operate-list">
+                            <li><a href="#">价格调整</a></li>
+                            <li class="bdsharebuttonbox">
+                                <a href="#" class="bds_more" data-cmd="more">分享</a>
+                            </li>
+                            <li><a href="#">取消代理</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagebar clearfix">
+            <div class="pull-right">
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">上一页</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="disabled"><span>…</span></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+                <ul class="page-jump">
+                    <li><span>共100页 &nbsp;到第</span></li>
+                    <li>
+                        <input type="text" class="form-control">&nbsp;页</li>
+                    <li>
+                        <button class="btn btn-primary">确定</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../static/libs/jquery/dist/jquery.js"></script>
+    <script src="../static/libs/jquery-ui/jquery-ui.js"></script>
+    <script src="../static/libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+    $(function() {
+        $('.datepicker').datepicker();
+        $('.option-list>li').click(function() {
+           $(this).addClass('active').siblings().removeClass('active')
+        });
+    })
+    </script>
+</body>
+
+</html>

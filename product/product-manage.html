@@ -55,7 +55,7 @@
                     <li class="tab-options">
                         <h4>出发地：</h4>
                         <ul class="option-list">
-                            <li class="option-item">
+                            <li class="option-item active">
                                 <a href="javascript:;">北京</a>
                             </li>
                             <li>
@@ -133,7 +133,7 @@
                     <li class="tab-options">
                         <h4>目的地：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">北京</a>
                             </li>
                             <li>
@@ -148,7 +148,7 @@
                     <li class="tab-options">
                         <h4>结算价：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -168,7 +168,7 @@
                     <li class="tab-options">
                         <h4>产品利润：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -194,7 +194,7 @@
                     <li class="tab-options">
                         <h4>商家名称：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -221,7 +221,7 @@
                     <li class="tab-options">
                         <h4>行程天数：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -261,20 +261,14 @@
                     </li>
                     <li class="tab-options date">
                         <h4>出团日期：</h4>
-                        <ul class="option-list">
-                            <li>
-                                <input type="text" class="datepicker form-control" placeholder="请选择日期">
-                            </li>
-                            <span>——</span>
-                            <li>
-                                <input type="text" class="datepicker form-control" placeholder="请选择日期">
-                            </li>
-                        </ul>
+                        <input type="text" class="datepicker form-control" placeholder="请选择日期">
+                        <span class="line">——</span>
+                        <input type="text" class="datepicker form-control" placeholder="请选择日期">
                     </li>
                     <li class="tab-options">
                         <h4>交通类型：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -309,7 +303,7 @@
                     <li class="tab-options">
                         <h4>含餐：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -325,7 +319,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="table-title">
+            <div class="table-search">
                 <p class="pull-left">
                     <label for="check">
                         <input id="check" type="checkbox" class="check-all"> 全选
@@ -445,7 +439,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="pager-wrap clearfix">
+            <div class="pagebar clearfix">
                 <div class="pull-right">
                     <ul class="pagination">
                         <li class="disabled"><a href="#">上一页</a></li>
@@ -483,6 +477,9 @@
     }
     $(function() {
         $('#myTab li:eq(0) a').tab('show');
+        $('.option-list>li').click(function() {
+           $(this).addClass('active').siblings().removeClass('active')
+        });
         $('.more').click(function() {
             var oplist = $(this).siblings('.option-list');
             if (oplist.hasClass('height-auto')) {
@@ -527,14 +524,12 @@
             $checkbox = $('.table tbody input[type=checkbox]');
             var $checked = $checkbox.filter(':checked');
             console.log($checked.length)
-            if($checked.length<1){
+            if($checked.length < 1){
                 alert('请选择要调整价格的产品')
                 return false
             }else if($checked.length == 1){
                 var original = $checked.parents('tr').children().eq(4).text();
                 var add = $checked.parents('tr').children().eq(8).text();
-                var percentage = parseInt($checked.parents('tr').children().eq(6).text());
-                console.log(percentage)
                 var title = '商品加价';
                 var content = '<form class="price-add"><p>同行价：'+original+'元</p><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">'+original+'</span>元+<input type="text" class="form-control add" value="'+add+'"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p></form>';
                 $('.modal-title,.modal-body', window.parent.document).html('');
