@@ -1,3 +1,4 @@
+/*common css*/
 ul,li{
 	padding: 0;
 	list-style: none
@@ -5,11 +6,11 @@ ul,li{
 h1,h2,h3,h4,h5{
 	margin: 0
 }
-a:hover,a:link,a:active{
+a:hover, a:link, a:active{
 	text-decoration: none
 }
 label{
-	font-weight: normal;
+	font-weight: normal
 }
 label, input[type=checkbox]{
 	cursor: pointer
@@ -35,24 +36,17 @@ label, input[type=checkbox]{
 	margin-bottom: 50px;
 	padding: 20px;
 	border: 1px solid #ccc;
-	border-top: 0;
-}
-.order-tab-content{
-	padding: 20px
-}
-.order-tab-content,
-.order-tab-content .tab-list{
-	margin-bottom: 50px
+	border-top: 0
 }
 .tab-options{
-	margin: 10px 0;
+	margin: 10px 0
 }
 .tab-options>*{
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: top
 }
 .tab-options h4{
-	width: 90px;
+	width: 90px
 }
 .tab-options .more{
 	margin: 0 20px;
@@ -119,22 +113,10 @@ label, input[type=checkbox]{
 	width: 400px
 }
 .search .btn{
-	color: #f60;
+	color: #f60
 }
 .table {
 	border: 1px solid #ccc;
-}
-.order-tab-content .table caption,
-.order-tab-content .table>tbody>tr>td:first-child{
-	width: 110px
-}
-.order-tab-content .table > thead > tr > th{
-	color: #333;
-	background: #fff
-}
-.table caption{
-	text-align: center;
-	border: 1px solid #ccc
 }
 .table > thead > tr > th{
 	font-weight: normal;
@@ -234,4 +216,84 @@ label, input[type=checkbox]{
 }
 .page-jump li input{
 	width: 60px
+}
+/*order-list css*/
+.order-tab-content{
+	padding: 20px
+}
+.order-tab-content,
+.order-tab-content .tab-list{
+	margin-bottom: 50px
+}
+.table caption{
+	text-align: center;
+	border: 1px solid #ccc
+}
+.order-tab-content .table caption,
+.order-tab-content .table>tbody>tr>td:first-child{
+	width: 110px
+}
+/*.order-tab-content .table > thead > tr > th{
+	color: #333;
+	background: #fff
+}*/
+/*order-refund css*/
+.refund>ul, .refund>h4 {
+	display: inline-block;
+	
+}
+.refund>h4 {
+	height: 35px;
+	line-height: 0;
+  vertical-align: middle
+}
+.refund>.nav-tabs,.refund>.nav-tabs li{
+	border: 0;
+}
+
+.refund>.nav-tabs>li>a,
+.refund>.nav-tabs>li.active>a,
+.refund>.nav-tabs>li>a:hover{
+	cursor: pointer;
+	border: 0
+}
+.refund>.nav-tabs>li>a{
+	color: #666;
+}
+.refund>.nav-tabs>li.active>a {
+	color: #337ab7;
+}
+.refund .tab-content{
+	border: 0;
+	padding: 0;
+}
+.refund .option-list{
+	width: 100%
+}
+.option-list li{
+	vertical-align: middle;
+}
+.option-list li label{
+	width: 110px;
+}
+.refund-reject h5{
+	width: 110px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+.refund-reject textarea{
+	width: 90%;
+	padding: 5px;
+	text-indent: 1em;
+	font-size: 20px;
+	resize: none
+}
+.refund-reject .btn{
+	margin-left: calc(90% - 82px);
+}
+.payment input{
+	width: 50px;
+	margin: auto;
+	text-align: center;
 }
