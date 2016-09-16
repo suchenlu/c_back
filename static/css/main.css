@@ -124,6 +124,18 @@ label, input[type=checkbox]{
 .table {
 	border: 1px solid #ccc;
 }
+.order-tab-content .table caption,
+.order-tab-content .table>tbody>tr>td:first-child{
+	width: 110px
+}
+.order-tab-content .table > thead > tr > th{
+	color: #333;
+	background: #fff
+}
+.table caption{
+	text-align: center;
+	border: 1px solid #ccc
+}
 .table > thead > tr > th{
 	font-weight: normal;
 	color: #fff;
@@ -142,12 +154,12 @@ label, input[type=checkbox]{
 	text-align: center;
 	vertical-align: middle
 }
-.table-striped > tbody > tr:nth-of-type(odd) {
+/*.table-striped > tbody > tr:nth-of-type(odd) {
     background-color: #fff
 }
 .table-striped > tbody > tr:nth-of-type(even) {
     background-color: #E5F4FB
-}
+}*/
 .table > tbody > tr > td:nth-child(1){
 	padding: 0 10px
 }
