@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>修改店铺信息</title>
+		<link rel="stylesheet" href="../static/css/bootstrap.css" />
+		<link rel="stylesheet" href="../static/css/base.css" />
+	</head>
+
+	<body>
+
+		<div class="main">
+			<div class="row-fluid" role="tablist">
+				<ul class="nav">
+					<li class="active"><a>修改店铺信息</a></li>
+				</ul>
+			</div>
+			<div class="entry_2 col-sm-12">
+				<div class="form-group col-sm-12 one">
+					<label class="control-label col-sm-2 ter">公司全称</label>
+					<input type="text" class=" col-sm-6">
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">公司简称</label>
+					<input type="text" class=" col-sm-6">
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">公司LOGO</label>
+					 <input id="lefile" type="file" style="display:none" class="">
+		          <div class="input-append col-sm-2">
+		            <a class="btn btn-default" onclick="$('input[id=lefile]').click();">选择文件</a>
+		          </div>
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">联系电话</label>
+					<input type="text" class=" col-sm-6">
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">QQ</label>
+					<input type="text" class=" col-sm-6">
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">公司地址</label>
+					<input type="text" class=" col-sm-6">
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">营业执照注册号</label>
+					<input type="text" class=" col-sm-6">
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">联系执照</label>
+					 <input id="lefile" type="file" style="display:none" class="">
+		          <div class="input-append col-sm-2">
+		            <a class="btn btn-default" onclick="$('input[id=lefile]').click();">选择文件</a>
+		          </div>
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">经营许可证</label>
+					 <input id="lefile" type="file" style="display:none" class="">
+		          <div class="input-append col-sm-2">
+		            <a class="btn btn-default" onclick="$('input[id=lefile]').click();">选择文件</a>
+		          </div>
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">主营产品</label>
+					<div class="col-sm-6">
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_1" id="checked_1">
+							<label for="checked_1">国内长线</label>
+						</div>
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_2" id="checked_2">
+							<label for="checked_2">周边游</label>
+						</div>
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_3" id="checked_3">
+							<label for="checked_3">出境长线</label>
+						</div>
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_4" id="checked_4">
+							<label for="checked_4">出境短线</label>
+						</div>
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_5" id="checked_5">
+							<label for="checked_5">港澳台</label>
+						</div>
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_6" id="checked_6">
+							<label for="checked_6">酒店</label>
+						</div>
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_7" id="checked_7">
+							<label for="checked_7">保险</label>
+						</div>
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_8" id="checked_8">
+							<label for="checked_8">租车</label>
+						</div>
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_9" id="checked_9">
+							<label for="checked_9">机票</label>
+						</div>
+						<div class="form-group main_product col-sm-2">
+							<input type="checkbox" name="checked_10" id="checked_10">
+							<label for="checked_10">门票</label>
+						</div>
+					</div>	
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">公司简介</label>
+					<textarea class="col-sm-6"></textarea>
+					<span class="col-sm-1">*</span>
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="control-label col-sm-2 ter">公司荣誉</label>
+					<textarea class="col-sm-6"></textarea>
+					<span class="col-sm-1">*</span>
+				</div>
+				<div class="form-group col-sm-8 col-sm-offset-3">
+					<!-- <input value="保   存" class="col-sm-2" type="button"> -->	
+					<a class="col-sm-2 submit" href="javascript:;">确认修改</a>
+					<a class="col-sm-2 col-sm-offset-1 submit" href="javascript:;">取消</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../static/js/jquery.js"></script>
+		<script type="text/javascript" src="../static/js/bootstrap.js"></script>
+		<script type="text/javascript">
+		$(".hb_img").click(function(){
+				$(this).next(".file").click();
+			})
+			// $('input[id=lefile]').change(function() {
+		 //  	$('#photoCover').val($(this).val());
+		  });
+		</script>
+	</body>
+
+</html>
