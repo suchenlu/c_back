@@ -13,6 +13,7 @@
     <div class="page-title">
         <h2>订单详情</h2>
     </div>
+    <div class="container-fluid detail">
         <div class="order-tab-content">
             <table class="table table-hover table-striped table-condensed table-bordered">
                 <caption>订单信息</caption>
@@ -141,13 +142,13 @@
                         <td>订单000001提交游客信息</td>
                         <td>张三</td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td>2</td>
                         <td>2016-08-15 17:05:36</td>
                         <td>订单000001提交游客信息</td>
                         <td>张三</td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td>3</td>
                         <td>2016-08-15 17:05:36</td>
                         <td>订单000001提交游客信息</td>
@@ -156,6 +157,7 @@
                 </tbody>
             </table>
         </div>
+    </div>
     <script src="../static/libs/jquery/dist/jquery.js"></script>
     <script src="../static/libs/jquery-ui/jquery-ui.js"></script>
     <script src="../static/libs/bootstrap/dist/js/bootstrap.js"></script>
@@ -163,7 +165,7 @@
     $(function() {
         $('.datepicker').datepicker();
         $('.option-list>li').click(function() {
-           $(this).addClass('active').siblings().removeClass('active')
+            $(this).addClass('active').siblings().removeClass('active')
         });
     })
     </script>

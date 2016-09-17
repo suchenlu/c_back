@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>order-complaint</title>
+    <link rel="stylesheet" href="../static/libs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/libs/jquery-ui/themes/flick/jquery-ui.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+
+<body>
+    <div class="page-title">
+        <h2>订单投诉</h2>
+    </div>
+    <div class="container-fluid refund">
+        <h4>投诉状态：</h4>
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active">
+                <a href="#untreated" data-toggle="tab">未处理</a>
+            </li>
+            <li class="">
+                <a href="#in-treatment" data-toggle="tab">处理中</a>
+            </li>
+            <li class="">
+                <a href="#completed" data-toggle="tab">已完成</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="untreated">
+                <table class="table table-hover table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>退单号</th>
+                            <th>下单人</th>
+                            <th>下单时间</th>
+                            <th>投诉时间</th>
+                            <th>订单状态</th>
+                            <th>投诉内容</th>
+                            <th>投诉人</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2345678</td>
+                            <td>张三</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请通过，投诉已完成</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td><a href="#">查看投诉</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagebar clearfix">
+                    <div class="pull-right">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#">上一页</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="disabled"><span>…</span></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                        <ul class="page-jump">
+                            <li><span>共100页 &nbsp;到第</span></li>
+                            <li>
+                                <input type="text" class="form-control">&nbsp;页</li>
+                            <li>
+                                <button class="btn btn-primary">确定</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="in-treatment">
+                <table class="table table-hover table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>退单号</th>
+                            <th>下单人</th>
+                            <th>下单时间</th>
+                            <th>投诉时间</th>
+                            <th>订单状态</th>
+                            <th>投诉内容</th>
+                            <th>投诉人</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2345678</td>
+                            <td>张三</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请通过，投诉已完成</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td><a href="#">查看投诉</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagebar clearfix">
+                    <div class="pull-right">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#">上一页</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="disabled"><span>…</span></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                        <ul class="page-jump">
+                            <li><span>共100页 &nbsp;到第</span></li>
+                            <li>
+                                <input type="text" class="form-control">&nbsp;页</li>
+                            <li>
+                                <button class="btn btn-primary">确定</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="completed">
+                <table class="table table-hover table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>退单号</th>
+                            <th>下单人</th>
+                            <th>下单时间</th>
+                            <th>投诉时间</th>
+                            <th>订单状态</th>
+                            <th>投诉内容</th>
+                            <th>投诉人</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2345678</td>
+                            <td>张三</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请通过，投诉已完成</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td><a href="#">查看投诉</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagebar clearfix">
+                    <div class="pull-right">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#">上一页</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="disabled"><span>…</span></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                        <ul class="page-jump">
+                            <li><span>共100页 &nbsp;到第</span></li>
+                            <li>
+                                <input type="text" class="form-control">&nbsp;页</li>
+                            <li>
+                                <button class="btn btn-primary">确定</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/libs/jquery/dist/jquery.js"></script>
+    <script src="../static/libs/jquery-ui/jquery-ui.js"></script>
+    <script src="../static/libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+    $(function() {
+        $('.datepicker').datepicker();
+        $('.option-list>li').click(function() {
+            $(this).addClass('active').siblings().removeClass('active')
+        });
+    })
+    </script>
+</body>
+
+</html>

@@ -15,35 +15,43 @@ label{
 label, input[type=checkbox]{
 	cursor: pointer
 }
+/*page-title*/
 .page-title {
 	margin-bottom: 30px;
 	border-bottom: 1px solid #ccc
 }
 .page-title h2{
+	display: inline-block;
 	width: 120px;
-	padding: 5px 0;
+	padding: 11px 0;
 	text-align: center;
 	color: #fff;
 	font-size: 18px;
 	background: #008BDC
 }
+.page-title .btn{
+	margin: 4px 30px 0 0
+}
+/*nav-tabs*/
 .nav-tabs>li>a {
 	margin-right: 0;
 	border: 1px solid #ccc;
 	border-bottom: 0;
 }
+/*tab-content*/
 .tab-content{
-	margin-bottom: 50px;
 	padding: 20px;
+	margin-bottom: 50px;
+}
+.tab-border {
 	border: 1px solid #ccc;
 	border-top: 0
 }
 .tab-options{
 	margin: 10px 0
 }
-.tab-options>*{
-	display: inline-block;
-	vertical-align: top
+.tab-options>*, .option-list li{
+	display: inline-block
 }
 .tab-options h4{
 	width: 90px
@@ -61,12 +69,10 @@ label, input[type=checkbox]{
 .height-auto{
 	height: auto
 }
-.option-list, .option-list li{
-	display: inline-block	
-}
 .option-list li{
 	margin: 0 8px 5px;
-	line-height: 1.8
+	line-height: 1.8;
+	vertical-align: middle;
 }
 .option-list li.active a{
 	color: #337ab7;
@@ -102,8 +108,8 @@ label, input[type=checkbox]{
 	line-height: 2;
 	color: #ccc;
 }
-.table-search .btn-wrap{
-	margin-left: 30px;
+.table-search .btn{
+	margin-right: 10px;
 }
 .table-search .price-ajust{
 	color: #666;
@@ -113,7 +119,12 @@ label, input[type=checkbox]{
 	width: 400px
 }
 .search .btn{
-	color: #f60
+	padding: 2px 15px;
+	color: #f60;
+	font-size: 20px
+}
+.search .btn span{
+	font-size: 20px
 }
 .table {
 	border: 1px solid #ccc;
@@ -142,12 +153,16 @@ label, input[type=checkbox]{
 .table-striped > tbody > tr:nth-of-type(even) {
     background-color: #E5F4FB
 }*/
+.check-all {
+	vertical-align: top
+}
 .table > tbody > tr > td:nth-child(1){
 	padding: 0 10px
 }
 .table > tbody > tr > td:nth-child(2){
 	padding: 0 20px
 }
+/*recommend*/
 .recommend > td{
 	color: #f60
 }
@@ -160,6 +175,7 @@ label, input[type=checkbox]{
 	vertical-align: middle;
 	background: url(../images/recommend.png)no-repeat center;
 }
+/*operate css*/
 .operate span {
 	font-size: 16px;
 	color: #666;
@@ -193,17 +209,17 @@ label, input[type=checkbox]{
 .operate-list li a{;
 	color: inherit;
 }
-.operate-list li.bdsharebuttonbox a{
-	width: 80%;
-	text-align: center;
-	font-size: 14px
+.operate-list li.bdsharebuttonbox{
+	padding: 0
 }
 .operate-list li.bdsharebuttonbox .bds_more{
-	background-position: -30px 0;
+	font-size: 14px;
+	background: none;
 }
 .operate-list li a:hover{
 	color: #f60
 }
+/*pagebar*/
 .pagebar ul{
 	float: left;
 	margin-right: 20px
@@ -217,64 +233,36 @@ label, input[type=checkbox]{
 .page-jump li input{
 	width: 60px
 }
-/*order-list css*/
-.order-tab-content{
-	padding: 20px
+/*product css*/
+.product .tab-options>* {
+    vertical-align: top
 }
-.order-tab-content,
-.order-tab-content .tab-list{
-	margin-bottom: 50px
+/*order css*/
+.order label{
+	vertical-align: middle;
+	color: #666
 }
-.table caption{
+.order-state{
+	vertical-align: top
+}
+.order .operate-list li.bdsharebuttonbox {
+    padding: 3px 0;
+}
+.detail .table caption{
 	text-align: center;
 	border: 1px solid #ccc
 }
-.order-tab-content .table caption,
-.order-tab-content .table>tbody>tr>td:first-child{
+.detail .table caption,
+.detail .table>tbody>tr>td:first-child{
 	width: 110px
 }
-/*.order-tab-content .table > thead > tr > th{
-	color: #333;
-	background: #fff
-}*/
 /*order-refund css*/
-.refund>ul, .refund>h4 {
-	display: inline-block;
-	
-}
-.refund>h4 {
-	height: 35px;
-	line-height: 0;
-  vertical-align: middle
-}
-.refund>.nav-tabs,.refund>.nav-tabs li{
-	border: 0;
-}
-
-.refund>.nav-tabs>li>a,
-.refund>.nav-tabs>li.active>a,
-.refund>.nav-tabs>li>a:hover{
-	cursor: pointer;
-	border: 0
-}
-.refund>.nav-tabs>li>a{
-	color: #666;
-}
-.refund>.nav-tabs>li.active>a {
-	color: #337ab7;
-}
-.refund .tab-content{
-	border: 0;
-	padding: 0;
-}
 .refund .option-list{
 	width: 100%
 }
-.option-list li{
+.refund .option-list li{
+	margin:0 5px 0 0;
 	vertical-align: middle;
-}
-.option-list li label{
-	width: 110px;
 }
 .refund-reject h5{
 	width: 110px;
@@ -296,4 +284,7 @@ label, input[type=checkbox]{
 	width: 50px;
 	margin: auto;
 	text-align: center;
+}
+.table-left>tbody>tr>td{
+	text-align: left
 }

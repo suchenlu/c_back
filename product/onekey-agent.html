@@ -13,7 +13,7 @@
     <div class="page-title">
         <h2>一键代理</h2>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid product">
         <ul id="myTab" class="nav nav-tabs">
             <li class="active">
                 <a href="#all" data-toggle="tab">全部</a>
@@ -49,7 +49,7 @@
                 <a href="#around " data-toggle="tab">门票</a>
             </li>
         </ul>
-        <div id="myTabContent" class="tab-content">
+        <div id="myTabContent" class="tab-content tab-border">
             <div class="tab-pane fade in active" id="all">
                 <ul class="tab-list">
                     <li class="tab-options">
@@ -321,12 +321,7 @@
             </div>
             <div class="table-search">
                 <p class="pull-left">
-                    <label for="check">
-                        <input id="check" type="checkbox" class="check-all"> 全选
-                    </label>
-                    <span class="btn-wrap">
-                        <button class="btn btn-warning onekey-agent">一键代理</button>
-                    </span>
+                    <button class="btn btn-warning onekey-agent">一键代理</button>
                 </p>
                 <p class="search pull-right">
                     <input type="text" class="form-control" placeholder="输入产品编号、名称、商家名称">
@@ -338,7 +333,11 @@
             <table class="table table-hover table-striped table-condensed">
                 <thead>
                     <tr>
-                        <th>&nbsp;</th>
+                        <th>
+                            <label>
+                                <input type="checkbox" class="check-all"> 全选
+                            </label>
+                        </th>
                         <th>产品编号</th>
                         <th>产品名称</th>
                         <th>供应商</th>
@@ -374,8 +373,8 @@
                         <td class="operate">
                             <span class="glyphicon glyphicon-align-justify"></span>
                             <ul class="operate-list">
-                                <li class="bdsharebuttonbox"> 
-                                  <a href="#" class="bds_more" data-cmd="more">分享</a>
+                                <li class="bdsharebuttonbox">
+                                    <a href="#" class="bds_more" data-cmd="more">分享</a>
                                 </li>
                             </ul>
                         </td>
@@ -399,8 +398,8 @@
                         <td class="operate">
                             <span class="glyphicon glyphicon-align-justify"></span>
                             <ul class="operate-list">
-                                <li class="bdsharebuttonbox"> 
-                                  <a href="#" class="bds_more" data-cmd="more">分享</a>
+                                <li class="bdsharebuttonbox">
+                                    <a href="#" class="bds_more" data-cmd="more">分享</a>
                                 </li>
                             </ul>
                         </td>
@@ -424,8 +423,8 @@
                         <td class="operate">
                             <span class="glyphicon glyphicon-align-justify"></span>
                             <ul class="operate-list">
-                                <li class="bdsharebuttonbox"> 
-                                  <a href="#" class="bds_more" data-cmd="more">分享</a>
+                                <li class="bdsharebuttonbox">
+                                    <a href="#" class="bds_more" data-cmd="more">分享</a>
                                 </li>
                             </ul>
                         </td>
@@ -460,10 +459,31 @@
     <script src="../static/libs/jquery-ui/jquery-ui.js"></script>
     <script src="../static/libs/bootstrap/dist/js/bootstrap.js"></script>
     <script>
-    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16","bdPopupOffsetLeft": -80},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16",
+            "bdPopupOffsetLeft": -80
+        },
+        "share": {},
+        "image": {
+            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+            "viewText": "分享到：",
+            "viewSize": "16"
+        },
+        "selectShare": {
+            "bdContainerClass": null,
+            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+        }
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
     </script>
     <script>
-    function onekeyAgent(){
+    function onekeyAgent() {
         var $checkbox = $('.table tbody input[type=checkbox]');
         var $checked = $checkbox.filter(':checked');
         $checked.parents('tr').remove()
@@ -498,13 +518,13 @@
             if ($checked.length < 1) {
                 alert('请选择要代理的产品')
                 return false
-            }else if($checked.length == 1){
+            } else if ($checked.length == 1) {
                 var content = '<form class="price-add"><p>同行价：2000元</p><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p></form>';
                 $('.modal-title,.modal-body', window.parent.document).html('');
                 $('.modal-title', window.parent.document).append(title);
                 $('.modal-body', window.parent.document).append(content);
                 window.parent.modal();
-            }else if($checked.length > 1){
+            } else if ($checked.length > 1) {
                 var content = '<form class="price-add"><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span></p></form>';
                 $('.modal-title,.modal-body', window.parent.document).html('');
                 $('.modal-title', window.parent.document).append(title);

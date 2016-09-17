@@ -14,7 +14,6 @@
         <h2>退款订单</h2>
     </div>
     <div class="container-fluid refund">
-        <h4>退款状态：</h4>
         <ul id="myTab" class="nav nav-tabs">
             <li class="active">
                 <a href="#untreated" data-toggle="tab">未处理</a>
@@ -29,7 +28,7 @@
                 <a href="#rejected" data-toggle="tab">已驳回</a>
             </li>
         </ul>
-        <div id="myTabContent" class="tab-content">
+        <div id="myTabContent" class="tab-content tab-border">
             <div class="tab-pane fade in active" id="untreated">
                 <ul class="option-list">
                     <li>
@@ -63,7 +62,65 @@
                         </select>
                     </li>
                 </ul>
-                <button class="btn btn-primary">搜索</button>
+                <ul>
+                    <button class="btn btn-primary">搜索</button>
+                </ul>
+                <table class="table table-hover table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>退单号</th>
+                            <th>订单编号</th>
+                            <th>产品名称</th>
+                            <th>门市名称</th>
+                            <th>供应商</th>
+                            <th>下单人</th>
+                            <th>支付金额</th>
+                            <th>下单时间</th>
+                            <th>退款时间</th>
+                            <th>订单状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="refund-detail.html">2345678</a></td>
+                            <td><a href="refund-detail.html">0000001</a></td>
+                            <td><a href="refund-detail.html">三亚六日游</a></td>
+                            <td>康辉旅行社-中兴路</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td>600</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请</td>
+                            <td><a href="refund-handle.html">处理退款</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagebar clearfix">
+                    <div class="pull-right">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#">上一页</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="disabled"><span>…</span></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                        <ul class="page-jump">
+                            <li><span>共100页 &nbsp;到第</span></li>
+                            <li>
+                                <input type="text" class="form-control">&nbsp;页</li>
+                            <li>
+                                <button class="btn btn-primary">确定</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade in" id="in-treatment">
                 <ul class="option-list">
@@ -103,7 +160,65 @@
                         </select>
                     </li>
                 </ul>
-                <button class="btn btn-primary">搜索</button>
+                <ul>
+                    <button class="btn btn-primary">搜索</button>
+                </ul>
+                <table class="table table-hover table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>退单号</th>
+                            <th>订单编号</th>
+                            <th>产品名称</th>
+                            <th>门市名称</th>
+                            <th>供应商</th>
+                            <th>下单人</th>
+                            <th>支付金额</th>
+                            <th>下单时间</th>
+                            <th>退款时间</th>
+                            <th>订单状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="refund-detail.html">2345678</a></td>
+                            <td><a href="refund-detail.html">0000001</a></td>
+                            <td><a href="refund-detail.html">三亚六日游</a></td>
+                            <td>康辉旅行社-中兴路</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td>600</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请</td>
+                            <td><a href="refund-handle.html">处理退款</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagebar clearfix">
+                    <div class="pull-right">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#">上一页</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="disabled"><span>…</span></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                        <ul class="page-jump">
+                            <li><span>共100页 &nbsp;到第</span></li>
+                            <li>
+                                <input type="text" class="form-control">&nbsp;页</li>
+                            <li>
+                                <button class="btn btn-primary">确定</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade in" id="refunded">
                 <ul class="option-list">
@@ -134,7 +249,65 @@
                         </select>
                     </li>
                 </ul>
-                <button class="btn btn-primary">搜索</button>
+                <ul>
+                    <button class="btn btn-primary">搜索</button>
+                </ul>
+                <table class="table table-hover table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>退单号</th>
+                            <th>订单编号</th>
+                            <th>产品名称</th>
+                            <th>门市名称</th>
+                            <th>供应商</th>
+                            <th>下单人</th>
+                            <th>支付金额</th>
+                            <th>下单时间</th>
+                            <th>退款时间</th>
+                            <th>订单状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="refund-detail.html">2345678</a></td>
+                            <td><a href="refund-detail.html">0000001</a></td>
+                            <td><a href="refund-detail.html">三亚六日游</a></td>
+                            <td>康辉旅行社-中兴路</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td>600</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请</td>
+                            <td><a href="refund-handle.html">处理退款</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagebar clearfix">
+                    <div class="pull-right">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#">上一页</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="disabled"><span>…</span></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                        <ul class="page-jump">
+                            <li><span>共100页 &nbsp;到第</span></li>
+                            <li>
+                                <input type="text" class="form-control">&nbsp;页</li>
+                            <li>
+                                <button class="btn btn-primary">确定</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade in" id="rejected">
                 <ul class="option-list">
@@ -173,63 +346,65 @@
                         </select>
                     </li>
                 </ul>
-                <button class="btn btn-primary">搜索</button>
-            </div>
-        </div>
-        <table class="table table-hover table-striped table-condensed">
-            <thead>
-                <tr>
-                    <th>序号</th>
-                    <th>退单号</th>
-                    <th>订单编号</th>
-                    <th>产品名称</th>
-                    <th>门市名称</th>
-                    <th>供应商</th>
-                    <th>下单人</th>
-                    <th>支付金额</th>
-                    <th>下单时间</th>
-                    <th>退款时间</th>
-                    <th>订单状态</th>
-                    <th>操作</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>2345678</td>
-                    <td>0000001</td>
-                    <td>三亚六日游</td>
-                    <td>康辉旅行社-中兴路</td>
-                    <td>北京供应商</td>
-                    <td>张三</td>
-                    <td>600</td>
-                    <td>2016-08-15 17:25:36</td>
-                    <td>2016-08-15 17:25:36</td>
-                    <td>订单已取消，有全额退款申请</td>
-                    <td><a href="refund-handle.html">处理退款</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="pagebar clearfix">
-            <div class="pull-right">
-                <ul class="pagination">
-                    <li class="disabled"><a href="#">上一页</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li class="disabled"><span>…</span></li>
-                    <li><a href="#">下一页</a></li>
+                <ul>
+                    <button class="btn btn-primary">搜索</button>
                 </ul>
-                <ul class="page-jump">
-                    <li><span>共100页 &nbsp;到第</span></li>
-                    <li>
-                        <input type="text" class="form-control">&nbsp;页</li>
-                    <li>
-                        <button class="btn btn-primary">确定</button>
-                    </li>
-                </ul>
+                <table class="table table-hover table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>退单号</th>
+                            <th>订单编号</th>
+                            <th>产品名称</th>
+                            <th>门市名称</th>
+                            <th>供应商</th>
+                            <th>下单人</th>
+                            <th>支付金额</th>
+                            <th>下单时间</th>
+                            <th>退款时间</th>
+                            <th>订单状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="refund-detail.html">2345678</a></td>
+                            <td><a href="refund-detail.html">0000001</a></td>
+                            <td><a href="refund-detail.html">三亚六日游</a></td>
+                            <td>康辉旅行社-中兴路</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td>600</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请</td>
+                            <td><a href="refund-handle.html">处理退款</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagebar clearfix">
+                    <div class="pull-right">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#">上一页</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="disabled"><span>…</span></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                        <ul class="page-jump">
+                            <li><span>共100页 &nbsp;到第</span></li>
+                            <li>
+                                <input type="text" class="form-control">&nbsp;页</li>
+                            <li>
+                                <button class="btn btn-primary">确定</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
