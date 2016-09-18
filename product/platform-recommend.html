@@ -105,7 +105,7 @@
                             <td class="operate">
                                 <span class="glyphicon glyphicon-align-justify"></span>
                                 <ul class="operate-list">
-                                    <li><a href="javascript:;" class="ajust-price">价格调整</a></li>
+                                    <li><a href="javascript:;" class="price-ajust">价格调整</a></li>
                                     <li class="bdsharebuttonbox">
                                         <a href="#" class="bds_more" data-cmd="more">分享</a>
                                     </li>
@@ -131,7 +131,7 @@
                             <td class="operate">
                                 <span class="glyphicon glyphicon-align-justify"></span>
                                 <ul class="operate-list">
-                                    <li><a href="javascript:;" class="ajust-price">价格调整</a></li>
+                                    <li><a href="javascript:;" class="price-ajust">价格调整</a></li>
                                     <li class="bdsharebuttonbox">
                                         <a href="#" class="bds_more" data-cmd="more">分享</a>
                                     </li>
@@ -157,7 +157,7 @@
                             <td class="operate">
                                 <span class="glyphicon glyphicon-align-justify"></span>
                                 <ul class="operate-list">
-                                    <li><a href="javascript:;" class="ajust-price">价格调整</a></li>
+                                    <li><a href="javascript:;" class="price-ajust">价格调整</a></li>
                                     <li class="bdsharebuttonbox">
                                         <a href="#" class="bds_more" data-cmd="more">分享</a>
                                     </li>
@@ -169,14 +169,14 @@
                 <div class="pagebar clearfix">
                     <div class="pull-right">
                         <ul class="pagination">
-                            <li class="disabled"><a href="#">上一页</a></li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
+                            <li class="prev disabled"><a href="javascript:;">上一页</a></li>
+                            <li class="active"><a href="javascript:;">1</a></li>
+                            <li><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
                             <li class="disabled"><span>…</span></li>
-                            <li><a href="#">下一页</a></li>
+                            <li class="next"><a href="javascript:;">下一页</a></li>
                         </ul>
                         <ul class="page-jump">
                             <li><span>共100页 &nbsp;到第</span></li>
@@ -194,91 +194,8 @@
     <script src="../static/libs/jquery/dist/jquery.js"></script>
     <script src="../static/libs/jquery-ui/jquery-ui.js"></script>
     <script src="../static/libs/bootstrap/dist/js/bootstrap.js"></script>
-    <script>
-    window._bd_share_config = {
-        "common": {
-            "bdSnsKey": {},
-            "bdText": "",
-            "bdMini": "2",
-            "bdPic": "",
-            "bdStyle": "0",
-            "bdSize": "16",
-            "bdPopupOffsetLeft": -80
-        },
-        "share": {},
-        "image": {
-            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
-            "viewText": "分享到：",
-            "viewSize": "16"
-        },
-        "selectShare": {
-            "bdContainerClass": null,
-            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
-        }
-    };
-    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
-    </script>
-    <script>
-    function cancelAgent() {
-        var $checkbox = $('.table tbody input[type=checkbox]');
-        var $checked = $checkbox.filter(':checked');
-        $checked.parents('tr').remove()
-    }
-    $(function() {
-        $('#myTab li:eq(0) a').tab('show');
-        $('.more').click(function() {
-            var oplist = $(this).siblings('.option-list');
-            if (oplist.hasClass('height-auto')) {
-                oplist.removeClass('height-auto')
-            } else {
-                oplist.addClass('height-auto')
-            }
-        })
-        $('.datepicker').datepicker();
-        var $checkbox = $('.table tbody input[type=checkbox]');
-        $('.check-all').change(function() {
-            var bool = $(this).prop('checked');
-            $checkbox.prop('checked', bool)
-        });
-        $checkbox.change(function() {
-            var $checked = $checkbox.filter(':checked');
-            if ($checkbox.length == $checked.length) {
-                $('.check-all').prop('checked', true)
-            } else {
-                $('.check-all').prop('checked', false)
-            }
-        });
-        $('.price-ajust').click(function() {
-            var $checked = $checkbox.filter(':checked');
-            var title = '商品加价';
-            if ($checked.length < 1) {
-                alert('请选择要调整价格的产品')
-                return false
-            } else if ($checked.length == 1) {
-                ajustPrice()
-                return false
-            } else if ($checked.length > 1) {}
-            var content = '<form class="price-add"><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span></p></form>';
-            $('.modal-title,.modal-body', window.parent.document).html('');
-            $('.modal-title', window.parent.document).append(title);
-            $('.modal-body', window.parent.document).append(content);
-            window.parent.modal();
-            return false
-        })
-
-        function ajustPrice() {
-            var title = '商品加价';
-            var content = '<form class="price-add"><p>同行价：2000元</p><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p></form>';
-            $('.modal-title,.modal-body', window.parent.document).html('');
-            $('.modal-title', window.parent.document).append(title);
-            $('.modal-body', window.parent.document).append(content);
-            window.parent.modal();
-        }
-        $('.ajust-price').click(function() {
-            ajustPrice()
-        })
-    });
-    </script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/bdshare.js"></script>
 </body>
 
 </html>

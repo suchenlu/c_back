@@ -79,7 +79,7 @@
         <div class="panel-group" id="accordion">
             <div class="panel">
                 <div class="panel-heading">
-                    <h4 class="panel-title">
+                    <h4 class="panel-title active">
                     <a href="#collapse1" data-toggle="collapse" data-parent="#accordion">
                         <i class="glyphicon"></i>
                         店铺首页
@@ -88,7 +88,12 @@
                       </a>
                   </h4>
                 </div>
-                <div id="collapse1" class="panel-collapse collapse">
+                <div id="collapse1" class="panel-collapse in">
+                    <div class="panel-body active">
+                        <a href="entry_shop/entry_shop_hint.html" target="content">店铺首页
+                        <span></span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="panel">
@@ -97,6 +102,7 @@
                   <a href="#collapse2" data-toggle="collapse" data-parent="#accordion">
                   <i class="glyphicon product_center"></i>
                     产品中心
+                  <span class="glyphicon glyphicon-menu-right"></span>
                   </a>
                 </h4>
                 </div>
@@ -233,7 +239,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default confirm" type="submit">确认</button>
-                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button> 
+                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button>
                 </div>
             </div>
         </div>
@@ -242,48 +248,55 @@
     <script src="static/js/bootstrap.js"></script>
     <script src="static/js/sidebar.js"></script>
     <script>
-    function modal(){
-        $('#myModal').show().find('.modal-content').animate({'top':100},500)
-        $('.close, .cancel, .confirm').click(function(){
-          $('#myModal').hide().find('.modal-content').css('top',-1000);       
-        }) 
+    function modal() {
+        $('#myModal').show().find('.modal-content').animate({
+            'top': 100
+        }, 500)
+        $('.close, .cancel, .confirm').click(function() {
+            $('#myModal').hide().find('.modal-content').css('top', -1000);
+        })
         var original = parseInt($('.original').text());
         var add = parseInt($('.add').val()) || 0;
-        $('.result').text(original+add)
-        function result(){
-            $('.add').blur(function(){
+        $('.result').text(original + add)
+
+        function result() {
+            $('.add').blur(function() {
                 add = parseInt($(this).val()) || 0;
-                $('.result').text(original+add)
+                $('.result').text(original + add)
             })
         }
         result()
-        $(".price-add input[type='radio']").change(function(){
+        $(".price-add input[type='radio']").change(function() {
             var type = $(this).attr('id');
-            if(type == 'interge'){
+            if (type == 'interge') {
                 $('.int').show();
                 $('.per').hide();
                 original = parseInt($('.original').text());
                 add = parseInt($('.add').val()) || 0;
-                $('.result').text(original+add)
+                $('.result').text(original + add)
                 result()
-            }else if(type == 'percentage'){
+            } else if (type == 'percentage') {
                 $('.per').show();
                 $('.int').hide();
-                add = parseInt($('.add').val())/100 || 0;
+                add = parseInt($('.add').val()) / 100 || 0;
                 original = parseInt($('.original').text());
-                $('.result').text(original*(1+add))
-                $('.add').blur(function(){
-                    add = parseInt($(this).val())/100 || 0;
-                    $('.result').text(original*(1+add))
+                $('.result').text(original * (1 + add))
+                $('.add').blur(function() {
+                    add = parseInt($(this).val()) / 100 || 0;
+                    $('.result').text(original * (1 + add))
                 })
-            }else{
+            } else {
                 return false
             }
         })
         var cancelAgent = $('.cancel-agent').parent().siblings('.modal-footer').find('.confirm');
-        cancelAgent.click(function(){
-            content.window.cancelAgent();
+        var confirmAgent = $('#setPrice').parent().siblings('.modal-footer').find('.confirm');
+        cancelAgent.click(function() {
+            content.window.removeAgent();
         })
+        confirmAgent.click(function() {
+           content.window.onekeyAgent();
+        });
     }
     //modal()
     </script>

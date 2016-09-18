@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>product-manage</title>
+    <title>onekey-agent</title>
     <link rel="stylesheet" href="../static/libs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../static/libs/jquery-ui/themes/flick/jquery-ui.css">
     <link rel="stylesheet" href="../static/css/main.css">
@@ -55,7 +55,7 @@
                     <li class="tab-options">
                         <h4>出发地：</h4>
                         <ul class="option-list">
-                            <li class="option-item">
+                            <li class="active">
                                 <a href="javascript:;">北京</a>
                             </li>
                             <li>
@@ -133,7 +133,7 @@
                     <li class="tab-options">
                         <h4>目的地：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">北京</a>
                             </li>
                             <li>
@@ -148,7 +148,7 @@
                     <li class="tab-options">
                         <h4>结算价：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -168,7 +168,7 @@
                     <li class="tab-options">
                         <h4>产品利润：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -194,7 +194,7 @@
                     <li class="tab-options">
                         <h4>商家名称：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -221,7 +221,7 @@
                     <li class="tab-options">
                         <h4>行程天数：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -268,7 +268,7 @@
                     <li class="tab-options">
                         <h4>交通类型：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -303,7 +303,7 @@
                     <li class="tab-options">
                         <h4>含餐：</h4>
                         <ul class="option-list">
-                            <li>
+                            <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
                             <li>
@@ -330,7 +330,7 @@
                     </button>
                 </p>
             </div>
-            <table class="table table-hover table-striped table-condensed">
+            <table class="table table-hover table-stripe table-condensed">
                 <thead>
                     <tr>
                         <th>
@@ -368,7 +368,7 @@
                         <td>100</td>
                         <td>北京</td>
                         <td>吉普岛</td>
-                        <td>已代理</td>
+                        <td class="state">未代理</td>
                         <td>出境短线</td>
                         <td class="operate">
                             <span class="glyphicon glyphicon-align-justify"></span>
@@ -393,7 +393,7 @@
                         <td>100</td>
                         <td>北京</td>
                         <td>吉普岛</td>
-                        <td>已代理</td>
+                        <td class="state">未代理</td>
                         <td>出境短线</td>
                         <td class="operate">
                             <span class="glyphicon glyphicon-align-justify"></span>
@@ -418,7 +418,7 @@
                         <td>100</td>
                         <td>北京</td>
                         <td>吉普岛</td>
-                        <td>已代理</td>
+                        <td class="state">未代理</td>
                         <td>出境短线</td>
                         <td class="operate">
                             <span class="glyphicon glyphicon-align-justify"></span>
@@ -434,14 +434,14 @@
             <div class="pagebar clearfix">
                 <div class="pull-right">
                     <ul class="pagination">
-                        <li class="disabled"><a href="#">上一页</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
+                        <li class="prev disabled"><a href="javascript:;">上一页</a></li>
+                        <li class="active"><a href="javascript:;">1</a></li>
+                        <li><a href="javascript:;">2</a></li>
+                        <li><a href="javascript:;">3</a></li>
+                        <li><a href="javascript:;">4</a></li>
+                        <li><a href="javascript:;">5</a></li>
                         <li class="disabled"><span>…</span></li>
-                        <li><a href="#">下一页</a></li>
+                        <li class="next"><a href="javascript:;">下一页</a></li>
                     </ul>
                     <ul class="page-jump">
                         <li><span>共100页 &nbsp;到第</span></li>
@@ -458,92 +458,15 @@
     <script src="../static/libs/jquery/dist/jquery.js"></script>
     <script src="../static/libs/jquery-ui/jquery-ui.js"></script>
     <script src="../static/libs/bootstrap/dist/js/bootstrap.js"></script>
-    <script>
-    window._bd_share_config = {
-        "common": {
-            "bdSnsKey": {},
-            "bdText": "",
-            "bdMini": "2",
-            "bdPic": "",
-            "bdStyle": "0",
-            "bdSize": "16",
-            "bdPopupOffsetLeft": -80
-        },
-        "share": {},
-        "image": {
-            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
-            "viewText": "分享到：",
-            "viewSize": "16"
-        },
-        "selectShare": {
-            "bdContainerClass": null,
-            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
-        }
-    };
-    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
-    </script>
+    <script src="../static/js/jquery-ui-timepicker-zh-CN.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/bdshare.js"></script>
     <script>
     function onekeyAgent() {
         var $checkbox = $('.table tbody input[type=checkbox]');
         var $checked = $checkbox.filter(':checked');
-        $checked.parents('tr').remove()
+        $checked.parents('tr').children('.state').text('已代理')
     }
-    $(function() {
-        $('#myTab li:eq(0) a').tab('show');
-        $('.more').click(function() {
-            var oplist = $(this).siblings('.option-list');
-            if (oplist.hasClass('height-auto')) {
-                oplist.removeClass('height-auto')
-            } else {
-                oplist.addClass('height-auto')
-            }
-        })
-        $('.datepicker').datepicker();
-        var $checkbox = $('.table tbody input[type=checkbox]');
-        $('.check-all').change(function() {
-            var bool = $(this).prop('checked');
-            $checkbox.prop('checked', bool)
-        });
-        $checkbox.change(function() {
-            var $checked = $checkbox.filter(':checked');
-            if ($checkbox.length == $checked.length) {
-                $('.check-all').prop('checked', true)
-            } else {
-                $('.check-all').prop('checked', false)
-            }
-        });
-        $('.onekey-agent').click(function() {
-            var $checked = $checkbox.filter(':checked');
-            var title = '商品加价';
-            if ($checked.length < 1) {
-                alert('请选择要代理的产品')
-                return false
-            } else if ($checked.length == 1) {
-                var content = '<form class="price-add"><p>同行价：2000元</p><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p></form>';
-                $('.modal-title,.modal-body', window.parent.document).html('');
-                $('.modal-title', window.parent.document).append(title);
-                $('.modal-body', window.parent.document).append(content);
-                window.parent.modal();
-            } else if ($checked.length > 1) {
-                var content = '<form class="price-add"><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span></p></form>';
-                $('.modal-title,.modal-body', window.parent.document).html('');
-                $('.modal-title', window.parent.document).append(title);
-                $('.modal-body', window.parent.document).append(content);
-                window.parent.modal();
-            }
-            // var title = '提示';
-            // var content = '<p class="cancel-agent">确认要代理该产品<em>？</em></p>';
-            // $('.modal-title,.modal-body', window.parent.document).html('');
-            // $('.modal-title', window.parent.document).append(title);
-            // $('.modal-body', window.parent.document).append(content);
-            // window.parent.modal();
-            // if (confirm('确认取消代理该产品？')) {
-            //     $checked.parents('tr').remove()
-            // } else {
-            //     return false
-            // }
-        })
-    });
     </script>
 </body>
 

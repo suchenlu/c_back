@@ -15,6 +15,9 @@ label{
 label, input[type=checkbox]{
 	cursor: pointer
 }
+select.form-control{
+	padding: 2px 5px;
+}
 /*page-title*/
 .page-title {
 	margin-bottom: 30px;
@@ -147,12 +150,9 @@ label, input[type=checkbox]{
 	text-align: center;
 	vertical-align: middle
 }
-/*.table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: #fff
-}
-.table-striped > tbody > tr:nth-of-type(even) {
+.table-stripe > tbody > tr:nth-of-type(even) {
     background-color: #E5F4FB
-}*/
+}
 .check-all {
 	vertical-align: top
 }
@@ -206,7 +206,7 @@ label, input[type=checkbox]{
 .operate-list li:last-child{
 	border: 0
 }
-.operate-list li a{;
+.operate-list li a{
 	color: inherit;
 }
 .operate-list li.bdsharebuttonbox{
@@ -240,7 +240,8 @@ label, input[type=checkbox]{
 /*order css*/
 .order label{
 	vertical-align: middle;
-	color: #666
+	color: #666;
+	font-size: 16px;
 }
 .order-state{
 	vertical-align: top
