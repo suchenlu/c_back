@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B2C后台管理</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/sidebar.css">
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="header">
+        <div class="qqbox-layer none">
+            <div class="qqbox">
+                <i></i>
+                <b>在<br>线<br>咨<br>询</b>
+                <ul class="select_qq">
+                    <li id="qq1"><a>华东</a></li>
+                    <li id="qq2"><a>华中</a></li>
+                    <li id="qq3"><a>华北</a></li>
+                    <li id="qq4"><a>东北</a></li>
+                    <li id="qq5"><a>西北</a></li>
+                    <li id="qq6"><a>华南</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="topbar row">
+            <div class="col-md-4 site-logo">
+                <a href="#" class="logo"></a>
+            </div>
+            <div class="col-md-8 user-info">
+                <ul>
+                    <li><span>Admin</span>, 欢迎您！</li>
+                    <li>|</li>
+                    <li><a href="javascript:;">进入商城</a></li>
+                    <li>|</li>
+                    <li><a href="javascript:;" id="on_line">在线咨询</a></li>
+                    <li>|</li>
+                    <li><a href="javascript:;">退出</a></li>
+                    <li class="service-line">
+                        <p>服务热线：010-53526677</p>
+                        <p>客户经理：18515958807</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tabbar-wrap">
+            <div class="tabbar row">
+                <a href="#" class="col-xs-12 col-sm-3 col-md-3 user_center">
+                用户中心
+                <span></span>
+              </a>
+                <a href="#" class="col-xs-12 col-sm-3 col-md-3 b2b">
+                B2B平台
+                 <span></span>   
+              </a>
+                <a href="#" class="col-xs-12 col-sm-3 col-md-3 b2c active">B2C平台
+                <span></span>
+              </a>
+                <a href="#" class="col-xs-12 col-sm-3 col-md-3 pay_center">
+                支付中心
+              </a>
+            </div>
+        </div>
+    </div>
+    <div class="siderbar">
+        <div class="siderbar-head">
+            <div class="head-logo">
+                <img src="static/images/head.png" />
+            </div>
+            <span>风行制造</span>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title active">
+                    <a href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                        <i class="glyphicon"></i>
+                        店铺首页
+                         <span class="glyphicon glyphicon-menu-right">
+                         </span>
+                      </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse in">
+                    <div class="panel-body active">
+                        <a href="entry_shop/entry_shop_hint.html" target="content">申请开店
+                        <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                  <a href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                  <i class="glyphicon product_center"></i>
+                    产品中心
+                  <span class="glyphicon glyphicon-menu-right"></span>
+                  </a>
+                </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <a href="product/onekey-agent.html" target="content">一键代理
+                       <span></span>
+                      </a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="product/product-manage.html" target="content">
+                        产品管理
+                        <span></span>
+                        </a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="product/platform-recommend.html" target="content">平台推荐
+                        <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                  <a href="#collapse3" data-toggle="collapse" data-parent="#accordion">
+                  <i class="glyphicon platform_manager"></i>
+                    订单管理 
+                  <span class="glyphicon glyphicon-menu-right"></span>                     
+                  </a>
+                </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <a href="order/order-list.html" target="content">订单中心<span></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="order/order-refund.html" target="content">订单退款<span></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="order/order-complaint.html" target="content">订单投诉<span></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                  <a href="#collapse4" data-toggle="collapse" data-parent="#accordion">
+                  <i class="glyphicon platform_coupon"></i>
+                    店铺管理
+                  <span class="glyphicon glyphicon-menu-right"></span>                      
+                  </a>
+                </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <a href="shop/shop_maintance.html" target="content">店铺维护<span></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="shop/shop_information.html" target="content">店铺信息<span></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="shop/market_manage.html" target="content">门市管理<span></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="shop/market_employee.html" target="content">顾问管理<span></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                  <a href="#collapse5" data-toggle="collapse" data-parent="#accordion">
+                  <i class="glyphicon platform_report"></i>
+                    报表
+                  <span class="glyphicon glyphicon-menu-right"></span>                      
+                  </a>
+                </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <a href="report/finance-refund.html" target="content">财务统计<span></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="../order/settle/settle_list" target="content">优惠补贴<span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toggle-stop">
+            <span class="glyphicon glyphicon-align-justify stop"></span>
+        </div>
+    </div>
+    <div class="togglebar none">
+        <div class="toggle-open">
+            <span class="glyphicon glyphicon-menu-hamburger open"></span>
+        </div>
+    </div>
+    <div class="main">
+        <iframe src="entry_shop/entry_shop_hint.html" name="content" frameborder="0" width="100%" height="100%" scrolling="yes">
+        </iframe>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="#">京ICP备15004030号-1</a></li>
+            <li>京公网安备11010502027137</li>
+            <li>客户服务专线 010-53526677</li>
+        </ul>
+        <p>Copyright © 2014 opcta.com</p>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- <form class="price-add">
+                        <p>同行价：2000元</p>
+                        <p>加价类型：
+                        <label>
+                            <input type="radio" name="type" id="interge" checked="checked"> 
+                            整数加价
+                        </label>
+                        <label>
+                            <input type="radio" name="type" id="percentage">百分比加价
+                        </label> 
+                        </p>
+                        <p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p>
+                    </form> -->
+                    <!-- <p class="cancel-agent">确认取消代理该产品<em>？</em></p> -->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default confirm" type="submit">确认</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+    <script src="static/js/sidebar.js"></script>
+    <script>
+    function modal() {
+        $('#myModal').show().find('.modal-content').animate({
+            'top': 100
+        }, 500)
+        $('.close, .cancel, .confirm').click(function() {
+            $('#myModal').hide().find('.modal-content').css('top', -1000);
+        })
+        var original = parseInt($('.original').text());
+        var add = parseInt($('.add').val()) || 0;
+        $('.result').text(original + add)
+
+        function result() {
+            $('.add').blur(function() {
+                add = parseInt($(this).val()) || 0;
+                $('.result').text(original + add)
+            })
+        }
+        result()
+        $(".price-add input[type='radio']").change(function() {
+            var type = $(this).attr('id');
+            if (type == 'interge') {
+                $('.int').show();
+                $('.per').hide();
+                original = parseInt($('.original').text());
+                add = parseInt($('.add').val()) || 0;
+                $('.result').text(original + add)
+                result()
+            } else if (type == 'percentage') {
+                $('.per').show();
+                $('.int').hide();
+                add = parseInt($('.add').val()) / 100 || 0;
+                original = parseInt($('.original').text());
+                $('.result').text(original * (1 + add))
+                $('.add').blur(function() {
+                    add = parseInt($(this).val()) / 100 || 0;
+                    $('.result').text(original * (1 + add))
+                })
+            } else {
+                return false
+            }
+        })
+        var cancelAgent = $('.cancel-agent').parent().siblings('.modal-footer').find('.confirm');
+        var confirmAgent = $('#setPrice').parent().siblings('.modal-footer').find('.confirm');
+        cancelAgent.click(function() {
+            content.window.removeAgent();
+        })
+        confirmAgent.click(function() {
+           content.window.onekeyAgent();
+        });
+    }
+    //modal()
+    </script>
+</body>
+
+</html>

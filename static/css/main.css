@@ -1,4 +1,8 @@
 /*common css*/
+body{
+	font-family: 'Microsoft Yahei';
+	color: #444;
+}
 ul,li{
 	padding: 0;
 	list-style: none
@@ -14,6 +18,12 @@ label{
 }
 label, input[type=checkbox]{
 	cursor: pointer
+}
+textarea{
+	resize: vertical;
+}
+em{
+	font-style: normal;
 }
 select.form-control{
 	padding: 2px 5px;
@@ -291,4 +301,95 @@ select.form-control{
 .table-left>tbody>tr>td{
 	text-align: left
 }
-
+/*store css*/
+.no-store {
+	height: 400px;
+	background: url(../images/no-store.png)no-repeat center 
+}
+.no-store-info{
+	position: absolute;
+	top: 300px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.no-store-info p{
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 5px;
+}
+.no-store-info p em{
+	font-size: 30px;
+	color: #37b1ff;
+}
+.btn-apply{
+	padding: 10px;
+	color: #fff;
+	font-size: 20px;
+	background: #ff7b43;
+	border-radius: 10px;
+}
+.btn-apply:link ,
+.btn-apply:hover{
+	color: #fff;
+	background: #ff7b43;
+}
+.disclaimer .panel {
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 0
+}
+.disclaimer .panel-heading{
+	height: 45px;
+	border-radius: 0;
+  background-color: #66bae9;
+}
+.exit:hover, .exit:link {
+	color: #fff;
+}
+.exit{
+	float: right;
+	margin-top: -10px;
+	font-size: 30px;
+	color: #fff;
+}
+.disclaimer .panel-body{
+	background-color: #e5f4fb;
+	padding: 40px;
+}
+.disclaimer .panel-content{
+	padding: 20px;
+	
+	font-size: 16px;
+	background: #fff
+}
+.disclaimer .panel-content h1{
+	margin-bottom: 20px;
+	font-size: 30px;
+	text-align: center;
+}
+.panel-content h4,
+.panel-content p{
+	line-height: 1.5
+}
+.panel-content h4{
+	font-weight: 600;
+}
+.panel-content p{
+	margin: 0 0 0 2em
+}
+.disclaimer .btn-apply{
+	padding: 0px 20px;
+	border-radius: 5px;
+	letter-spacing: 3px
+}
+.apply-form {
+	margin-bottom: 50px
+}
+.main-products label {
+	margin-right: 30px;
+}
+.main-products input[type=checkbox]{
+	margin-right: 10px;
+	vertical-align: top;
+}
