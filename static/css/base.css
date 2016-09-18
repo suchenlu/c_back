@@ -99,7 +99,7 @@ dd{line-height: 25px;}
 .entry_2 .top span{font-size: 18px;font-weight: bold;}
 .entry_2 .col-sm-12 p{margin: 10px 0;margin-left: 5px;}
 .entry_2 .form-group.one{margin-top: 20px;}
-.entry_2 .form-group label{height: 30px;line-height: 30px;margin-right: 10px;}
+.entry_2 .form-group label{margin-right: 10px;}
 .entry_2 .form-group textarea{height: 76px;}
 .entry_2 .form-group span{color: #ff0000;margin-left: 5px;}
 
@@ -492,6 +492,14 @@ margin:30px auto;
 .main .row-fluid a.btn_add{
 	margin-right:115px;
 }
+.table > thead > tr > th,
+.table > tbody > tr > td{
+	min-width: 70px;
+	height: 30px;
+	line-height: 1.5;
+	text-align: center;
+	vertical-align: middle
+}
 .main .table_basic tbody tr td .operate button{
 	width:15px;
 	height:15px;
@@ -562,7 +570,17 @@ margin:30px auto;
 .modal-body .modal-btn .btn:hover{
 	color:#008bdc;
 }
-		
-		
-		
+.img{
+	background: #fff;
+	transition: all .5s;
+}
+.img:hover{
+	transform: scale(1.2);
+}
+label.upload {
+	line-height: 1
+}		
+input[type=file]{
+	display: none
+}	
 		

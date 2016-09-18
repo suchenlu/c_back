@@ -1,6 +1,5 @@
 $(function() {
     $('#myTab li:eq(0) a').tab('show');
-    $('.datepicker').datepicker();
 
     $('.option-list>li').click(function() {
         $(this).addClass('active').siblings().removeClass('active')
@@ -43,7 +42,7 @@ $(function() {
         //     return false
         // }
     })
-    $('button.price-ajust').click(function() {
+    $('button.price-adjust').click(function() {
         $checkbox = $('.table tbody input[type=checkbox]');
         var $checked = $checkbox.filter(':checked');
         if ($checked.length < 1) {
@@ -89,7 +88,7 @@ $(function() {
         $('.modal-body', window.parent.document).append(content);
         window.parent.modal();
     }
-    $('a.price-ajust').click(function() {
+    $('a.price-adjust').click(function() {
         ajustPrice()
     })
     $('.onekey-agent').click(function(event) {

@@ -21,4 +21,5 @@
          showOtherMonths: true,
          selectOtherMonths: true
      });
+    $('.datepicker').datepicker();
  });

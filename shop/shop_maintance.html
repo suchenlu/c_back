@@ -6,13 +6,14 @@
     <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="../static/css/base.css"/>
     <link rel="stylesheet" href="../static/css/jquery-ui.css" />
+    <link rel="stylesheet" href="../static/css/main.css" />
 </head>
 <body id="product_manage">
 
-    <div class="main order">
+    <div class="main">
         <div class="row-fluid" role="tablist">
             <ul class="nav">
-                <li class="active"><a>产品首页</a></li>
+                <li class="active"><a>店铺维护</a></li>
             </ul>
             <a class="btn pull-right btn_add" href="shop_product_add.html" role="button">添  加</a>
              <a class="btn pull-right btn_del" href="javascript:;" role="button">删  除</a>
@@ -20,7 +21,7 @@
         <div class="select col-md-12">
             <div class="row select_b col-sm-12">
                 <div class="col-md-12">
-                    <span class="col-md-1">站点：</span>
+                    <span class="col-md-2">站点：</span>
                     <div class="col-sm-2 s_choose_station">
                         <select class="col-sm-7" name="" id="">
                             <option value="">北京</option>
@@ -28,7 +29,7 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <span class="col-md-1">产品类型：</span>
+                    <span class="col-md-2">产品类型：</span>
                     <ul class="col-md-8 ul_1">
                         <li>
                             <a href="javascript:;">周边游</a></li>
@@ -42,7 +43,7 @@
 
                 </div>
                 <div class="col-md-12">
-                    <span class="col-md-1">目的地：</span>
+                    <span class="col-md-2">目的地：</span>
                     <ul class="col-md-8 ul_1">
                         <li>
                             <a href="javascript:;">精选</a></li>
@@ -60,10 +61,14 @@
             </div>
         </div>
        <div class="row">
-            <table class="table_basic">
+            <table class="table table_basic">
             <thead>
                 <tr>
-                    <th><input type="checkbox" name="">全选</th>
+                    <th>
+                      <label>
+                        <input type="checkbox" class="check-all">全选
+                      </label>
+                    </th>
                     <th>产品编号</th>
                     <th>产品名称</th>
                     <th>供应商</th>
@@ -166,18 +171,6 @@
 <script type="text/javascript" src="../static/js/jquery.js"></script>
 <script type="text/javascript" src="../static/js/bootstrap.js"></script>
 <script type="text/javascript" src="../static/js/jquery-ui.js"></script>
-<script type="text/javascript">
-    //用户中心侧边栏手风琴菜风格单颜色调整
-    $("tbody tr:nth-child(odd)").css("background-color", "#fff");
-    $("tbody tr:nth-child(even)").css("background-color", "#e6f3fb");
-     $("tbody tr:nth-child(odd):hover").css("background-color", "#f2f9fd");
-    $("tbody tr:nth-child(even):hover").css("background-color", "#d9eef9");
-</script>
-<script>
-    $(function() {
-        $( "#begin" ).datepicker();
-        $( "#end" ).datepicker();
-    });
-</script>
+<script src="../static/js/main.js"></script>
 </body>
 </html>

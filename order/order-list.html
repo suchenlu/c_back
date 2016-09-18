@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>order-center</title>
+    <title>order-list</title>
     <link rel="stylesheet" href="../static/libs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../static/libs/jquery-ui/themes/flick/jquery-ui.css">
     <link rel="stylesheet" href="../static/css/main.css">
@@ -129,13 +129,6 @@
                         <td>张三</td>
                         <td class="operate">
                             <span class="glyphicon glyphicon-align-justify"></span>
-                            <ul class="operate-list">
-                                <li><a href="#">价格调整</a></li>
-                                <li class="bdsharebuttonbox">
-                                    <a href="#" class="bds_more" data-cmd="more">分享</a>
-                                </li>
-                                <li><a href="#">取消代理</a></li>
-                            </ul>
                         </td>
                     </tr>
                     <tr>
@@ -154,13 +147,6 @@
                         <td>张三</td>
                         <td class="operate">
                             <span class="glyphicon glyphicon-align-justify"></span>
-                            <ul class="operate-list">
-                                <li><a href="#">价格调整</a></li>
-                                <li class="bdsharebuttonbox">
-                                    <a href="#" class="bds_more" data-cmd="more">分享</a>
-                                </li>
-                                <li><a href="#">取消代理</a></li>
-                            </ul>
                         </td>
                     </tr>
                 </tbody>
@@ -192,14 +178,8 @@
     <script src="../static/libs/jquery/dist/jquery.js"></script>
     <script src="../static/libs/jquery-ui/jquery-ui.js"></script>
     <script src="../static/libs/bootstrap/dist/js/bootstrap.js"></script>
-    <script>
-    $(function() {
-        $('.datepicker').datepicker();
-        $('.option-list>li').click(function() {
-            $(this).addClass('active').siblings().removeClass('active')
-        });
-    })
-    </script>
+    <script src="../static/js/jquery-ui-timepicker-zh-CN.js"></script>
+    <script src="../static/js/main.js"></script>
 </body>
 
 </html>

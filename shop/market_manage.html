@@ -23,9 +23,13 @@
 	        </div>
     	</div>
     	<div class="row">
-    		<table class="table_basic">
+    		<table class="table table_basic">
     			<thead>
-    				<th><input type="checkbox">全选</th>
+    				<th>
+	    				<label>
+	    				<input type="checkbox" class="check-all">全选
+	    				</label>
+    				</th>
     				<th>门市名称</th>
     				<th>门市地址</th>
     				<th>门市电话</th>
@@ -72,13 +76,7 @@
     </div>
 	<script type="text/javascript" src="../static/js/jquery.js"></script>
 	<script type="text/javascript" src="../static/js/bootstrap.js"></script>
-	<script type="text/javascript">
-    //用户中心侧边栏手风琴菜风格单颜色调整
-    $("tbody tr:nth-child(odd)").css("background-color", "#fff");
-    $("tbody tr:nth-child(even)").css("background-color", "#e6f3fb");
-     $("tbody tr:nth-child(odd):hover").css("background-color", "#f2f9fd");
-    $("tbody tr:nth-child(even):hover").css("background-color", "#d9eef9");
-	</script>
+	<script src="../static/js/main.js"></script>
 	<script type="text/javascript">
 		 $('.disabled').click(function(){
 	      // var num=$(this).parent().siblings('.surplus').text();
