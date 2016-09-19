@@ -17,8 +17,8 @@
                     <h4 class="modal-title" id="myModalLabel">提示</h4>
                 </div>
                 <div class="modal-body">
-										<p class="success-icon"></p>
-										<p class="success-info">申请成功</p>
+                    <p class="success-icon"></p>
+                    <p class="success-info">申请成功</p>
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="btn btn-default">点击查看店铺</a>
@@ -26,6 +26,16 @@
             </div>
         </div>
     </div>
+    <script src="../static/js/jquery.js"></script>
+    <script>
+    $(function() {
+        window.parent.maskShow()
+        $('.close, .btn').click(function() {
+            $('#myModal').hide()
+            window.parent.maskHide()
+        })
+    })
+    </script>
 </body>
 
 </html>

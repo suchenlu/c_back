@@ -90,7 +90,7 @@
                 </div>
                 <div id="collapse1" class="panel-collapse in">
                     <div class="panel-body active">
-                        <a href="store/apply-success-info.html" target="content">申请开店
+                        <a href="store/no-store.html" target="content">申请开店
                         <span></span>
                         </a>
                     </div>
@@ -215,39 +215,6 @@
         <p>Copyright © 2014 opcta.com</p>
     </div>
     <div id="mask" class="mask"></div>
-    <div id="myModal" class="modal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">提示</h4>
-                </div>
-                <div class="modal-body">
-                                        
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-default confirm" type="submit">确认</button>
-                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button>
-                </div>
-            </div>
-        </div>
-    </div> <div id="myModal" class="modal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">提示</h4>
-                </div>
-                <div class="modal-body">
-                                        
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-default confirm" type="submit">确认</button>
-                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="static/js/jquery.js"></script>
     <script src="static/js/bootstrap.js"></script>
     <script src="static/js/sidebar.js"></script>
@@ -258,51 +225,6 @@
     function maskHide(){
         $('#mask').hide();
     }
-    function modal() {
-        var original = parseInt($('.original').text());
-        var add = parseInt($('.add').val()) || 0;
-        $('.result').text(original + add)
-
-        function result() {
-            $('.add').blur(function() {
-                add = parseInt($(this).val()) || 0;
-                $('.result').text(original + add)
-            })
-        }
-        result()
-        $(".price-add input[type='radio']").change(function() {
-            var type = $(this).attr('id');
-            if (type == 'interge') {
-                $('.int').show();
-                $('.per').hide();
-                original = parseInt($('.original').text());
-                add = parseInt($('.add').val()) || 0;
-                $('.result').text(original + add)
-                result()
-            } else if (type == 'percentage') {
-                $('.per').show();
-                $('.int').hide();
-                add = parseInt($('.add').val()) / 100 || 0;
-                original = parseInt($('.original').text());
-                $('.result').text(original * (1 + add))
-                $('.add').blur(function() {
-                    add = parseInt($(this).val()) / 100 || 0;
-                    $('.result').text(original * (1 + add))
-                })
-            } else {
-                return false
-            }
-        })
-        var cancelAgent = $('.cancel-agent').parent().siblings('.modal-footer').find('.confirm');
-        var confirmAgent = $('#setPrice').parent().siblings('.modal-footer').find('.confirm');
-        cancelAgent.click(function() {
-            content.window.removeAgent();
-        })
-        confirmAgent.click(function() {
-           content.window.onekeyAgent();
-        });
-    }
-   // modal()
     </script>
 </body>
 

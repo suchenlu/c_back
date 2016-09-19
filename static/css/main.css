@@ -246,12 +246,9 @@ select.form-control{
 .product .tab-options>* {
     vertical-align: top
 }
-.product .table > tbody > tr > td:nth-child(1){
-	padding: 0 10px
-}
-.product .table > tbody > tr > td:nth-child(2){
-	padding: 0 20px
-}
+/*.product .table>tbody>tr>td{
+	width: auto;
+}*/
 /*order css*/
 .order label{
 	vertical-align: middle;
@@ -311,7 +308,7 @@ select.form-control{
 }
 .no-store-info{
 	position: absolute;
-	top: 300px;
+	top: 280px;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -326,17 +323,18 @@ select.form-control{
 	color: #37b1ff;
 }
 .btn-apply{
-	padding: 10px;
 	color: #fff;
 	font-size: 20px;
 	background: #ff7b43;
-	border-radius: 10px;
+	border-radius: 6px;
 }
-.btn-apply:link ,
-.btn-apply:hover{
+
+.btn-default.btn-apply:active,
+.btn-default.btn-apply:hover{
 	color: #fff;
-	background: #ff7b43;
+	background-color: #ff7b43;
 }
+/* disclaimer */
 .disclaimer .panel {
 	border: 0;
 	border-radius: 0;
@@ -386,6 +384,10 @@ select.form-control{
 	border-radius: 5px;
 	letter-spacing: 3px
 }
+.disclaimer .btn-apply:hover {
+	color: #fff;
+}
+/*apply-for-store*/
 .apply-form {
 	margin-bottom: 50px
 }
@@ -396,24 +398,13 @@ select.form-control{
 	margin-right: 10px;
 	vertical-align: top;
 }
-.mask{
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,.5)
-}
+/*modal*/
 .modal {
-  background: rgba(0, 0, 0, .5)
+  background: rgba(0, 0, 0, .3)
 }
 .modal-dialog{
-    width: 400px
+   width: 400px
 }
-/*.modal-content {
-    top: -1000px
-}*/
-
 .modal-header {
     padding: 5px 10px;
     background: #008CDC;
@@ -469,18 +460,20 @@ select.form-control{
 .price-add .per{
     display: none
 }
-.cancel-agent{
+.modal-info{
     padding: 30px 0;
     text-align: center;
     letter-spacing: 4px;
     color: #666;
 }
-.cancel-agent em{
+
+.modal-info em{
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
     color: #f60;
 }
+/*apply-success-tip page*/
 .apply-success{
 	display: block;
 }
@@ -504,5 +497,8 @@ select.form-control{
 	margin: -20px 0 0 10px;
 	font-size: 26px;
 	color: #666;
+}
+.apply-success .btn{
+	color: #ee7848;
 }
 

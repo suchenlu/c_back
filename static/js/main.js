@@ -27,20 +27,22 @@ $(function() {
             $('.check-all').prop('checked', false)
         }
     });
-
+    $('.confirm, .cancel, .close').click(function() {
+        $('#myModal').hide()
+        window.parent.maskHide()
+    })
     $('button.cancel-agent').click(function() {
         var $checked = $checkbox.filter(':checked');
         if ($checked.length < 1) {
             alert('请选择要取消代理的产品')
             return false
-        }else {
+        } else {
+            window.parent.maskShow()
             cancelAgent()
+            $('.confirm').click(function() {
+                $checked.parents('tr').remove()
+            });
         }
-        // if (confirm('确认取消代理该产品？')) {
-        //     $checked.parents('tr').remove()
-        // } else {
-        //     return false
-        // }
     })
     $('button.price-adjust').click(function() {
         $checkbox = $('.table tbody input[type=checkbox]');
@@ -49,46 +51,95 @@ $(function() {
             alert('请选择要调整价格的产品')
             return false
         } else if ($checked.length == 1) {
+            window.parent.maskShow()
             ajustPrice()
             return false
         } else if ($checked.length > 1) {
+            window.parent.maskShow()
             var title = '商品加价';
             var content = '<form class="price-add"><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：同行价+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span></p></form>';
-            $('.modal-title,.modal-body', window.parent.document).html('');
-            $('.modal-title', window.parent.document).append(title);
-            $('.modal-body', window.parent.document).append(content);
-            window.parent.modal();
+            $('.modal-title, .modal-body').html('');
+            $('.modal-title').append(title);
+            $('.modal-body').append(content);
+            $('#myModal').show()
         }
     })
 
     function cancelAgent() {
         var title = '提示';
         var content = '<p class="cancel-agent">确认取消代理该产品<em>？</em></p>';
-        $('.modal-title,.modal-body', window.parent.document).html('');
-        $('.modal-title', window.parent.document).append(title);
-        $('.modal-body', window.parent.document).append(content);
-        window.parent.modal();
+        $('.modal-title,.modal-body').html('');
+        $('.modal-title').append(title);
+        $('.modal-body').append(content);
+        $('#myModal').show()
     }
     $('a.cancel-agent').click((function(event) {
-       $(this).parents('tr').remove();
+        window.parent.maskShow()
+        cancelAgent()
+        var _this = $(this);
+        $('.confirm').click(function() {
+            _this.parents('tr').remove()
+        });
     }));
+
     function ajustPrice() {
         var title = '商品加价';
         var content = '<form class="price-add"><p>同行价：2000元</p><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p></form>';
-        $('.modal-title,.modal-body', window.parent.document).html('');
-        $('.modal-title', window.parent.document).append(title);
-        $('.modal-body', window.parent.document).append(content);
-        window.parent.modal();
+        $('.modal-title,.modal-body').html('');
+        $('.modal-title').append(title);
+        $('.modal-body').append(content);
+        $('#myModal').show()
+        calcPrice()
     }
+
+    function calcPrice() {
+        var original = parseInt($('.original').text());
+        var add = parseInt($('.add').val()) || 0;
+        $('.result').text(original + add)
+
+        function result() {
+            $('.add').keyup(function() {
+                add = parseInt($(this).val()) || 0;
+                $('.result').text(original + add)
+            })
+        }
+        result()
+        $(".price-add input[type='radio']").change(function() {
+            var type = $(this).attr('id');
+            if (type == 'interge') {
+                $('.int').show();
+                $('.per').hide();
+                original = parseInt($('.original').text());
+                add = parseInt($('.add').val()) || 0;
+                $('.result').text(original + add)
+                result()
+            } else if (type == 'percentage') {
+                $('.per').show();
+                $('.int').hide();
+                add = parseInt($('.add').val()) / 100 || 0;
+                original = parseInt($('.original').text());
+                $('.result').text(original * (1 + add))
+                $('.add').keyup(function() {
+                    add = parseInt($(this).val()) / 100 || 0;
+                    $('.result').text(original * (1 + add))
+                })
+            } else {
+                return false
+            }
+        })
+    }
+
     function setPrice() {
         var title = '商品加价';
         var content = '<form id="setPrice" class="price-add"><p>同行价：2000元</p><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p></form>';
-        $('.modal-title,.modal-body', window.parent.document).html('');
-        $('.modal-title', window.parent.document).append(title);
-        $('.modal-body', window.parent.document).append(content);
-        window.parent.modal();
+        $('.modal-title,.modal-body').html('');
+        $('.modal-title').append(title);
+        $('.modal-body').append(content);
+        $('#myModal').show()
+        window.parent.maskShow()
     }
     $('a.price-adjust').click(function() {
+        window.parent.maskShow()
         ajustPrice()
     })
     $('.onekey-agent').click(function(event) {
@@ -103,13 +154,14 @@ $(function() {
         } else if ($checked.length > 1) {
             var title = '商品加价';
             var content = '<form id="setPrice" class="price-add"><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：同行价+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span></p></form>';
-            $('.modal-title,.modal-body', window.parent.document).html('');
-            $('.modal-title', window.parent.document).append(title);
-            $('.modal-body', window.parent.document).append(content);
-            window.parent.modal();
+            $('.modal-title,.modal-body').html('');
+            $('.modal-title').append(title);
+            $('.modal-body').append(content);
+            $('#myModal').show()
+            window.parent.maskShow()
         }
     });
-    $('.pagination>li>a').click(function(){
+    $('.pagination>li>a').click(function() {
         $(this).parent().not('.next, .prev').addClass('active').siblings().removeClass('active');
     })
 })
