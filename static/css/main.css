@@ -1,4 +1,4 @@
-/*common css*/
+/*common style*/
 body{
 	font-family: 'Microsoft Yahei';
 	color: #444;
@@ -20,7 +20,7 @@ label, input[type=checkbox]{
 	cursor: pointer
 }
 textarea{
-	resize: vertical;
+	resize: vertical
 }
 input[type="file"] {
     padding: 0 12px
@@ -29,8 +29,9 @@ em{
 	font-style: normal
 }
 select.form-control{
-	padding: 2px 5px;
+	padding: 2px 5px
 }
+
 /*page-title*/
 .page-title {
 	margin-bottom: 30px;
@@ -46,15 +47,17 @@ select.form-control{
 	background: #008BDC
 }
 .page-title .btn{
-	margin: 4px 30px 0 0
+	float: right;
+	margin: 4px 30px 0 0;
+	letter-spacing: 3px
 }
-/*nav-tabs*/
+
+/*nav-tabs tab-content*/
 .nav-tabs>li>a {
 	margin-right: 0;
 	border: 1px solid #ccc;
 	border-bottom: 0;
 }
-/*tab-content*/
 .tab-content{
 	padding: 20px;
 	margin-bottom: 50px;
@@ -144,9 +147,7 @@ select.form-control{
 .search .btn span{
 	font-size: 20px
 }
-.table {
-	border: 1px solid #ccc;
-}
+/*table style*/
 .table > thead > tr > th{
 	font-weight: normal;
 	color: #fff;
@@ -171,7 +172,7 @@ select.form-control{
 .check-all {
 	vertical-align: top
 }
-/*recommend*/
+/* recommend */
 .recommend > td{
 	color: #f60
 }
@@ -184,7 +185,7 @@ select.form-control{
 	vertical-align: middle;
 	background: url(../images/recommend.png)no-repeat center;
 }
-/*operate css*/
+/*table td.operate*/
 .operate span {
 	font-size: 16px;
 	color: #666;
@@ -242,163 +243,7 @@ select.form-control{
 .page-jump li input{
 	width: 60px
 }
-/*product css*/
-.product .tab-options>* {
-    vertical-align: top
-}
-/*.product .table>tbody>tr>td{
-	width: auto;
-}*/
-/*order css*/
-.order label{
-	vertical-align: middle;
-	color: #666;
-	font-size: 16px;
-}
-.order-state{
-	vertical-align: top
-}
-.order .operate-list li.bdsharebuttonbox {
-    padding: 3px 0;
-}
-.detail .table caption{
-	text-align: center;
-	border: 1px solid #ccc
-}
-.detail .table caption,
-.detail .table>tbody>tr>td:first-child{
-	width: 110px
-}
-/*order-refund css*/
-.refund .option-list{
-	width: 100%
-}
-.refund .option-list li{
-	margin:0 5px 0 0;
-	vertical-align: middle;
-}
-.refund-reject h5{
-	width: 110px;
-	line-height: 40px;
-	text-align: center;
-	border: 1px solid #ccc;
-}
-.refund-reject textarea{
-	width: 90%;
-	padding: 5px;
-	text-indent: 1em;
-	font-size: 20px;
-	resize: none
-}
-.refund-reject .btn{
-	margin-left: calc(90% - 82px);
-}
-.payment input{
-	width: 50px;
-	margin: auto;
-	text-align: center;
-}
-.table-left>tbody>tr>td{
-	text-align: left
-}
-/*store css*/
-.no-store {
-	height: 400px;
-	background: url(../images/no-store.png)no-repeat center 
-}
-.no-store-info{
-	position: absolute;
-	top: 280px;
-	left: 0;
-	right: 0;
-	margin: auto;
-}
-.no-store-info p{
-	text-align: center;
-	font-size: 22px;
-	letter-spacing: 5px;
-}
-.no-store-info p em{
-	font-size: 30px;
-	color: #37b1ff;
-}
-.btn-apply{
-	color: #fff;
-	font-size: 20px;
-	background: #ff7b43;
-	border-radius: 6px;
-}
-
-.btn-default.btn-apply:active,
-.btn-default.btn-apply:hover{
-	color: #fff;
-	background-color: #ff7b43;
-}
-/* disclaimer */
-.disclaimer .panel {
-	border: 0;
-	border-radius: 0;
-	margin-bottom: 0
-}
-.disclaimer .panel-heading{
-	height: 45px;
-	border-radius: 0;
-  background-color: #66bae9;
-}
-.exit:hover, .exit:link {
-	color: #fff;
-}
-.exit{
-	float: right;
-	margin-top: -10px;
-	font-size: 30px;
-	color: #fff;
-}
-.disclaimer .panel-body{
-	background-color: #e5f4fb;
-	padding: 40px;
-}
-.disclaimer .panel-content{
-	padding: 20px;
-	
-	font-size: 16px;
-	background: #fff
-}
-.disclaimer .panel-content h1{
-	margin-bottom: 20px;
-	font-size: 30px;
-	text-align: center;
-}
-.panel-content h4,
-.panel-content p{
-	line-height: 1.5
-}
-.panel-content h4{
-	font-weight: 600;
-}
-.panel-content p{
-	margin: 0 0 0 2em
-}
-.disclaimer .btn-apply{
-	padding: 0px 20px;
-	border-radius: 5px;
-	letter-spacing: 3px
-}
-.disclaimer .btn-apply:hover {
-	color: #fff;
-}
-/*apply-for-store*/
-.apply-form {
-	margin-bottom: 50px
-}
-.main-products label {
-	margin-right: 30px;
-}
-.main-products input[type=checkbox]{
-	margin-right: 10px;
-	vertical-align: top;
-}
-/*modal*/
+/* modal */
 .modal {
   background: rgba(0, 0, 0, .3)
 }
@@ -417,17 +262,14 @@ select.form-control{
     font-weight: normal;
     text-shadow: none
 }
-
 .modal-header .close span {
     font-size: 35px
 }
-
 .modal-title {
     text-indent: 1em;
     font-size: 20px;
     color: #fff;
 }
-
 .modal-body {
    padding: 30px 30px 0 30px;
    font-size: 16px
@@ -466,16 +308,171 @@ select.form-control{
     letter-spacing: 4px;
     color: #666;
 }
-
 .modal-info em{
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
     color: #f60;
 }
+
+/*product page */
+.product .tab-options>* {
+    vertical-align: top
+}
+
+/*order page */
+.order label{
+	vertical-align: middle;
+	color: #666;
+	font-size: 16px;
+}
+.order-state{
+	vertical-align: top
+}
+.order .operate-list li.bdsharebuttonbox {
+    padding: 3px 0;
+}
+.detail .table caption{
+	text-align: center;
+	border: 1px solid #ccc
+}
+.detail .table caption,
+.detail .table>tbody>tr>td:first-child{
+	width: 110px
+}
+
+/* order-refund page */
+.refund .option-list{
+	width: 100%
+}
+.refund .option-list li{
+	margin:0 5px 0 0;
+	vertical-align: middle;
+}
+.refund-reject h5{
+	width: 110px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+.refund-reject textarea{
+	width: 90%;
+	padding: 5px;
+	text-indent: 1em;
+	font-size: 20px;
+	resize: none
+}
+.refund-reject .btn{
+	margin-left: calc(90% - 82px);
+}
+.table-left>tbody>tr>td{
+	text-align: left
+}
+/*store page css*/
+.no-store {
+	height: 400px;
+	background: url(../images/no-store.png)no-repeat center 
+}
+.no-store-info{
+	position: absolute;
+	top: 280px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.no-store-info p{
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 5px;
+}
+.no-store-info p em{
+	font-size: 30px;
+	color: #37b1ff;
+}
+.btn-apply{
+	color: #fff;
+	font-size: 20px;
+	background: #ff7b43;
+	border-radius: 6px;
+}
+.btn-default.btn-apply:active,
+.btn-default.btn-apply:hover{
+	color: #fff;
+	background-color: #ff7b43;
+}
+
+/* disclaimer page */
+.disclaimer .panel {
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 0
+}
+.disclaimer .panel-heading{
+	height: 45px;
+	border-radius: 0;
+  background-color: #66bae9;
+}
+.exit:hover, 
+.exit:link {
+	color: #fff
+}
+.exit{
+	float: right;
+	margin-top: -10px;
+	font-size: 30px;
+	color: #fff;
+}
+.disclaimer .panel-body{
+	background-color: #e5f4fb;
+	padding: 40px;
+}
+.disclaimer .panel-content{
+	padding: 20px;
+	font-size: 16px;
+	background: #fff
+}
+.disclaimer .panel-content h1{
+	margin-bottom: 20px;
+	font-size: 30px;
+	text-align: center
+}
+.panel-content h4,
+.panel-content p{
+	line-height: 1.5
+}
+.panel-content h4{
+	font-weight: 600;
+}
+.panel-content p{
+	margin: 0 0 0 2em
+}
+.disclaimer label{
+	margin-top: 10px;
+}
+.disclaimer .btn-apply{
+	padding: 0px 20px;
+	border-radius: 5px;
+	letter-spacing: 3px
+}
+.disclaimer .btn-apply:hover {
+	color: #fff;
+}
+
+/*apply-for-store page */
+.apply-form {
+	margin-bottom: 50px
+}
+.main-products label {
+	margin-right: 5px;
+}
+.main-products input[type=checkbox]{
+	margin-right: 2px;
+	vertical-align: top;
+}
+
 /*apply-success-tip page*/
 .apply-success{
-	display: block;
+	display: block
 }
 .apply-success .modal-dialog {
     margin: 100px auto;
@@ -499,6 +496,41 @@ select.form-control{
 	color: #666;
 }
 .apply-success .btn{
-	color: #ee7848;
+	color: #ee7848
 }
-
+/* store-info */
+.store-info .btn:hover{
+	color: #fff;
+	border: 0;
+	background: #ff7a42
+}
+.store-info .page-header{
+	margin-top: 0;
+	padding-left: 50px;
+}
+.store-info .store-pic{
+	width: 120px;
+	height: 120px;
+}
+.store-info .store-name{
+	display: inline-block;
+	margin-left: 20px;
+}
+.license {
+	width: 150px;
+	height: 100px;
+	transition: all .3s
+}
+.license:hover {
+	transform: scale(3)
+}
+.store-info .table tr td:first-child{
+	width: 200px
+}
+.store-info .table > tbody > tr > td{
+	border: 0;
+	vertical-align: top
+}
+.btn-cancel {
+	margin-left: 20px
+}

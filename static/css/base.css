@@ -570,13 +570,6 @@ margin:30px auto;
 .modal-body .modal-btn .btn:hover{
 	color:#008bdc;
 }
-.img{
-	background: #fff;
-	transition: all .5s;
-}
-.img:hover{
-	transform: scale(1.2);
-}
 input[type=file]{
 	display: none
 }	
