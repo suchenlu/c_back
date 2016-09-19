@@ -13,7 +13,7 @@
         <h2>申请开店</h2>
     </div>
     <div class="container">
-        <form method="post" action="" enctype="multipart/form-data" class="form-horizontal apply-form">
+        <form method="post" action="apply-success-info.html" enctype="multipart/form-data" class="form-horizontal apply-form">
             <div class="form-group">
                 <label for="" class="control-label col-md-2">公司全称</label>
                 <div class="col-md-8">
@@ -110,8 +110,24 @@
                 </div>
             </div>
             <button type="submit" class="col-md-offset-5 btn btn-primary btn-lg">提交</button>
+            <button class="btn btn-danger">测试</button>
         </form>
+        
     </div>
+    <script src="../static/js/jquery.js"></script>
+    <script>
+    $('.btn-danger').click(function() {
+        window.parent.maskShow();
+        $('#myModal').show().find('.modal-content').animate({
+            'top': 100
+        }, 500)
+        $('.close, .cancel, .confirm').click(function() {
+            $('#myModal').hide().find('.modal-content').css('top', -1000);
+            window.parent.maskHide();
+        })
+        return false
+    })
+    </script>
 </body>
 
 </html>

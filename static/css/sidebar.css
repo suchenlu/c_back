@@ -39,7 +39,7 @@ label{
     top: 0;
     right: 0;
     left: 0px;
-    z-index: 99;
+    z-index: 2;
     padding: 5px 20px;
     background: #fff
 }
@@ -50,7 +50,7 @@ label{
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 100;
+    z-index: 10;
     background: rgba(0, 0, 0, 0.2)
 }
 
@@ -405,7 +405,7 @@ label{
     top: 56px;
     left: 0px;
     bottom: 0;
-    z-index: 100;
+    z-index: 9;
     width: 5px;
     background: #1F95FF
 }
@@ -437,6 +437,7 @@ label{
     bottom: 50px;
     right: 20px;
     left: 240px;
+    z-index: 100;
     margin-left: 20px;
     background: #fff
 }
@@ -471,81 +472,13 @@ label{
         display: none
     }
 }
-
-.modal {
-    background: rgba(0, 0, 0, .5)
-}
-.modal-dialog{
-    width: 400px
-}
-.modal-content {
-    top: -1000px
-}
-
-.modal-header {
-    padding: 5px 10px;
-    background: #008CDC;
-    border-radius: 5px 5px 0 0
-}
-.modal-header .close {
-    margin-top: -5px;
-    opacity: 1;
-    color: #fff;
-    font-weight: normal;
-    text-shadow: none
-}
-
-.modal-header .close span {
-    font-size: 35px
-}
-
-.modal-title {
-    text-indent: 1em;
-    font-size: 20px;
-    color: #fff;
-}
-
-.modal-body {
-   padding: 30px 30px 0 30px;
-   font-size: 16px
-}
-.modal-footer {
-    border: 0;
-    text-align: center;
-}
-.modal-footer .btn{
-    margin: 0 25px;
-    padding: 3px;
-    letter-spacing: 10px;
-    text-indent: 10px;
-    font-size: 16px;
-    background: #e6e6e6
-}
-.modal-footer .confirm{
-    color: #008CDC
-}
-.modal-footer .cancel{
-    color: #f60
-}
-.price-add .form-control{
-    display: inline-block;
-    width: 60px;
-}
-.price-add label:last-child{
-    margin-left: 10px;
-}
-.price-add .per{
-    display: none
-}
-.cancel-agent{
-    padding: 30px 0;
-    text-align: center;
-    letter-spacing: 4px;
-    color: #666;
-}
-.cancel-agent em{
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    color: #f60;
+.mask{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99; 
+    background: rgba(0,0,0,.3)
 }

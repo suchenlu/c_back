@@ -90,7 +90,7 @@
                 </div>
                 <div id="collapse1" class="panel-collapse in">
                     <div class="panel-body active">
-                        <a href="store/apply-for-store.html" target="content">申请开店
+                        <a href="store/apply-success-info.html" target="content">申请开店
                         <span></span>
                         </a>
                     </div>
@@ -214,6 +214,7 @@
         </ul>
         <p>Copyright © 2014 opcta.com</p>
     </div>
+    <div id="mask" class="mask"></div>
     <div id="myModal" class="modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -222,20 +223,23 @@
                     <h4 class="modal-title" id="myModalLabel">提示</h4>
                 </div>
                 <div class="modal-body">
-                    <!-- <form class="price-add">
-                        <p>同行价：2000元</p>
-                        <p>加价类型：
-                        <label>
-                            <input type="radio" name="type" id="interge" checked="checked"> 
-                            整数加价
-                        </label>
-                        <label>
-                            <input type="radio" name="type" id="percentage">百分比加价
-                        </label> 
-                        </p>
-                        <p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p>
-                    </form> -->
-                    <!-- <p class="cancel-agent">确认取消代理该产品<em>？</em></p> -->
+                                        
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default confirm" type="submit">确认</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div> <div id="myModal" class="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body">
+                                        
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default confirm" type="submit">确认</button>
@@ -248,13 +252,13 @@
     <script src="static/js/bootstrap.js"></script>
     <script src="static/js/sidebar.js"></script>
     <script>
+    function maskShow(){
+        $('#mask').show();
+    }
+    function maskHide(){
+        $('#mask').hide();
+    }
     function modal() {
-        $('#myModal').show().find('.modal-content').animate({
-            'top': 100
-        }, 500)
-        $('.close, .cancel, .confirm').click(function() {
-            $('#myModal').hide().find('.modal-content').css('top', -1000);
-        })
         var original = parseInt($('.original').text());
         var add = parseInt($('.add').val()) || 0;
         $('.result').text(original + add)
@@ -298,7 +302,7 @@
            content.window.onekeyAgent();
         });
     }
-    //modal()
+   // modal()
     </script>
 </body>
 
