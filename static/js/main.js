@@ -137,6 +137,7 @@ $(function() {
         $('.modal-body').append(content);
         $('#myModal').show()
         window.parent.maskShow()
+        calcPrice()
     }
     $('a.price-adjust').click(function() {
         window.parent.maskShow()

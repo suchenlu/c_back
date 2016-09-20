@@ -15,7 +15,7 @@
             $(this).addClass('active').siblings().removeClass('active');
         })
         $('.panel-title').click(function(){
-            if($(this).parent().siblings('.panel-collapse').hasClass('collapse')){
+            if(!$(this).parent().siblings('.panel-collapse').hasClass('in')){
                 $(this).addClass('active').parents('.panel').siblings().find('.panel-title').removeClass('active')   
             }else{
                 $(this).removeClass('active')
@@ -23,7 +23,7 @@
         })
         $('.panel-body').click(function(){
         	$(this).addClass('active').siblings().removeClass('active')
-        	$('.panel-collapse.collapse').find('.panel-body').removeClass('active')
+        	$(this).parents('.panel').siblings().find('.panel-body').removeClass('active')
         })
         $('#on_line').click(function(){
         	$('.qqbox-layer').show().click(function(){
