@@ -176,12 +176,15 @@ select.form-control{
 .recommend > td{
 	color: #f60
 }
+.recommend > td:nth-child(2){
+	padding: 0 30px
+}
 .recommend > td:nth-child(2):before{
 	content: '';
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	margin: 0 5px 0 -20px;
+	margin: 0 2px 0 -22px;
 	vertical-align: middle;
 	background: url(../images/recommend.png)no-repeat center;
 }
@@ -319,7 +322,6 @@ select.form-control{
 .product .tab-options>* {
     vertical-align: top
 }
-
 /*order page */
 .order label{
 	vertical-align: middle;
@@ -469,7 +471,24 @@ select.form-control{
 	margin-right: 2px;
 	vertical-align: top;
 }
-
+input[type=file]{
+	display: none
+}
+.pic-preview{
+	display: inline-block;
+	width: 200px;
+	height: 150px;
+	border: 1px solid #ccc;
+}
+.pic-preview img{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.btn-upload{
+	vertical-align: bottom;
+	cursor: pointer;
+}
 /*apply-success-tip page*/
 .apply-success{
 	display: block
@@ -521,7 +540,7 @@ select.form-control{
 	height: 100px;
 	transition: all .3s
 }
-.license:hover {
+.store-info .license:hover {
 	transform: scale(3)
 }
 .store-info .table tr td:first-child{

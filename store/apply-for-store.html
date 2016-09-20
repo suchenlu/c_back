@@ -29,7 +29,11 @@
             <div class="form-group">
                 <label for="" class="control-label col-md-2">公司LOGO</label>
                 <div class="col-md-8">
-                    <input type="file" class="form-control">
+                    <input type="file" id="logoUp">
+                    <div id="logoPreview" class="pic-preview" onclick="$('#logoUp').click()">
+                        <img id="logoImg">
+                    </div>
+                    <a class="btn-upload" onclick="$('#logoUp').click()">上传公司LOGO</a>
                 </div>
             </div>
             <div class="form-group">
@@ -51,15 +55,23 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="" class="control-label col-md-2">联系执照</label>
+                <label for="" class="control-label col-md-2">营业执照</label>
                 <div class="col-md-8">
-                    <input type="file" class="form-control">
+                    <input type="file" id="licenseUp">
+                    <div id="licensePreview" class="pic-preview" onclick="$('#licenseUp').click()">
+                        <img id="licenseImg">
+                    </div>
+                    <a class="btn-upload" onclick="$('#licenseUp').click()">上传营业执照</a>
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="control-label col-md-2">经营许可证</label>
                 <div class="col-md-8">
-                    <input type="file" class="form-control">
+                    <input type="file" id="permitUp">
+                    <div id="permitPreview" class="pic-preview" onclick="$('#permitUp').click()">
+                        <img id="permitImg">
+                    </div>
+                    <a class="btn-upload" onclick="$('#permitUp').click()">上传经营许可证</a>
                 </div>
             </div>
             <div class="form-group">
@@ -98,25 +110,43 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="" class="control-label col-md-2">公司简介</label>
+                <label class="control-label col-md-2">公司简介</label>
                 <div class="col-md-8">
-                    <textarea class="form-control"></textarea>
+                    <textarea rows="6" class="form-control"></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label for="" class="control-label col-md-2">公司荣誉</label>
+                <label class="control-label col-md-2">公司荣誉</label>
                 <div class="col-md-8">
-                    <textarea class="form-control"></textarea>
+                    <textarea rows="6" class="form-control"></textarea>
                 </div>
             </div>
             <button type="submit" class="col-md-offset-5 btn btn-primary btn-lg btn-submit">提交</button>
         </form>
     </div>
     <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/uploadPreview.min.js"></script>
     <script>
-    	$('.btn-submit').click(function(){
-    		// return false
-    	})
+    $(function() {
+        new uploadPreview({
+            UpBtn: 'logoUp',
+            DivShow: 'logoPreview',
+            ImgShow: 'logoImg'
+        })
+        new uploadPreview({
+            UpBtn: 'licenseUp',
+            DivShow: 'licensePreview',
+            ImgShow: 'licenseImg'
+        })
+        new uploadPreview({
+            UpBtn: 'permitUp',
+            DivShow: 'permitPreview',
+            ImgShow: 'permitImg'
+        })
+        $('.btn-submit').click(function() {
+            // return false
+        })
+    })
     </script>
 </body>
 
