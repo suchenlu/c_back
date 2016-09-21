@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>store-manage</title>
+    <link rel="stylesheet" href="../static/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+
+<body>
+    <div class="page-title">
+        <h2>首页管理</h2>
+        <a href="product-add.html" class="btn btn-default">添加</a>
+    </div>
+    <div class="container-fluid store">
+        <ul class="tab-list">
+            <li class="tab-options">
+                <h4>站点：</h4>
+                <select class="form-control">
+                    <option value="1">北京</option>
+                    <option value="1">北京</option>
+                    <option value="1">北京</option>
+                    <option value="1">北京</option>
+                </select>
+            </li>
+            <li class="tab-options">
+                <h4>产品类型：</h4>
+                <ul class="option-list">
+                    <li class="active">
+                        <a href="javascript:;">周边游</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">国内游</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">港澳游</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">处境游</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="tab-options">
+                <h4>目的地：</h4>
+                <ul class="option-list">
+                    <li class="active">
+                        <a href="javascript:;">精选</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">北京</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">北京</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">北京</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">北京</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="product-operation">
+        	<p class="pull-left">
+        		<button class="btn btn-warning product-del">删除</button>
+        	</p>
+        </div>
+        <table class="table table-hover table-stripe table-condensed table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        <label>
+                            <input type="checkbox" class="check-all"> 全选
+                        </label>
+                    </th>
+                    <th>产品编号</th>
+                    <th>产品名称</th>
+                    <th>供应商</th>
+                    <th>添加时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>00001</td>
+                    <td>吉普岛</td>
+                    <td>北京国旅</td>
+                    <td>2016-08-09 16:43:17</td>
+                    <td class="operate">
+                        <span class="move-up"></span>
+                        <span class="move-down"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>00001</td>
+                    <td>吉普岛</td>
+                    <td>北京国旅</td>
+                    <td>2016-08-09 16:43:17</td>
+                    <td class="operate">
+                        <span class="move-up"></span>
+                        <span class="move-down"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>00001</td>
+                    <td>吉普岛</td>
+                    <td>北京国旅</td>
+                    <td>2016-08-09 16:43:17</td>
+                    <td class="operate">
+                        <span class="move-up"></span>
+                        <span class="move-down"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagebar clearfix">
+            <div class="pull-right">
+                <ul class="pagination">
+                    <li class="prev disabled"><a href="#">上一页</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="disabled"><span>…</span></li>
+                    <li class="next"><a href="#">下一页</a></li>
+                </ul>
+                <ul class="page-jump">
+                    <li><span>共100页 &nbsp;到第</span></li>
+                    <li>
+                        <input type="text" class="form-control">&nbsp;页</li>
+                    <li>
+                        <button class="btn btn-primary">确定</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body">
+                	<p class="modal-info">确认删除已勾选产品<em>？</em></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default confirm">确认</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/libs/jquery/jquery.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

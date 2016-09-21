@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页管理-添加</title>
+    <link rel="stylesheet" type="text/css" href="../static/libs/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+
+<body>
+    <div class="page-title">
+        <h2>添加产品</h2>
+        <a href="home-manage.html" class="btn btn-default">返回</a>
+        <a href="javascript:;" class="btn btn-default">添加</a>
+    </div>
+    <div class="container-fluid store">
+        <div class="product-operation">
+            <p class="search pull-left">
+                <input type="text" class="form-control col-md-4" placeholder="输入供应商名称或产品名称" >
+                <button class="btn btn-defalut">搜索
+                </button>
+            </p>
+        </div>
+        <table class="table table-hover table-stripe table-condensed table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        <label>
+                            <input type="checkbox" class="check-all">全选
+                        </label>
+                    </th>
+                    <th>产品编号</th>
+                    <th>产品名称</th>
+                    <th>供应商</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="">
+                    </td>
+                    <td>w10411</td>
+                    <td>北京3日游</td>
+                    <td>北京科技科技公司</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="">
+                    </td>
+                    <td>w10411</td>
+                    <td>北京3日游</td>
+                    <td>北京李四公司</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="">
+                    </td>
+                    <td>w10411</td>
+                    <td>北京3日游</td>
+                    <td>北京龙龙公司</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagebar clearfix">
+            <div class="pull-right">
+                <ul class="pagination">
+                    <li class="prev disabled"><a href="javascript:;">上一页</a></li>
+                    <li class="active"><a href="javascript:;">1</a></li>
+                    <li><a href="javascript:;">2</a></li>
+                    <li><a href="javascript:;">3</a></li>
+                    <li><a href="javascript:;">4</a></li>
+                    <li><a href="javascript:;">5</a></li>
+                    <li class="disabled"><span>…</span></li>
+                    <li class="next"><a href="javascript:;">下一页</a></li>
+                </ul>
+                <ul class="page-jump">
+                    <li><span>共100页 &nbsp;到第</span></li>
+                    <li>
+                        <input type="text" class="form-control">&nbsp;页</li>
+                    <li>
+                        <button class="btn btn-primary">确定</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../static/libs/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/main.js"></script>
+</body>
+
+</html>

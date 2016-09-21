@@ -129,10 +129,10 @@ select.form-control{
 	line-height: 2;
 	color: #ccc;
 }
-.table-search .btn{
+.product-operation .btn{
 	margin-right: 10px;
 }
-.table-search .price-ajust{
+.product-operation .price-ajust{
 	color: #666;
 }
 .search input{
@@ -184,7 +184,7 @@ select.form-control{
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	margin: 0 2px 0 -22px;
+	margin: -2px 4px 0 -22px;
 	vertical-align: middle;
 	background: url(../images/recommend.png)no-repeat center;
 }
@@ -275,7 +275,19 @@ select.form-control{
 }
 .modal-body {
    padding: 30px 30px 0 30px;
-   font-size: 16px
+   font-size: 18px
+}
+.modal-info{
+    padding: 30px 0;
+    text-align: center;
+    letter-spacing: 4px;
+    color: #666;
+}
+.modal-info em{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    color: #f60
 }
 .modal-footer {
     border: 0;
@@ -305,30 +317,14 @@ select.form-control{
 .price-add .per{
     display: none
 }
-.modal-info{
-    padding: 30px 0;
-    text-align: center;
-    letter-spacing: 4px;
-    color: #666;
-}
-.modal-info em{
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    color: #f60;
-}
 
 /*product page */
 .product .tab-options>* {
     vertical-align: top
 }
-.confirm-info {
-	text-align: center;
-}
-.confirm-info em{
-	font-style: normal;
-	font-size: 30px;
-	color: #f60;
+.option-list .day input{
+	width: 50px;
+	margin-right: 5px;
 }
 /*order page */
 .order label{
@@ -525,6 +521,28 @@ input[type=file]{
 .apply-success .btn{
 	color: #ee7848
 }
+/* store-home-manage */
+.store{
+	padding: 0 30px;
+}
+.store .option-list {
+	vertical-align: top
+}
+.store select.form-control{
+	width: 200px;
+}
+.operate span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+}
+.operate .move-up{
+	background: url(../images/up.png) no-repeat center;
+}
+.operate .move-down{
+	background: url(../images/down.png) no-repeat center;
+}
 /* store-info */
 .store-info .btn:hover{
 	color: #fff;
@@ -560,4 +578,37 @@ input[type=file]{
 }
 .btn-cancel {
 	margin-left: 20px
+}
+/*-----------------------------------------------*/
+/*shop maintance*/
+/*market manage*/
+.search input{
+	width: 200px;
+	margin-right: 20px;
+}
+.search .btn{
+	background-color:#F7AB3D; 
+	color:#fff; 
+	font-size: 16px;
+	height:30px;
+}
+.search .btn:hover{
+	background-color:#FF931A;
+}
+/*modal*/
+.confirm-info {
+	text-align: center;
+}
+.confirm-info em{
+	font-style: normal;
+	font-size: 30px;
+	color: #f60;
+}
+/*market_edit*/
+.date .line{
+	text-align: center;
+}
+/*market_employee_edit*/
+.form-group select{
+	width:150px;
 }

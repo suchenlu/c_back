@@ -16,20 +16,6 @@
 
 <body>
     <div class="header">
-        <div class="qqbox-layer none">
-            <div class="qqbox">
-                <i></i>
-                <b>在<br>线<br>咨<br>询</b>
-                <ul class="select_qq">
-                    <li id="qq1"><a>华东</a></li>
-                    <li id="qq2"><a>华中</a></li>
-                    <li id="qq3"><a>华北</a></li>
-                    <li id="qq4"><a>东北</a></li>
-                    <li id="qq5"><a>西北</a></li>
-                    <li id="qq6"><a>华南</a></li>
-                </ul>
-            </div>
-        </div>
         <div class="topbar row">
             <div class="col-md-4 site-logo">
                 <a href="#" class="logo"></a>
@@ -108,16 +94,16 @@
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
                     <div class="panel-body">
+                        <a href="store/home-manage.html" target="content">首页管理<span></span></a>
+                    </div>
+                    <div class="panel-body">
                         <a href="store/store-info.html" target="content">店铺信息<span></span></a>
                     </div>
                     <div class="panel-body">
-                        <a href="shop/shop_maintance.html" target="content">店铺维护<span></span></a>
+                        <a href="store/market_manage.html" target="content">门市管理<span></span></a>
                     </div>
                     <div class="panel-body">
-                        <a href="shop/market_manage.html" target="content">门市管理<span></span></a>
-                    </div>
-                    <div class="panel-body">
-                        <a href="shop/market_employee.html" target="content">顾问管理<span></span></a>
+                        <a href="store/market_employee.html" target="content">顾问管理<span></span></a>
                     </div>
                 </div>
             </div>
@@ -198,6 +184,20 @@
             <span class="glyphicon glyphicon-align-justify stop"></span>
         </div>
     </div>
+    <div class="qqbox-layer none">
+            <div class="qqbox">
+                <i></i>
+                <b>在<br>线<br>咨<br>询</b>
+                <ul class="select_qq">
+                    <li id="qq1"><a>华东</a></li>
+                    <li id="qq2"><a>华中</a></li>
+                    <li id="qq3"><a>华北</a></li>
+                    <li id="qq4"><a>东北</a></li>
+                    <li id="qq5"><a>西北</a></li>
+                    <li id="qq6"><a>华南</a></li>
+                </ul>
+            </div>
+    </div>
     <div class="togglebar none">
         <div class="toggle-open">
             <span class="glyphicon glyphicon-menu-hamburger open"></span>
@@ -219,6 +219,7 @@
     <script src="static/libs/jquery/jquery.js"></script>
     <script src="static/libs/bootstrap/js/bootstrap.js"></script>
     <script src="static/js/sidebar.js"></script>
+    <script src="static/js/qq.js"></script>
     <script>
     function maskShow(){
         $('#mask').show();

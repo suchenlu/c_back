@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>顾问管理</title>
+    <link rel="stylesheet" type="text/css" href="../static/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+
+<body>
+    <div class="page-title">
+        <h2>顾问管理</h2>
+        <a href="market_add.html" class="btn btn-default">添加顾问</a>
+    </div>
+    <div class="container-fluid">
+        <p class="search pull-left col-sm-6">
+            <label class="col-sm-3">所属门市</label>
+            <select class="col-sm-4">
+                <option value="">所有门市</option>
+            </select>
+            <button class="btn btn-defalut col-sm-2">
+                查询
+            </button>
+        </p>
+        <table class="table table-hover table-stripe table-condensed table-bordered">
+            <thead>
+                <th>
+                    <label>
+                        <input type="checkbox" class="check-all">全选
+                    </label>
+                </th>
+                <th>所属门市</th>
+                <th>顾问姓名</th>
+                <th>联系电话</th>
+                <th>邮箱</th>
+                <th>QQ</th>
+                <th>操作</th>
+                <th>职务</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="">
+                    </td>
+                    <td>卓翔</td>
+                    <td>张三</td>
+                    <td>010-11111</td>
+                    <td>1028388328@163.com</td>
+                    <td>11111111111</td>
+                    <td class="operate">
+                        <a href="market_employee_edit.html">编辑</a>
+                        <a class="disabled" href="javascript:;">禁用</a>
+                    </td>
+                    <td>员工</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="">
+                    </td>
+                    <td>卓翔</td>
+                    <td>李四</td>
+                    <td>010-222222</td>
+                    <td>1020000528@163.com</td>
+                    <td>222222222</td>
+                    <td class="operate">
+                        <a href="market_employee_edit.html">编辑</a>
+                        <a class="disabled" href="javascript:;">禁用</a>
+                    </td>
+                    <td>店长</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="confirm-info">确认禁用该顾问<em>？</em></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default confirm" type="submit">确认</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="../static/libs/jquery/jquery.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script type="text/javascript">
+    $('.disabled').click(function() {
+        $('#myModal').fadeIn()
+        $('.close, .cancel').click(function() {
+            $('#myModal').hide();
+        })
+    })
+    </script>
+</body>
+
+</html>

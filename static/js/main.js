@@ -1,6 +1,5 @@
 $(function() {
-    $('#myTab li:eq(0) a').tab('show');
-
+    
     $('.option-list>li').click(function() {
         $(this).addClass('active').siblings().removeClass('active')
     });
@@ -67,7 +66,7 @@ $(function() {
 
     function cancelAgent() {
         var title = '提示';
-        var content = '<p class="confirm-info">确认取消代理该产品<em>？</em></p>';
+        var content = '<p class="modal-info">确认取消代理该产品<em>？</em></p>';
         $('.modal-title,.modal-body').html('');
         $('.modal-title').append(title);
         $('.modal-body').append(content);
@@ -162,6 +161,19 @@ $(function() {
             window.parent.maskShow()
         }
     });
+    $('.product-del').click(function(){
+        $checkbox = $('.table tbody input[type=checkbox]');
+        var $checked = $checkbox.filter(':checked');
+        if($checked.length<1){
+            alert('请选择要删除的产品')
+        }else{
+            $('#myModal').show()
+            window.parent.maskShow()
+            $('.confirm').click(function(){
+                 $checked.parents('tr').remove()
+            })
+        }
+    })
     $('.pagination>li>a').click(function() {
         $(this).parent().not('.next, .prev').addClass('active').siblings().removeClass('active');
     })
