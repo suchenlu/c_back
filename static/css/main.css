@@ -580,9 +580,11 @@ input[type=file]{
 	margin-left: 20px
 }
 /*-----------------------------------------------*/
-/*shop maintance*/
 /*market manage*/
-.search input{
+.search.pull-left label{
+	line-height:30px;
+}
+.search.pull-left input,.search.pull-left select{
 	width: 200px;
 	margin-right: 20px;
 }
@@ -611,4 +613,14 @@ input[type=file]{
 /*market_employee_edit*/
 .form-group select{
 	width:150px;
+}
+.phone input:first-child{
+	width:70px;
+}
+.market .form-group select{
+	width:200px;
+}
+.employee_select select{
+	width:150px;
+	display: inline-block;
 }

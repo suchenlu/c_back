@@ -9,67 +9,65 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="page-title">
-            <h2>添加顾问</h2>
-        </div>
-        <div class="container">
-            <form method="post" action="#" enctype="multipart/form-data" class="form-horizontal apply-form">
-                <div class="form-group">
-                    <label class="control-label col-md-2">所属门市</label>
-                    <div class="col-md-4">
-                        <select class="form-control col-md-2">
-                            <option>请选择</option>
-                            <option>请选择</option>
-                            <option>请选择</option>
-                        </select>
-                    </div>
+    <div class="page-title">
+        <h2>添加门市</h2>
+    </div>
+    <div class="container market">
+        <form method="post" action="#" enctype="multipart/form-data" class="form-horizontal apply-form">
+            <div class="form-group">
+                <label class="control-label col-md-2">所属门市</label>
+                <div class="col-md-4">
+                    <select class="form-control col-md-2">
+                        <option>请选择</option>
+                        <option>请选择</option>
+                        <option>请选择</option>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <label for="" class="control-label col-md-2">员工姓名</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control">
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-md-2">员工姓名</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control">
                 </div>
-                <div class="form-group">
-                    <label for="" class="control-label col-md-2">头像</label>
-                    <div class="col-md-8">
-                        <input type="file" id="permitUp">
-                        <div id="permitPreview" class="pic-preview" onclick="$('#permitUp').click()">
-                            <img id="permitImg">
-                        </div>
-                        <a class="btn-upload" onclick="$('#permitUp').click()">上传头像</a>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-md-2">头像</label>
+                <div class="col-md-8">
+                    <input type="file" id="permitUp">
+                    <div id="permitPreview" class="pic-preview" onclick="$('#permitUp').click()">
+                        <img id="permitImg">
                     </div>
+                    <a class="btn-upload" onclick="$('#permitUp').click()">上传头像</a>
                 </div>
-                <div class="form-group date">
-                    <label for="" class="control-label col-md-2">联系电话</label>
-                    <div class="col-md-8 phone">
-                        <input class="datepicker form-control col-md-2" placeholder="座机" type="text">
-                        <span class="line col-md-1">——</span>
-                        <input class="datepicker col-md-6 form-control" type="text">
-                    </div>
+            </div>
+            <div class="form-group date">
+                <label for="" class="control-label col-md-2">联系电话</label>
+                <div class="col-md-8 phone">
+                    <input class="form-control col-md-2" placeholder="座机" type="text">
+                    <span class="line col-md-1">——</span>
+                    <input class="col-md-6 form-control" type="text">
                 </div>
-                <div class="form-group">
-                    <div class="col-md-8 col-md-offset-2">
-                        <input type="text" class="form-control col-md-ofset-3" placeholder="手机">
-                    </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-8 col-md-offset-2">
+                    <input type="text" class="form-control col-md-ofset-3" placeholder="手机">
                 </div>
-                <div class="form-group">
-                    <label for="" class="control-label col-md-2">邮箱</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder="邮箱">
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-md-2">邮箱</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="邮箱">
                 </div>
-                <div class="form-group">
-                    <label for="" class="control-label col-md-2">QQ</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder="QQ">
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-md-2">QQ</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="QQ">
                 </div>
-                <button type="submit" class="col-md-offset-5 btn btn-primary btn-submit">提交</button>
-                <button type="reset" class="btn btn-warning">返回</button>
-            </form>
-        </div>
+            </div>
+            <button type="submit" class="col-md-offset-5 btn btn-primary btn-submit">提交</button>
+            <button type="reset" class="btn col-md-offset-1 btn-warning">返回</button>
+        </form>
     </div>
     <script type="text/javascript" src="../static/libs/jquery/jquery.js"></script>
     <script src="../static/js/uploadPreview.min.js"></script>
