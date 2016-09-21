@@ -1,0 +1,857 @@
+/*头部店铺信息样式*/
+.shop_information{
+    width:100%;
+    height:120px;
+    border:1px solid #eee;
+    +border:none;
+    background-color:#fff;
+    padding-top:15px;
+}
+.shop_information .information{
+    width:1180px;
+    height:92px;
+    margin:0 auto;
+    position:relative;
+}
+.information .shop_logo{
+    width:130px;
+    height:82px;
+    position:relative;
+    display:inline-block;
+    float: left;
+    z-index:30;
+}
+/*.information .shop_logo:hover .shop_logo_news{display: block;}
+.information .shop_logo a{
+    display:block;
+    line-height: 30px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    overflow: hidden;
+}*/
+/*.information .shop_logo a>i{
+    width:0;
+    height:0;
+    border-right:8px solid transparent;
+    border-top:8px solid #ccc;
+    border-left:8px solid transparent;
+    position:absolute;
+    top:30px;
+    right:15px;
+}*/
+/*.information .shop_logo a.connection{
+    width:75px;
+    height:20px;
+    border-radius: 20px;
+    margin-left:30px;
+    background-color:#08b0ff;
+    position:relative;
+    line-height: 20px;
+}
+.information .shop_logo a.connection b{
+    display:inline-block;
+    width:15px;
+    height:10px;
+    position:absolute;
+    top:6px;
+    left:15px;
+    background:url("../img/img.png") no-repeat -7px -104px;
+
+}*/
+.shop_logo:hover .shop_logo_news{display: block;}
+.information .shop_logo .shop_logo_news{
+    display:none;
+}
+.shop_logo_news ul{
+    position:absolute;
+    background-color:#fff;
+    z-index:5;
+}
+.information .shop_logo .shop_logo_news b{
+    width:0;
+    height:0;
+    border-right:12px solid transparent;
+    border-bottom:11px solid #ccc;
+    border-left:12px solid transparent;
+    position:absolute;
+    top:70px;
+    right:15px;
+    z-index:6;
+}
+.information .shop_logo .shop_logo_news i{
+    width:0;
+    height:0;
+    border-right:10px solid transparent;
+    border-bottom:10px solid #fff;
+    border-left:10px solid transparent;
+    position:absolute;
+    top:71px;
+    right:17px;
+    z-index:7;
+}
+.information .shop_logo .shop_logo_news ul{
+    width:200px;
+    height:130px;
+    border:1px solid #ccc;
+    position:absolute;
+    top:80px;
+    left:55px;
+}
+.information .shop_logo .shop_logo_news li{
+    width:100%;
+    height:30px;
+    line-height: 35px;
+    font-size: 13px;
+}
+.information .shop_name{
+    font-size:26px;
+    display:inline-block;
+    margin-top: 10px;
+}
+.information ul{
+    float:left;
+    border-left:1px solid #ccc;
+    margin-top:25px;
+    padding:0 10px;
+}
+.information ul li{
+    width:auto;
+    height:50px;
+    margin-left:20px;
+    float:left;
+    cursor: pointer;
+}
+.information ul li s{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    float:left;
+    background:url("../img/img.png") no-repeat -43px -116px;
+}
+.information ul li.reputation s{
+    background-position:-162px -113px;
+}
+.information ul li.service s{
+    background-position:-115px -115px;
+}
+.information ul li .text{
+    width:70px;
+    height:40px;
+    float:left;
+    margin:0 0 0 5px;
+}
+.information ul li .text p{
+    font-size:16px;
+    font-family: "微软雅黑";
+}
+/*banner轮播图样式*/
+.banner{
+    width:100%;
+    height:300px;
+    z-index:3;
+}
+ul.inner{
+    width:100%;
+    height:300px;
+    overflow: hidden;
+    margin:0 auto;
+}
+.inner li{
+	width: 1920px;
+    height:300px;
+    position:absolute;
+    left:50%;
+    margin-left:-960px;
+}
+
+/*主体内容样式*/
+.scl_shop_content{
+    width:100%;
+    background-color:#f6f6f6;
+    border:1px solid #f6f6f6;
+}
+.scl_content{
+    width:1180px;
+    height:145px;
+    margin:25px  auto;
+}
+.scl_content a{
+    float:left;
+}
+.scl_shop_recommend{
+    width:1180px;
+    height:685px;
+    margin:0 auto;
+}
+.scl_shop_recommend ul li{
+    width:270px;
+    height:50%;
+    border:1px solid #ccc;
+    position:relative;
+    display:inline-block;
+    margin-bottom:33px;
+}
+.shop_recommend_left{
+    float:left;
+    margin-right:33px;
+}
+.shop_recommend_right{
+    float:right;
+    margin-right:0;
+}
+.scl_shop_recommend ul li:hover{
+    box-shadow: 2px 2px #eee;
+    -webkit-box-shadow: 2px 2px #eee;
+    -moz-box-shadow: 2px 2px #eee;
+    -o-box-shadow: 2px 2px #eee;
+}
+.scl_shop_recommend ul li i{
+    position:absolute;
+    width:107px;
+    height:103px;
+    display:inline-block;
+    background:url(../images/add/re_1.png) no-repeat;
+    top:-10px;
+    left:-12px;
+}
+.scl_shop_recommend ul li.current i{
+    background:url(../images/add/re_2.png) no-repeat;
+}
+.scl_shop_recommend ul li.shop_recommend_left a,.scl_shop_recommend ul li.shop_recommend_right a{width:100%;height:167px;overflow:hidden;}
+.scl_shop_recommend ul li .shop_recommend_title{
+    height:145px;
+    cursor: pointer;
+}
+.scl_shop_recommend ul li .shop_recommend_title .start{
+    +float:left;
+}
+.scl_shop_recommend ul li .shop_recommend_title .start p, .scl_shop_recommend ul li .shop_recommend_title .start p span{
+    font-size:13px;
+}
+.scl_shop_recommend .shop_recommend_title h3{
+    font-size: 16px;
+    color:#666;
+    display:inline-block;
+    line-height:40px;
+    margin-left:20px;
+    width: 330px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    +float:left;
+}
+.scl_shop_recommend .shop_recommend_title p{
+    font-size: 16px;
+    color:#fb833f;
+    display:inline-block;
+    float:right;
+    margin-right:25px;
+    line-height: 35px;
+}
+.scl_shop_recommend .shop_recommend_title p span{
+    font-size: 25px;
+}
+.scl_shop_recommend .shop_recommend_title .start p{
+    font-size: 16px;
+    color:#666;
+    display:inline-block;
+    line-height: 20px;
+    float:left;
+    margin-left:20px;
+}
+.scl_shop_recommend .shop_recommend_title .start p.scl_travel_time{
+	width:270px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.scl_shop_recommend .shop_recommend_title .start p span{
+    font-size: 16px;
+}
+.line_main li{
+    width:286px;
+    height:275px;
+    float:left;
+   	margin:0 0 15px 10px;
+    position: relative;
+    overflow:hidden;
+    
+}
+.line_main li a.picture{width:286px;+width:284px;height:171px;overflow:hidden;}
+.line_main li .short_line_content {
+    width:286px;
+    +width:284px;
+    height:105px;
+    border:1px solid #ccc;
+    border-top:none;
+    position:absolute;
+    bottom:0;
+    cursor:pointer;
+}
+.line_main li .short_line_content .scl_price{
+	float:right;
+	margin-right:10px;
+}
+.line_main li .short_line_content .scl_price b{
+    display:block;
+    width:auto;
+    height:40px;
+    color:#fb833f;
+    line-height: 50px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.short_line_content .scl_price b s{
+    display:inline-block;
+    font-size:24px;
+    font-family: "微软雅黑";
+    font-style: normal;
+    text-decoration: none;
+    line-height:24px;
+}
+.short_line_content .scl_price>s{
+	float:right;
+	color:#999;
+	font-size:14px;
+	text-decoration: line-through;
+}
+.short_line_content .main_content{
+    width:auto;
+    padding:15px 10px 15px 15px;
+}
+.short_line_content p{
+    line-height: 25px;
+    font-size: 14px;
+    color:#666;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.short_line_content:hover p{
+    color:#0eb1ff;
+}
+.scl_line{
+    width:1180px;
+    height:675px;
+    margin:35px auto;
+}
+.scl_line .title{
+    width:475px;
+    height:72px;
+    margin:30px auto;
+}
+.scl_line .title span{
+    width:411px;
+    height:72px;
+    display:inline-block;
+    background:url(../images/pbl/line_pic_1.png) no-repeat center;
+}
+.scl_line .title.Inbound_line span{
+    background:url(../images/pbl/line_pic_2.png) no-repeat center
+}
+.scl_line .title.travel_line span{
+    background:url(../images/pbl/line_pic_3.png) no-repeat center;
+}
+.scl_line .title.mac_line span{
+	background:url(../images/pbl/line_pic_4.png) no-repeat center;
+}
+.scl_line .title a{
+    font-size:13px;
+    color:#666;
+}
+.scl_line .title a:hover{
+    color:#46a1fe;
+}
+.scl_line_main{
+    width:1180px;
+    height:565px;
+    margin-top:10px;
+}
+.scl_line_left{
+    width:286px;
+    height:565px;
+    float:left;
+}
+.scl_line_left a{
+    width:286px;
+    height:565px;
+    /*background:url(../images/pbl/line_pic_img_1.png) no-repeat center;*/
+}
+/*.Inbound_line_left a{
+    background:url(../images/pbl/line_pic_img_2.png) no-repeat center;
+}
+.travel_line_left a{
+    background:url(../images/pbl/line_pic_img_3.png) no-repeat center;
+}*/
+.scl_line_right{
+    width:890px;
+    height:565px;
+    float:right;
+}
+.scl_line .line_main{
+    width:890px;
+    height:565px;
+}
+
+
+/*二级页面*/
+.scl_store{
+    width:100%;
+    background-color:#f6f6f6;
+    border:1px solid #f6f6f6;
+}
+.scl_store .scl_store_information{
+    width:1180px;
+    margin:0 auto;
+}
+.scl_store .scl_store_title{
+    margin-top:45px;
+}
+.scl_store .scl_store_title h2{
+    font-size:24px;
+    display:inline-block;
+    color:#7d7d7d;
+}
+.scl_store .scl_store_title p{
+    font-size: 20px;
+    display:inline-block;
+    color:#666;
+}
+.scl_store .scl_store_title p span{
+    color:#d2d2d2;
+    font-size: 20px;
+}
+.scl_store .scl_storeInformation_content{
+    width:1180px;
+    height:296px;
+    border:1px solid #ccc;
+    background-color:#e6f2f2;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-top:10px;
+}
+.scl_store .scl_storeInformation_content ul li{
+    width:228px;
+    +width:227px;
+    height:110px;
+    margin:30px 82px 0 82px;
+    float:left;
+    position:relative;
+    border: 1px solid transparent;
+}
+
+.scl_store .scl_storeInformation_content ul li span{
+    position:absolute;
+    top:0;
+    left:0;
+    visibility: hidden;
+}
+
+.scl_store .scl_storeInformation_content li .scl_store_search{
+    width:50px;
+    height:75px;
+    margin-top:15px;
+    margin-left:10px;
+    float:left;
+    background:url(../images/pbl/information.png) no-repeat 0 0;
+}
+
+.scl_store .scl_storeInformation_content li .scl_store_text{
+    float:left;
+    margin-left:5px;
+    margin-top:10px;
+}
+.scl_store .scl_store_text p{
+    width:40px;
+    height:40px;
+    margin:0 auto;
+    background:url(../images/pbl/shop_curr_all.png) no-repeat 0 0;
+}
+.scl_store .scl_store_text h2{
+    text-align: center;
+    font-size: 20px;
+}
+.scl_store .scl_store_text h3{
+    font-size: 13px;
+    text-align: center;
+}
+.scl_store .scl_storeInformation_content li.store_door .scl_store_search{
+    background-position:-50px 0;
+}
+.scl_store .scl_storeInformation_content li.store_door .scl_store_text p{
+    background-position:0 -40px;
+}
+.scl_store .scl_storeInformation_content li.store_news .scl_store_search{
+    background-position:-100px 0;
+}
+.scl_store .scl_storeInformation_content li.store_news .scl_store_text p{
+    background-position:0 -80px;
+}
+.scl_store .scl_storeInformation_content li.travel_problem{
+    margin-left:300px;
+}
+.scl_store .scl_storeInformation_content li.travel_problem .scl_store_search{
+    background-position:-150px 0;
+}
+.scl_store .scl_storeInformation_content li.travel_problem .scl_store_text p{
+    background-position:0 -160px;
+}
+.scl_store .scl_storeInformation_content li.store_gold .scl_store_search{
+    background-position:-150px  -70px;
+}
+.scl_store .scl_storeInformation_content li.store_gold .scl_store_text p{
+    background-position:0 -120px;
+}
+
+
+
+.scl_store .scl_storeInformation_content ul li:hover,.scl_store .scl_storeInformation_content ul li.on{
+    border:1px solid #ccc;
+    color:#63bcee;
+}
+.scl_store .scl_storeInformation_content ul li:hover span,.scl_store .scl_storeInformation_content ul li.on span{
+    top:0;
+    left:0;
+    visibility: visible;
+    +display:block;
+}
+.scl_store .scl_storeInformation_content ul li:hover .scl_store_search,.scl_store .scl_storeInformation_content ul li.on .scl_store_search{
+    visibility:hidden;
+   +display:none;
+}
+.scl_store .scl_storeInformation_content li:hover .scl_store_text h2,.scl_store .scl_storeInformation_content li.on .scl_store_text h2{
+    color:#0086d1;
+}
+.scl_store .scl_storeInformation_content ul li:hover .scl_store_text p,.scl_store .scl_storeInformation_content ul li.on .scl_store_text p{
+    background-position:-40px 0;
+}
+.scl_store .scl_storeInformation_content ul li:hover .scl_store_text p.scl_door,.scl_store .scl_storeInformation_content ul li.on .scl_store_text p.scl_door{
+    background-position:-40px -40px;
+}
+.scl_store .scl_storeInformation_content ul li:hover .scl_store_text p.scl_news,.scl_store .scl_storeInformation_content ul li.on .scl_store_text p.scl_news{
+    background-position:-40px -80px;
+}
+.scl_store .scl_storeInformation_content ul li:hover .scl_store_text p.scl_problem,.scl_store .scl_storeInformation_content ul li.on .scl_store_text p.scl_problem{
+    background-position:-40px -160px;
+}
+.scl_store .scl_storeInformation_content ul li:hover .scl_store_text p.scl_gold,.scl_store .scl_storeInformation_content ul li.on .scl_store_text p.scl_gold{
+    background-position:-40px -120px;
+}
+
+.scl_store .scl_store_down{
+    width:40px;
+    height:40px;
+    margin:10px auto;
+}
+.scl_store .scl_store_down img{
+    width:100%;
+    height:100%;
+}
+.scl_store_center{margin-bottom: 100px;}
+.scl_store .scl_store_main{
+    width:1180px;
+    margin:0 auto;
+    min-height:215px;
+}
+.scl_store .scl_store_main .scl_main_title{
+    height:45px;
+    margin-left:10px;
+    border-bottom:1px solid #ccc;
+    position:relative;
+    line-height: 25px;
+}
+.scl_store .scl_store_main .scl_main_title span{
+    width:40px;
+    height:40px;
+    display:inline-block;
+    margin-top:3px;
+    background:url(../images/pbl/shop_curr_all.png) no-repeat 0 0;
+}
+.scl_store .scl_store_main .scl_main_title p{
+    font-size: 20px;
+    display:inline-block;
+    position:absolute;
+    top:10px;
+}
+
+.scl_store .scl_store_main .scl_baseInformation{
+    margin:10px 0 10px 96px;
+}
+.scl_store .scl_store_main .scl_baseInformation p{
+    line-height: 25px;
+}
+.scl_store .scl_store_doorContent{
+    height:auto;
+}
+.scl_store .scl_store_doorContent .scl_storeDoor{
+    border:1px solid #f6f6f6;
+}
+.scl_store .scl_store_main .scl_storeDoor_main h2{
+    color:#3f98d6;
+    font-size: 20px;
+    padding:25px 0 15px 40px;
+}
+.scl_store .scl_store_main .scl_storeDoor .scl_storeDoor_content li{
+    height:178px;
+}
+.scl_store .scl_store_main .scl_storeDoor .scl_storeDoor_content li .scl_storeDoor_main{
+    padding-left:240px;
+    height:178px;
+}
+.scl_store .scl_store_main .scl_storeDoor ul li .scl_storeDoor_mainText li{
+    height:35px;
+    line-height: 30px;
+    position:relative;
+}
+.scl_store .scl_store_doorContent .scl_storeDoor_mainText li i{
+    width:25px;
+    height:25px;
+    display:inline-block;
+    border-radius:50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    background:url(../images/pbl/information.png) no-repeat -95px -90px #c1c1c1;
+}
+.scl_store .scl_store_doorContent .scl_storeDoor_mainText li.storeDoor_address i{
+    background-position:-46px -90px;
+}
+.scl_store .scl_store_doorContent .scl_storeDoor_mainText li.storeDoor_qq i{
+    background-position:0 -90px;
+}
+.scl_store .scl_store_doorContent .scl_storeDoor_mainText li p{
+    display:inline-block;
+    position: absolute;
+    top:-3px;
+    left:40px;
+    font-size: 15px;
+}
+.scl_store .scl_store_doorContent .scl_storeDoor_mainText li p span{
+    width:auto;
+    height:auto;
+}
+.scl_store .scl_store_travelProblem{
+    height:auto;
+}
+.scl_store .scl_store_travelProblem .scl_baseInformation{
+    width:750px;
+    height:1000px;
+    margin:0 auto;
+}
+.scl_store .scl_store_travelProblem .scl_baseInformation li{
+    width:215px;
+    margin:25px 15px;
+    display:inline-block;
+    +float:left;
+}
+.scl_store .scl_store_travelProblem .scl_baseInformation li i{
+    width:130px;
+    height:120px;
+    margin:0 auto;
+    display:inline-block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    overflow: hidden;
+}
+.scl_store .scl_store_travelProblem .scl_baseInformation li p{
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+.scl_store .scl_storeGold{
+    height:auto;
+}
+.scl_store .scl_storeGold .scl_baseInformation p span{
+    margin-left:50px;
+}
+
+.scl_store .scl_toTop{
+    margin:25px auto;
+    width:40px;
+    height:40px;
+    display:none;
+}
+.scl_store .scl_toTop a{
+    font-size: 18px;
+    color:#3f3f3f;
+}
+.scl_store .scl_toTop a p{
+    width:25px;
+    height:11px;
+    background:url("../img/toTop.png") no-repeat center;
+}
+/*add*/
+.shop_bot{
+    height:40px;
+    line-height: 40px;
+    display:inline-block;
+}
+.shop_bot img{
+    vertical-align: middle;
+    position:relative;
+    top:-3px;
+}
+.shop_bot>div{
+    display: inline-block;
+    position:relative;
+}
+.shop_bot>div>div{
+    z-index:100;
+    background:#fff;
+    text-align:center;
+    box-shadow: 2px 2px 20px #777;
+    padding:5px;
+    display:none;
+}
+.shop_bot>div>div img{
+    margin-left:0;
+}
+.shop_bot>div>div p{
+    height:20px;
+    position:relative;
+    top:-10px;
+}
+.shop_bot>div>p{
+    cursor:pointer;
+}
+.shop_bot div p span{
+    width:0; 
+    height:0; 
+    border-left:6px solid transparent;
+    border-right:6px solid transparent;
+    border-top:9px solid #ccc;
+    margin-left:8px;
+    position:relative;
+    top:14px;
+}
+.shop_bot a{
+    padding:0 6px;
+    display:inline-block;
+    color:#666;
+}
+.shop_bot div img{
+    margin-left:15px;
+}
+.shop_information .information ul{
+    position:absolute;
+    left:380px;
+    top:0;
+}
+.shop_bot .shop_er{
+    position:absolute;
+    left:-30px;
+    top:40px;
+}
+.shop_er{
+    float:right;
+    display:inline-block;
+    text-align:center;
+    position: absolute;
+    right: 70px;
+    top: -15px;
+    width:110px;
+    z-index:100; 
+    cursor:pointer;   
+}
+.shop_call{
+    display:block;
+    width:300px;
+    height:340px;
+    position: absolute;
+    left: -90px;
+}
+.shop_call h1{
+    height:40px;
+    line-height: 40px;
+    font-weight: 400;
+    font-size:16px;
+    text-align:left;
+    padding:0 10px;
+    margin-bottom: 10px;
+}
+.shop_call p{
+    clear:both;
+    height:30px;
+    line-height: 30px;
+}
+.shop_call p label{
+    float:left;
+    width:100px;
+}
+.shop_call p a{
+    text-align:left;
+    float:left;
+}
+.shop_call .shop_height{
+    height:60px;
+    line-height: 60px;
+}
+.shop_call h2{
+    height:70px;
+    line-height: 70px;
+    border-top:1px solid #ccc;
+}
+.shop_call h2 button{
+    color:#fff;
+    background:#fac03d;
+    border-radius:5px;
+    padding:8px 12px;
+    outline:none;
+}
+.scl_shop_recommend ul li.shop_recommend_left a img, .scl_shop_recommend ul li.shop_recommend_right a img{
+    width:100%;
+}
+.scl_add{
+    margin:20px 80px;
+    width:550px;
+}
+.scl_add li{
+    font-size:16px;
+    display:inline-block;
+    margin:10px 0;
+    padding:0 20px;
+    border-right:1px solid #ccc;
+}
+.scl_add li:nth-child(3n){
+    border-right:none;
+}
+.shop_hover{
+    overflow:hidden;
+    width:220px;
+    height:250px;
+    display:none;
+    position:relative;
+    left:-50px;
+}
+.shop_hover span{
+    width:0; 
+    height:0; 
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-bottom:9px solid #fff;
+    position:absolute;
+    top:-50%;
+    left:50%;
+    margin-top:126px;
+    margin-left:-8px;
+
+}
+.shop_hover img{
+    margin-top:10px;
+}
+/*add*/
+#order_button2{
+    position:relative;
+}
+#order_button2 p{
+    display:none;
+    position:absolute;
+    left:0;
+    top:43px;
+    border:1px solid #ff7b43;
+    border-top:none;
+}

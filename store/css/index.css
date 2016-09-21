@@ -1,0 +1,784 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+ul,
+ol {
+	list-style: none;
+}
+a,
+i,
+s,
+b {
+	font-style: normal;
+	text-decoration: none;
+}
+.clear {
+	clear: both;
+}
+
+/*头部品牌logo样式*/
+
+.bottom {
+	width: 100%;
+	height: 80px;
+	+height:90px;
+	border-bottom: 1px solid #dedede;
+}
+
+.bottom ul {
+	width: 1180px;
+	height: 70px;
+	margin: 10px auto;
+}
+
+.bottom ul li {
+	width: 260px;
+	height: 78px;
+	float: left;
+	margin-left: 30px;
+}
+
+.bottom ul li i {
+	width: 45px;
+	height: 100%;
+	display: inline-block;
+	background: url("../images/bottom_1.png") no-repeat center;
+}
+
+.bottom ul li.bottom2 i {
+	background: url("../images/bottom_2.png") no-repeat center;
+}
+
+.bottom ul li.bottom2 h2 {
+	color: #5c96e4;
+}
+
+.bottom ul li.bottom3 i {
+	background: url("../images/bottom_3.png") no-repeat center;
+}
+
+.bottom ul li.bottom4 i {
+	background: url("../images/bottom_4.png") no-repeat center;
+}
+
+.bottom ul li.bottom4 h2 {
+	color: #5c96e4;
+}
+
+.bottom2,
+.bottom3,
+.bottom4 {
+	margin-left: 60px;
+}
+
+.bottom ul li h2 {
+	font-size: 20px;
+	position: absolute;
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: 10px;
+	color: #fdb853;
+}
+
+.bottom ul li p {
+	display: inline-block;
+	font-size: 12px;
+	position: absolute;
+	margin-top: 45px;
+	margin-left: 8px;
+	color: #666666;
+}
+
+/*左侧快捷浮窗导航*/
+.fixed_t {width: 50px;height: 330px;position: absolute;left: -100px;top: 101px;z-index:20;}
+.fixed_t #leftnav {width: 50px;background: #fff;height: 300px;}
+.fixed_t #leftnav li {width: 50px;height: 50px;}
+.fixed_t #leftnav li a {display: block;width: 50px;height: 50px;color: #535353;text-align: center;font-size: 14px;}
+.fixed_t #leftnav li a p {width: 30px;line-height: 18px;margin-left: 10px;+margin-left:0;padding-top: 7px;}
+.fixed_t #leftnav .on a {color: #fff;background: #0eb1ff;}
+.fixed_tit {position: fixed;left: 50%;margin-left: -685px;top: 166px;width: 50px;}
+/*主体部分样式*/
+
+.content {
+	z-index: 3;
+	background-color: #f6f6f6;
+}
+
+.content_1 {
+	width: 100%;
+	height: 770px;
+}
+
+.content_1 .title {
+	width: 100%;
+	height: 80px;
+}
+
+.content_2 .title,
+.content_3 .title,
+.content_4 .title,
+.content_5 .title,
+.content_7 .title {
+	width: 100%;
+	height: 70px;
+}
+
+.title .brand,
+.title .short_line {
+	width: 1180px;
+	height: 55px;
+	+height:35px;
+	margin: 0 auto;
+	padding-top: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.short_line .more {
+	float: right;
+	width: 65px;
+	line-height: 25px;
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+	background: none;
+	border: 1px solid #d4d4d4;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+.short_line .more:hover{background: #0eb1ff;border-color: #0eb1ff;color: #fff;}
+.brand .brand_title,
+.short_line .short_line_title {
+	width: 115px;
+	height: 35px;
+	display: inline-block;
+	border-bottom: 2px solid #0eb1ff;
+	font-size: 26px;
+	color: #333;
+	line-height: 35px;
+	+float:left;
+}
+
+.brand .brand_subtitle,
+.short_line .short_line_subtitle {
+	display: inline-block;
+	color: #999;
+	font-size: 13px;
+	+float:left;
+	line-height: 35px;
+}
+
+.content_1 .brand_logo {
+	width: 100%;
+	height: 675px;
+	border: 1px solid #fff;
+	+border:none;
+	background: url("../images/logo_nav_02.jpg") no-repeat center;
+}
+
+.brand_logo .brand_shop {
+	width: 1180px;
+	height: 625px;
+	margin: 0 auto;
+	margin-top: 15px;
+	border: 1px solid #fff;
+	position: relative;
+}
+
+.brand_shop .top_logo {
+	width: 1180px;
+	height: 125px;
+	margin-top: 5px;
+}
+
+.top_logo li {
+	width: 163px;
+	height: 125px;
+	float: left;
+	margin-left: 5px;
+}
+
+/*.top_logo li a,.bottom_logo li a {
+	width: 163px;
+	height: 125px;
+	display: inline-block;
+	background-color: #fff;
+}
+*/
+
+
+.top_logo li a,.bottom_logo li a {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	*display: block;
+	*font-size: 100px; /*这个值很奇怪，需要是容器的高度的82.5%，具体数值需要在实际中稍微调整*/
+	*font-family: Arial;
+	width: 163px;
+	height: 125px;
+	background: #fff;
+}
+
+/*.hdr ul li a img {
+	width: auto;
+	height: auto;
+	display: block;
+	margin: auto;
+}*/
+.hdr ul li a img {
+	vertical-align: middle;
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: auto;
+}
+.left_logo {
+	width: 290px;
+	height: 360px;
+	float: left;
+}
+
+.left_logo li {
+	width: 140px;
+	height: 175px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+/*.left_logo li a,.right_logo li a {
+	width: 140px;
+	height: 175px;
+	display: inline-block;
+	background-color: #fff;
+	/*display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;*/
+/*}*/
+
+.left_logo li a,.right_logo li a {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	*display: block;
+	*font-size: 151px; /*这个值很奇怪，需要是容器的高度的82.5%，具体数值需要在实际中稍微调整*/
+	*font-family: Arial;
+	width: 140px;
+	height: 175px;
+	background: #fff;
+}
+.right_logo {
+	width: 290px;
+	height: 360px;
+	float: right;
+}
+
+.right_logo li {
+	width: 140px;
+	height: 175px;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+
+
+.bottom_logo {
+	width: 1180px;
+	height: 125px;
+	position: absolute;
+	bottom: 5px;
+	left:0;
+}
+
+.bottom_logo li {
+	width: 163px;
+	height: 125px;
+	float: left;
+	margin-left: 5px;
+}
+
+
+.brand_shop .shop_box {
+	width: 600px;
+	height: 364px;
+	background-color: #000;
+	position: absolute;
+	top: 130px;
+	left: 290px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	opacity: .6;
+}
+
+.brand_shop .shop_center {
+	width: 580px;
+	height: 330px;
+	/*border:10px solid #000;*/
+	position: absolute;
+	background: url("../images/vedio.jpg") no-repeat center;
+	top: 145px;
+	left: 300px;
+}
+
+.bdr .center {
+	position: absolute;
+	top: 145px;
+	left: 300px;
+}
+
+/*.center .center_logo {
+	width: 580px;
+	height: 165px;
+	display: inline-block;
+	position: relative;
+}*/
+
+.center .center_logo {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	*display: block;
+	*font-size: 100px; /*这个值很奇怪，需要是容器的高度的82.5%，具体数值需要在实际中稍微调整*/
+	font-family: Arial;
+	width: 580px;
+	height: 165px;
+	background: #fff;
+}
+
+
+/*.center_logo img {
+	display: block;
+	width: auto;*/
+	/*height: auto;*/
+/*	margin: 0 auto;
+	transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+}*/
+
+.center_logo img {
+	vertical-align: middle;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+.center_title {
+	width: 580px;
+	height: 45px;
+	line-height: 47px;
+	background-color: #0eb1ff;
+}
+
+.center_title h2 {
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+}
+
+.bottom_title {
+	width: 580px;
+	height: 120px;
+	background-color: #ecebeb
+}
+
+.bottom_title h3 {
+	text-align: center;
+	font-size: 14px;
+	padding-top: 5px;
+}
+
+.bottom_title p {
+	font-size: 14px;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 10px;
+	line-height: 30px;
+	float: left;
+	width: 280px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.bottom_title span.phone {
+	font-size: 24px;
+	font-weight: bold;
+	color: #000;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.content_2,
+.content_3,
+.content_4,
+.content_5,
+.content_7 {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.content_2 .short_line_main,
+.content_3 .short_line_main,
+.content_4 .short_line_main,
+.content_5 .short_line_main {
+	height: 575px;
+}
+
+.short_line_main .short_line_mainLeft {
+	width: 290px;
+	height: 575px;
+	float: left;
+	position: relative;
+	background: url("../images/short_img_01.jpg") no-repeat top center;
+}
+.short_line_main .short_line_mainLeft a{width: 100%;height: 100%;}
+.content_3 .short_line_main .short_line_mainLeft {
+	background: url("../images/short_img_02.jpg") no-repeat top center;
+}
+
+.content_4 .short_line_main .short_line_mainLeft {
+	background: url("../images/short_img_03.jpg") no-repeat top center;
+}
+
+.content_5 .short_line_main .short_line_mainLeft {
+	background: url("../images/short_img_04.jpg") no-repeat top center;
+}
+
+.short_line_mainLeft img {
+	width: 334px;
+	height: 172px;
+	position: absolute;
+	bottom: -9px;
+	left: -45px;
+}
+
+.content_3 .short_line_mainLeft img {
+	width: 322px;
+	bottom: 0px;
+	left: -33px;
+	height: 168px;
+}
+
+.content_4 .short_line_mainLeft img {
+	width: 330px;
+	height: 179px;
+	bottom: -2px;
+	left: -41px;
+}
+
+.content_5 .short_line_mainLeft img {
+	width: 333px;
+	height: 191px;
+	bottom: -1px;
+	left: -31px;
+}
+
+.short_line_main .short_line_mainRight {
+	width: 875px;
+	height: 100%;
+	margin-left: 8px;
+	float: right;
+}
+
+.short_line_mainRight .menu {
+	width: 880px;
+	height: 30px;
+	position: relative;
+}
+
+.menu li {
+	width: 100px;
+	height: 30px;
+	float: left;
+	margin-right: 90px;
+}
+
+.content_5 .menu li {
+	margin-right: 150px;
+}
+
+.menu li.addr,
+.content_5 .menu li.addr {
+	margin-right: 0;
+}
+
+.menu li i {
+	display: inline-block;
+	width: 40px;
+	height: 25px;
+	background: url("../images/pbl/h1_6_logo.png") no-repeat center;
+	background-size: 80px 200px;
+	background-position: -40px 0;
+	margin-top: -6px;
+}
+
+.menu li.on i {
+	background-position: 0 0;
+}
+
+.menu li.on a {
+	color: #0eb1ff;
+}
+
+.content_3 .short_line_mainRight .menu li i {
+	background-position: -40px -40px;
+}
+.content_3 .menu li.on i {
+background-position: 0 -40px;
+}
+.content_4 .short_line_mainRight .menu li i {background-position: -40px -80px;}
+.content_4 .menu li.on i {background-position: 0 -80px;}
+.content_5 .short_line_mainRight .menu li i {background-position: -40px -120px;}
+.content_5 .short_line_mainRight .menu li.on i {background-position: 0 -120px;}
+.menu li a {
+	position: absolute;
+	top: 5px;
+	margin-left: 10px;
+	font-size: 14px;
+	color: #333;
+}
+
+.clear {
+	clear: both;
+}
+
+.short_line_mainRight .line_main {
+	width: 915px;
+	height: 520px;
+}
+
+.line_main li {
+	width: 280px;
+	height: 265px;
+	float: left;
+	margin-right: 17px;
+	margin-bottom: 15px;
+	position: relative;
+	overflow: hidden;
+}
+.line_main li:last-child,.line_main li:nth-child(3){margin-right: 0;}
+.line_main li .picture {
+	width: 280px;
+	+width:278px;
+	height: 170px;
+	overflow: hidden;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	+position:absolute;
+	+top:0;
+	+left:0;
+}
+
+.line_main li .picture img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	transition: all .6s ease-in-out;
+}
+
+.short_line_mainRight .line_main li .picture img:hover {
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+}
+
+/*.line_main li .circle_logo {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	position: absolute;
+	bottom: 70px;
+	left: 15px;
+	/*border:1px solid #f00;
+	/*border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	z-index: 2;*/
+/*}*/
+
+/*.line_main li .circle_logo img {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	bottom: 5px;
+	left: 5px;
+	z-index: 2;
+}*/
+
+/*.line_main li span {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border: 10px solid #fff;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	opacity: .4;
+	z-index: 2;
+}
+
+.line_main li .circle_logo:hover img {
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transition: all 1s ease-in-out;
+}
+
+.line_main .circle_logo:hover span {
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transition: all 1s ease-in-out;
+}*/
+
+
+/*.line_main li span:hover{*/
+
+
+/*width:80px;*/
+
+
+/*height:80px;*/
+
+
+/*}*/
+
+
+/*.line_main li span i:hover{*/
+
+
+/*width:75px;*/
+
+
+/*height:75px;*/
+
+
+/*position:absolute;*/
+
+
+/*bottom:70px;*/
+
+
+/*}*/
+
+.line_main li .short_line_content {
+	width: 280px;
+	+width:278px;
+	height: 95px;
+	border: 1px solid #ccc;
+	border-top: none;
+	position: absolute;
+	bottom: 0;
+}
+.line_main li .short_line_content .scl_price{
+	float:right;
+	margin-right:10px;
+	max-width:130px;
+}
+.line_main li .short_line_content b {
+	display: block;
+	width: auto;
+	height: 35px;
+	color: #fb833f;
+	/*margin-right: 10px;*/
+	line-height: 40px;
+	float: right;
+	font-size: 14px;
+}
+.line_main li .short_line_content .scl_price b s{
+	display:inline-block;
+	font-size:24px;
+	font-family:"微软雅黑";
+	font-style: normal;
+	text-decoration: none;
+	line-height：24px;
+}
+.short_line_content .scl_price>s{
+	/*position:absolute;
+	top:34px;
+	right:10px;*/
+	color:#999;
+	font-size:14px;
+	float:right;
+	text-decoration: line-through;
+}
+/*.short_line_content b {
+	display: inline-block;
+	font-size: 18px;
+}*/
+.short_line_content .main_content {
+	width: auto;
+	padding:15px 10px 15px 15px;
+}
+.short_line_content p {
+	line-height: 20px;
+	font-size: 14px;
+	color: #666;
+	overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+.short_line_content:hover p {
+	color: #0eb1ff;
+}
+
+.content_6 {
+	width: 1180px;
+	height: 148px;
+	margin: 20px auto 0 auto;
+}
+
+/*.imgload_js{transform:scale(1) !important; display: block; margin: 0 auto; background-position: center center; background-repeat: no-repeat;}
+.imgload_js{ background-size: 80% auto;}*/
+/*.left_logo .imgload_js,.right_logo .imgload_js{ background-size: 60% auto;}
+.bottom_logo .imgload_js,.top_logo .imgload_js{ background-size: 50% auto;}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -67,7 +67,7 @@ $(function() {
 
     function cancelAgent() {
         var title = '提示';
-        var content = '<p class="cancel-agent">确认取消代理该产品<em>？</em></p>';
+        var content = '<p class="confirm-info">确认取消代理该产品<em>？</em></p>';
         $('.modal-title,.modal-body').html('');
         $('.modal-title').append(title);
         $('.modal-body').append(content);

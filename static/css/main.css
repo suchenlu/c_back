@@ -322,6 +322,14 @@ select.form-control{
 .product .tab-options>* {
     vertical-align: top
 }
+.confirm-info {
+	text-align: center;
+}
+.confirm-info em{
+	font-style: normal;
+	font-size: 30px;
+	color: #f60;
+}
 /*order page */
 .order label{
 	vertical-align: middle;
@@ -370,7 +378,7 @@ select.form-control{
 .table-left>tbody>tr>td{
 	text-align: left
 }
-/*store page css*/
+/*store page */
 .no-store {
 	height: 400px;
 	background: url(../images/no-store.png)no-repeat center 
