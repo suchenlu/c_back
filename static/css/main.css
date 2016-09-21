@@ -14,6 +14,7 @@ a:hover, a:link, a:active{
 	text-decoration: none
 }
 label{
+	margin-bottom: 0;
 	font-weight: normal
 }
 label, input[type=checkbox]{
@@ -31,7 +32,14 @@ em{
 select.form-control{
 	padding: 2px 5px
 }
-
+.btn-search {
+	color: #fff;
+	background: #FF7B43
+}
+.btn-search:hover {
+	color: #fff;
+	background: #f60
+}
 /*page-title*/
 .page-title {
 	margin-bottom: 30px;
@@ -51,7 +59,14 @@ select.form-control{
 	margin: 4px 30px 0 0;
 	letter-spacing: 3px
 }
-
+a.btn{
+	color: #fff;
+	background: rgb(221, 221, 221)
+}
+a.btn:hover{
+	color: #fff;
+	background: #FF7B43
+}
 /*nav-tabs tab-content*/
 .nav-tabs>li>a {
 	margin-right: 0;
@@ -129,7 +144,7 @@ select.form-control{
 	line-height: 2;
 	color: #ccc;
 }
-.product-operation .btn{
+.product-operation .pull-left .btn{
 	margin-right: 10px;
 }
 .product-operation .price-ajust{
@@ -139,12 +154,11 @@ select.form-control{
 	display: inline-block;
 	width: 400px
 }
-.search .btn{
-	padding: 2px 15px;
-	color: #f60;
-	font-size: 20px
+.search .btn.icon{
+	padding: 3px 10px;
 }
-.search .btn span{
+.search .btn-search span{
+	color: #fff;
 	font-size: 20px
 }
 /*table style*/
@@ -184,7 +198,7 @@ select.form-control{
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	margin: -2px 4px 0 -22px;
+	margin: -2px 2px 0 -24px;
 	vertical-align: middle;
 	background: url(../images/recommend.png)no-repeat center;
 }
@@ -544,11 +558,6 @@ input[type=file]{
 	background: url(../images/down.png) no-repeat center;
 }
 /* store-info */
-.store-info .btn:hover{
-	color: #fff;
-	border: 0;
-	background: #ff7a42
-}
 .store-info .page-header{
 	margin-top: 0;
 	padding-left: 50px;
@@ -579,7 +588,7 @@ input[type=file]{
 .btn-cancel {
 	margin-left: 20px
 }
-/*-----------------------------------------------*/
+/*-----------------------division----------------------*/
 /*market manage*/
 .search.pull-left label{
 	line-height:30px;
@@ -588,15 +597,15 @@ input[type=file]{
 	width: 200px;
 	margin-right: 20px;
 }
-.search .btn{
+/*.search .btn{
 	background-color:#F7AB3D; 
 	color:#fff; 
 	font-size: 16px;
 	height:30px;
-}
-.search .btn:hover{
+}*/
+/*.search .btn:hover{
 	background-color:#FF931A;
-}
+}*/
 /*modal*/
 .confirm-info {
 	text-align: center;
