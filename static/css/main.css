@@ -43,14 +43,6 @@ select.form-control{
 	color: #fff;
 	background: #ff6b43
 }
-/*.btn-search {
-	color: #fff;
-	background: #FF7B43
-}
-.btn-search:hover {
-	color: #fff;
-	background: #f60
-}*/
 
 /*page-title*/
 .page-title {
@@ -204,7 +196,7 @@ select.form-control{
 	color: #f60
 }
 .recommend > td:nth-child(2){
-	padding: 0 30px
+	width: 100px;
 }
 .recommend > td:nth-child(2):before{
 	content: '';
@@ -261,11 +253,10 @@ select.form-control{
 }
 /*pagebar*/
 .pagebar ul{
-	float: left;
-	margin-right: 20px
+	float: left
 }
 .page-jump {
-	margin: 20px 0;
+	margin: 20px 0 0 20px;
 }
 .page-jump li, .page-jump li input{
 	display: inline-block;
