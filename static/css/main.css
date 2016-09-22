@@ -32,14 +32,26 @@ em{
 select.form-control{
 	padding: 2px 5px
 }
-.btn-search {
+.btn{
+	letter-spacing: 2px
+}
+.btn-main {
+	color: #fff;
+	background: #ff7b43
+}
+.btn-main:hover {
+	color: #fff;
+	background: #ff6b43
+}
+/*.btn-search {
 	color: #fff;
 	background: #FF7B43
 }
 .btn-search:hover {
 	color: #fff;
 	background: #f60
-}
+}*/
+
 /*page-title*/
 .page-title {
 	margin-bottom: 30px;
@@ -54,19 +66,20 @@ select.form-control{
 	font-size: 18px;
 	background: #008BDC
 }
+
 .page-title .btn{
 	float: right;
 	margin: 4px 30px 0 0;
-	letter-spacing: 3px
 }
-a.btn{
-	color: #fff;
+.page-title a.btn{
+	color: #333;
 	background: rgb(221, 221, 221)
 }
-a.btn:hover{
+/*.page-title a.btn:hover{
 	color: #fff;
 	background: #FF7B43
-}
+}*/
+
 /*nav-tabs tab-content*/
 .nav-tabs>li>a {
 	margin-right: 0;
@@ -154,10 +167,10 @@ a.btn:hover{
 	display: inline-block;
 	width: 400px
 }
-.search .btn.icon{
+.search .btn-main{
 	padding: 3px 10px;
 }
-.search .btn-search span{
+.search .btn-main span{
 	color: #fff;
 	font-size: 20px
 }
@@ -310,7 +323,7 @@ a.btn:hover{
 .modal-footer .btn{
     margin: 0 25px;
     padding: 3px 8px;
-    letter-spacing: 2px;
+  /*  letter-spacing: 2px;*/
     text-indent: 2px;
     font-size: 16px;
     background: #e6e6e6
@@ -401,6 +414,7 @@ a.btn:hover{
 	margin: auto;
 }
 .no-store-info p{
+	margin: 0;
 	text-align: center;
 	font-size: 22px;
 	letter-spacing: 5px;
@@ -409,16 +423,9 @@ a.btn:hover{
 	font-size: 30px;
 	color: #37b1ff;
 }
-.btn-apply{
-	color: #fff;
-	font-size: 20px;
-	background: #ff7b43;
-	border-radius: 6px;
-}
-.btn-default.btn-apply:active,
-.btn-default.btn-apply:hover{
-	color: #fff;
-	background-color: #ff7b43;
+.no-store .btn{
+	margin-top: 20px;
+	font-size: 18px
 }
 
 /* disclaimer page */
@@ -432,11 +439,11 @@ a.btn:hover{
 	border-radius: 0;
   background-color: #66bae9;
 }
-.exit:hover, 
-.exit:link {
+.disclaimer .exit:hover, 
+.disclaimer .exit:link {
 	color: #fff
 }
-.exit{
+.disclaimer .exit{
 	float: right;
 	margin-top: -10px;
 	font-size: 30px;
@@ -469,12 +476,12 @@ a.btn:hover{
 .disclaimer label{
 	margin-top: 10px;
 }
-.disclaimer .btn-apply{
-	padding: 0px 20px;
-	border-radius: 5px;
-	letter-spacing: 3px
+.disclaimer .btn-main{
+	padding: 5px 20px;
+	font-size: 18px;
+	letter-spacing: 5px
 }
-.disclaimer .btn-apply:hover {
+.disclaimer .main:hover {
 	color: #fff;
 }
 
