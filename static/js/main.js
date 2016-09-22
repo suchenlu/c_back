@@ -177,7 +177,7 @@ $(function() {
     $('.pagination>li>a').click(function() {
         $(this).parent().not('.next, .prev').addClass('active').siblings().removeClass('active');
     })
-    $('.disabled').click(function(){
+    $('.js_disabled').click(function(){
         $('#myModal').show()
         window.parent.maskShow()
     })

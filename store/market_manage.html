@@ -47,7 +47,7 @@
                     <td><a href="market_employee.html">2</a></td>
                     <td class="operate">
                         <a href="market_edit.html">编辑</a>
-                        <a class="disabled" href="javascript:;">禁用</a>
+                        <a class="js_disabled" href="javascript:;">禁用</a>
                         <a href="market_manager.html">设置店长</a>
                     </td>
                 </tr>
@@ -74,7 +74,7 @@
     <script type="text/javascript" src="../static/libs/jquery/jquery.js"></script>
     <script src="../static/js/main.js"></script>
     <script type="text/javascript">
-    $('.disabled').click(function() {
+    $('.js_disabled').click(function() {
         $('#myModal').animate({
             'opacity': 1
         }).show()

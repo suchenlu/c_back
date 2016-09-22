@@ -48,7 +48,7 @@
                     <td>11111111111</td>
                     <td class="operate">
                         <a href="market_employee_edit.html">编辑</a>
-                        <a class="disabled" href="javascript:;">禁用</a>
+                        <a class="js_disabled" href="javascript:;">禁用</a>
                     </td>
                     <td>员工</td>
                 </tr>
@@ -63,7 +63,7 @@
                     <td>222222222</td>
                     <td class="operate">
                         <a href="market_employee_edit.html">编辑</a>
-                        <a class="disabled" href="javascript:;">禁用</a>
+                        <a class="js_disabled" href="javascript:;">禁用</a>
                     </td>
                     <td>店长</td>
                 </tr>
@@ -91,7 +91,7 @@
     <script type="text/javascript" src="../static/libs/jquery/jquery.js"></script>
     <script src="../static/js/main.js"></script>
     <script type="text/javascript">
-    $('.disabled').click(function() {
+    $('.js_disabled').click(function() {
         $('#myModal').fadeIn()
         $('.close, .cancel').click(function() {
             $('#myModal').hide();

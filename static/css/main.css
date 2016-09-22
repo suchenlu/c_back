@@ -159,10 +159,11 @@ select.form-control{
 	display: inline-block;
 	width: 400px
 }
-.search .btn-main{
-	padding: 3px 10px;
+.product .search .btn-main{
+	padding: 4px 10px;
+	margin-top:-6px;
 }
-.search .btn-main span{
+.product .search .btn-main span{
 	color: #fff;
 	font-size: 20px
 }
@@ -595,15 +596,6 @@ input[type=file]{
 	width: 200px;
 	margin-right: 20px;
 }
-/*.search .btn{
-	background-color:#F7AB3D; 
-	color:#fff; 
-	font-size: 16px;
-	height:30px;
-}*/
-/*.search .btn:hover{
-	background-color:#FF931A;
-}*/
 /*modal*/
 .confirm-info {
 	text-align: center;
