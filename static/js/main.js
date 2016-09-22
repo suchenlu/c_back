@@ -1,9 +1,9 @@
 $(function() {
-    
+    //tab selected
     $('.option-list>li').click(function() {
         $(this).addClass('active').siblings().removeClass('active')
     });
-
+    // more show
     $('.more').click(function() {
         var oplist = $(this).siblings('.option-list');
         if (oplist.hasClass('height-auto')) {
@@ -12,7 +12,7 @@ $(function() {
             oplist.addClass('height-auto')
         }
     })
-
+    //checkAll
     var $checkbox = $('.table tbody input[type=checkbox]');
     $('.check-all').change(function() {
         var bool = $(this).prop('checked');
@@ -26,10 +26,12 @@ $(function() {
             $('.check-all').prop('checked', false)
         }
     });
+    //close modal
     $('.confirm, .cancel, .close').click(function() {
         $('#myModal').hide()
         window.parent.maskHide()
     })
+    //cancel-agent batch or single
     $('button.cancel-agent').click(function() {
         var $checked = $checkbox.filter(':checked');
         if ($checked.length < 1) {
@@ -43,6 +45,8 @@ $(function() {
             });
         }
     })
+
+    //price-adjust batch or single
     $('button.price-adjust').click(function() {
         $checkbox = $('.table tbody input[type=checkbox]');
         var $checked = $checkbox.filter(':checked');
@@ -72,6 +76,7 @@ $(function() {
         $('.modal-body').append(content);
         $('#myModal').show()
     }
+    //cancelAgent single
     $('a.cancel-agent').click((function(event) {
         window.parent.maskShow()
         cancelAgent()
@@ -90,7 +95,7 @@ $(function() {
         $('#myModal').show()
         calcPrice()
     }
-
+    //real-time calculate price
     function calcPrice() {
         var original = parseInt($('.original').text());
         var add = parseInt($('.add').val()) || 0;
@@ -127,7 +132,7 @@ $(function() {
             }
         })
     }
-
+    //setPrice batch or single
     function setPrice() {
         var title = '商品加价';
         var content = '<form id="setPrice" class="price-add"><p>同行价：2000元</p><p>加价类型：<label><input type="radio" name="type" id="interge" checked="checked">整数加价</label><label><input type="radio" name="type" id="percentage">百分比加价</label></p><p>销售价：<span class="original">2000</span>元+<input type="text" class="form-control add"><span class="int">元</span><span class="per">%</span> = <span class="result">2000</span>元</p></form>';
@@ -138,10 +143,12 @@ $(function() {
         window.parent.maskShow()
         calcPrice()
     }
+    // price-adjust single
     $('a.price-adjust').click(function() {
         window.parent.maskShow()
         ajustPrice()
     })
+    //onekey-agent
     $('.onekey-agent').click(function(event) {
         $checkbox = $('.table tbody input[type=checkbox]');
         var $checked = $checkbox.filter(':checked');
@@ -161,6 +168,7 @@ $(function() {
             window.parent.maskShow()
         }
     });
+    //delete product batch or single
     $('.product-del').click(function(){
         $checkbox = $('.table tbody input[type=checkbox]');
         var $checked = $checkbox.filter(':checked');
@@ -174,9 +182,28 @@ $(function() {
             })
         }
     })
+    //pagination
     $('.pagination>li>a').click(function() {
         $(this).parent().not('.next, .prev').addClass('active').siblings().removeClass('active');
     })
+    // table>tr moveUp
+    $('.move-up').click(function(){
+        var $tr = $(this).parents('tr');
+        if($tr.index() != 0){
+            $tr.prev().before($tr)
+            $tr.fadeOut(50).fadeIn(50)
+        }
+    })
+    //tabel>tr moveDown
+    $('.move-down').click(function(){
+        var $tr = $(this).parents('tr');
+        var len = $(this).parents('tbody').find('tr').length;
+        if($tr.index() != len - 1){
+            $tr.next().after($tr)
+            $tr.fadeOut(50).fadeIn(50)
+        }
+    })
+    //disabled modal
     $('.js_disabled').click(function(){
         $('#myModal').show()
         window.parent.maskShow()
