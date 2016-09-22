@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>refund-handle</title>
+    <link rel="stylesheet" href="../static/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+
+<body>
+    <div class="page-title">
+        <h2>退单详情</h2>
+    </div>
+    <div class="container-fluid detail">
+        <table class="table table-hover table-stripe table-condensed table-bordered">
+            <caption>退款信息</caption>
+            <thead>
+                <tr>
+                    <th>订单号</th>
+                    <th>产品名称</th>
+                    <th>游客实付金额</th>
+                    <th>结算金额</th>
+                    <th>佣金</th>
+                    <th>退款进度</th>
+                    <th>占位补偿金</th>
+                    <th>退款原因</th>
+                    <th>供应商处理结果</th>
+                    <th>驳回原因</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00001</td>
+                    <td>北京一日游</td>
+                    <td>1000元</td>
+                    <td>800</td>
+                    <td>200</td>
+                    <td>供应商已驳回，待处理</td>
+                    <td><input type="text" class="form-control" value="0">元</td>
+                    <td>改定其他路线</td>
+                    <td>驳回，请重新提交申请</td>
+                    <td>驳回驳回驳回</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text-danger">说明：供应商已驳回，请重新提交退款申请，上次占位补偿金：0元</p>
+        <button class="btn btn-primary">提交退款</button>
+    </div>
+</body>
+
+</html>

@@ -10,7 +10,7 @@ ul,li{
 h1,h2,h3,h4,h5{
 	margin: 0
 }
-a:hover, a:link, a:active{
+a:focus, a:hover, a:active, a:link{
 	text-decoration: none
 }
 label{
@@ -39,7 +39,8 @@ select.form-control{
 	color: #fff;
 	background: #ff7b43
 }
-.btn-main:hover {
+.btn-main:focus,
+.btn-main:hover{
 	color: #fff;
 	background: #ff6b43
 }
@@ -94,11 +95,11 @@ select.form-control{
 }
 .tab-options h4{
 	width: 90px;
-	font-size: 16px;
+	font-size: 16px
 }
 .tab-options .more{
 	margin: 0 20px;
-	cursor: pointer;
+	cursor: pointer
 }
 .option-list {
 	width: 65%;
@@ -112,13 +113,13 @@ select.form-control{
 .option-list li{
 	margin: 0 8px 5px;
 	line-height: 1.8;
-	vertical-align: middle;
-}
-.option-list li.active a{
-	color: #337ab7;
+	vertical-align: middle
 }
 .option-list li a{
-	color: #666;
+	color: #666
+}
+.option-list li.active a{
+	color: #337ab7
 }
 .option-list li label{
 	margin-right: 10px;
@@ -150,22 +151,7 @@ select.form-control{
 	color: #ccc;
 }
 .product-operation .pull-left .btn{
-	margin-right: 10px;
-}
-.product-operation .price-ajust{
-	color: #666;
-}
-.search input{
-	display: inline-block;
-	width: 400px
-}
-.product .search .btn-main{
-	padding: 4px 10px;
-	margin-top:-6px;
-}
-.product .search .btn-main span{
-	color: #fff;
-	font-size: 20px
+	margin-right: 10px
 }
 /*table style*/
 .table > thead > tr > th{
@@ -341,6 +327,18 @@ select.form-control{
 .product .tab-options>* {
     vertical-align: top
 }
+.search input{
+	display: inline-block;
+	width: 400px
+}
+.product .search .btn-main{
+	padding: 4px 10px;
+	margin-top:-6px;
+}
+.product .search .btn-main span{
+	color: #fff;
+	font-size: 20px
+}
 .option-list .day input{
 	width: 50px;
 	margin-right: 5px;
@@ -366,6 +364,11 @@ select.form-control{
 	width: 110px
 }
 
+.detail table td input{
+	display: inline-block;
+	width: 50px;
+	margin: auto;
+}
 /* order-refund page */
 .refund .option-list{
 	width: 100%
@@ -393,6 +396,7 @@ select.form-control{
 .table-left>tbody>tr>td{
 	text-align: left
 }
+
 /*store page */
 .no-store {
 	height: 400px;
@@ -592,22 +596,10 @@ input[type=file]{
 .search.pull-left label{
 	line-height:30px;
 }
-.search.pull-left input,.search.pull-left select{
+.search.pull-left input,
+.search.pull-left select{
 	width: 200px;
 	margin-right: 20px;
-}
-/*modal*/
-.confirm-info {
-	text-align: center;
-}
-.confirm-info em{
-	font-style: normal;
-	font-size: 30px;
-	color: #f60;
-}
-/*market_edit*/
-.date .line{
-	text-align: center;
 }
 /*market_employee_edit*/
 .form-group select{
