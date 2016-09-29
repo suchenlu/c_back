@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>顾问管理</title>
-    <link rel="stylesheet" href="../static/libs/bootstrap/css/bootstrap.css" />
+	<meta charset="UTF-8">
+	<title>添加顾问</title>
+	 <link rel="stylesheet" type="text/css" href="../static/libs/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
 </head>
-
 <body>
-    <div class="page-title">
-        <h2>顾问编辑</h2>
+	<div class="page-title">
+        <h2>添加顾问</h2>
     </div>
     <div class="container-fluid market">
-        <p class="search pull-left col-sm-9">
+    	<p class="search pull-left col-sm-9">
             <label class="col-sm-2">组织代码</label>
             <select class="col-sm-3 form-control">
                 <option value="">全部组织</option>
@@ -34,8 +32,8 @@
             </select>
             <button class="btn btn-main">查询</button>
         </p>
-        <div class="col-sm-12">
-            <div class="product-search">
+       <div class="col-sm-12">
+       	 <div class="product-search">
                 <p class="pull-left">
                     <button class="btn btn-warning btn_query">一键分配顾问所属门市</button>
                 </p>
@@ -46,8 +44,8 @@
                     </button>
                 </p>
             </div>
-        </div>
-        <table class="table table-hover table-stripe table-condensed table-bordered">
+       </div>
+         <table class="table table-hover table-stripe table-condensed table-bordered">
             <thead>
                 <th>
                     <label>
@@ -102,25 +100,24 @@
             </tbody>
         </table>
         <div id="myModal" class="modal">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">提示</h4>
-                    </div>
-                    <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-default confirm" type="submit">确认</button>
-                        <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button>
-                    </div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default confirm" type="submit">确认</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default cancel">取消</button>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="../static/libs/jquery/jquery.js"></script>
-    <script type="text/javascript" src="../static/libs/bootstrap/bootstrap.js"></script>
-    <script type="text/javascript" src="../static/js/main.js"></script>
+    </div>
+   
+     <script type="text/javascript" src="../static/libs/jquery/jquery.js"></script>
+    <script src="../static/js/main.js"></script>
 </body>
-
 </html>

@@ -28,35 +28,30 @@
         <div id="myTabContent" class="tab-content tab-border">
             <div class="tab-pane fade in active" id="untreated">
                 <ul class="option-list">
-                    <li>
-                        <label for="">下单人姓名：</label>
-                        <input type="text" class="form-control">
-                    </li>
                     <li class="tab-options date">
-                        <label>下单日期：</label>
+                        <label>申请退款时间：</label>
                         <input type="text" class="datepicker form-control" placeholder="请选择日期">
                         <span class="line">——</span>
                         <input type="text" class="datepicker form-control" placeholder="请选择日期">
                     </li>
+                    <li>
+                        <label for="">退单号：</label>
+                        <input type="text" class="form-control">
+                    </li>
                 </ul>
                 <ul class="option-list">
-                    <li>
-                        <label for="">订单号：</label>
-                        <input type="text" class="form-control">
-                    </li>
-                    <li>
-                        <label for="">产品名称：</label>
-                        <input type="text" class="form-control">
-                    </li>
-                    <li>
+                     <li>
                         <label for="">门市名称：</label>
                         <select class="form-control">
                             <option value="">所有门市</option>
-                            <option value="">总部</option>
                             <option value="">门市1</option>
                             <option value="">门市2</option>
                             <option value="">门市3</option>
                         </select>
+                    </li>
+                    <li>
+                        <label for="">下单人姓名：</label>
+                        <input type="text" class="form-control">
                     </li>
                 </ul>
                 <ul>
@@ -67,13 +62,14 @@
                         <tr>
                             <th>序号</th>
                             <th>退单号</th>
+                            <th>订单号</th>
                             <th>产品名称</th>
                             <th>门市名称</th>
                             <th>供应商</th>
                             <th>下单人</th>
                             <th>支付金额</th>
                             <th>下单时间</th>
-                            <th>退款时间</th>
+                            <th>申请退款时间</th>
                             <th>订单状态</th>
                             <th>操作</th>
                         </tr>
@@ -82,6 +78,7 @@
                         <tr>
                             <td>1</td>
                             <td><a href="refund-detail.html">2345678</a></td>
+                            <td>000001</td>
                             <td><a href="refund-detail.html">三亚六日游</a></td>
                             <td>康辉旅行社-中兴路</td>
                             <td>北京供应商</td>
@@ -119,39 +116,41 @@
             </div>
             <div class="tab-pane fade in" id="in-treatment">
                 <ul class="option-list">
-                    <li>
-                        <label for="">处理进度：</label>
-                        <select class="form-control">
-                            <option value="">全部</option>
-                            <option value="">供应商处理中</option>
-                            <option value="">分销商处理中</option>
-                            <option value="">游客确认中</option>
-                        </select>
-                    </li>
                     <li class="tab-options date">
-                        <label>下单日期：</label>
+                        <label>申请退款时间：</label>
                         <input type="text" class="datepicker form-control" placeholder="请选择日期">
                         <span class="line">——</span>
                         <input type="text" class="datepicker form-control" placeholder="请选择日期">
                     </li>
+                    <li>
+                        <label for="">退单号：</label>
+                        <input type="text" class="form-control">
+                    </li>
                 </ul>
                 <ul class="option-list">
-                    <li>
-                        <label for="">订单号：</label>
-                        <input type="text" class="form-control">
-                    </li>
-                    <li>
-                        <label for="">产品名称：</label>
-                        <input type="text" class="form-control">
-                    </li>
                     <li>
                         <label for="">门市名称：</label>
                         <select class="form-control">
                             <option value="">所有门市</option>
-                            <option value="">总部</option>
                             <option value="">门市1</option>
                             <option value="">门市2</option>
                             <option value="">门市3</option>
+                        </select>
+                    </li>
+                     <li>
+                        <label for="">下单人姓名：</label>
+                        <input type="text" class="form-control">
+                    </li>
+                    <li>
+                        <label for="">处理进度：</label>
+                        <select class="form-control">
+                            <option value="">全部</option>
+                            <option value="">已将退款请求提交至供应商</option>
+                            <option value="">供应商已驳回，待处理</option>
+                            <option value="">供应商已同意，待处理</option>
+                            <option value="">已处理，待游客确认</option>
+                            <option value="">游客已确认，待打款</option>
+                            <option value="">游客不认可退款金额，待处理</option>
                         </select>
                     </li>
                 </ul>
@@ -163,13 +162,14 @@
                         <tr>
                             <th>序号</th>
                             <th>退单号</th>
+                            <th>订单号</th>
                             <th>产品名称</th>
                             <th>门市名称</th>
                             <th>供应商</th>
                             <th>下单人</th>
                             <th>支付金额</th>
                             <th>下单时间</th>
-                            <th>退款时间</th>
+                            <th>申请退款时间</th>
                             <th>订单状态</th>
                             <th>处理进度</th>
                             <th>操作</th>
@@ -179,6 +179,7 @@
                         <tr>
                             <td>1</td>
                             <td><a href="refund-detail.html">2345678</a></td>
+                            <td>000001</td>
                             <td><a href="refund-detail.html">三亚六日游</a></td>
                             <td>康辉旅行社-中兴路</td>
                             <td>北京供应商</td>
@@ -188,6 +189,81 @@
                             <td>2016-08-15 17:25:36</td>
                             <td>订单已取消，有全额退款申请</td>
                             <td>已将退款请求提交至供应商</td>
+                            <td><a href="refund-handle-commit.html">处理退款</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="refund-detail.html">2345678</a></td>
+                            <td>000002</td>
+                            <td><a href="refund-detail.html">三亚六日游</a></td>
+                            <td>康辉旅行社-中兴路</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td>600</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请</td>
+                            <td>供应商已驳回，待处理</td>
+                            <td><a href="refund-handle-commit.html">处理退款</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="refund-detail.html">2345678</a></td>
+                            <td>00003</td>
+                            <td><a href="refund-detail.html">三亚六日游</a></td>
+                            <td>康辉旅行社-中兴路</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td>600</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请</td>
+                            <td>供应商已同意，待处理</td>
+                            <td><a href="refund-handle-commit.html">处理退款</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="refund-detail.html">2345678</a></td>
+                            <td>000004</td>
+                            <td><a href="refund-detail.html">三亚六日游</a></td>
+                            <td>康辉旅行社-中兴路</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td>600</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请</td>
+                            <td>已处理，待游客确认</td>
+                            <td><a href="refund-handle-commit.html">处理退款</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="refund-detail.html">2345678</a></td>
+                            <td>000005</td>
+                            <td><a href="refund-detail.html">三亚六日游</a></td>
+                            <td>康辉旅行社-中兴路</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td>600</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请</td>
+                            <td>游客已确认，待打款</td>
+                            <td><a href="refund-handle-commit.html">处理退款</a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="refund-detail.html">2345678</a></td>
+                            <td>000006</td>
+                            <td><a href="refund-detail.html">三亚六日游</a></td>
+                            <td>康辉旅行社-中兴路</td>
+                            <td>北京供应商</td>
+                            <td>张三</td>
+                            <td>600</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>2016-08-15 17:25:36</td>
+                            <td>订单已取消，有全额退款申请</td>
+                            <td>游客不认可退款金额，待处理</td>
                             <td><a href="refund-handle-commit.html">处理退款</a></td>
                         </tr>
                     </tbody>
@@ -218,30 +294,29 @@
             <div class="tab-pane fade in" id="refunded">
                 <ul class="option-list">
                     <li class="tab-options date">
-                        <label>下单日期：</label>
+                        <label>申请退款时间：</label>
                         <input type="text" class="datepicker form-control" placeholder="请选择日期">
                         <span class="line">——</span>
                         <input type="text" class="datepicker form-control" placeholder="请选择日期">
                     </li>
+                    <li>
+                        <label for="">退单号：</label>
+                        <input type="text" class="form-control">
+                    </li>
                 </ul>
                 <ul class="option-list">
-                    <li>
-                        <label for="">订单号：</label>
-                        <input type="text" class="form-control">
-                    </li>
-                    <li>
-                        <label for="">产品名称：</label>
-                        <input type="text" class="form-control">
-                    </li>
                     <li>
                         <label for="">门市名称：</label>
                         <select class="form-control">
                             <option value="">所有门市</option>
-                            <option value="">总部</option>
                             <option value="">门市1</option>
                             <option value="">门市2</option>
                             <option value="">门市3</option>
                         </select>
+                    </li>
+                    <li>
+                        <label for="">下单人姓名：</label>
+                        <input type="text" class="form-control">
                     </li>
                 </ul>
                 <ul>
@@ -252,13 +327,14 @@
                         <tr>
                             <th>序号</th>
                             <th>退单号</th>
+                            <th>订单号</th>
                             <th>产品名称</th>
                             <th>门市名称</th>
                             <th>供应商</th>
                             <th>下单人</th>
                             <th>支付金额</th>
                             <th>下单时间</th>
-                            <th>退款时间</th>
+                            <th>申请退款时间</th>
                             <th>订单状态</th>
                             <th>操作</th>
                         </tr>
@@ -267,6 +343,7 @@
                         <tr>
                             <td>1</td>
                             <td><a href="refund-detail.html">2345678</a></td>
+                            <td>000001</td>
                             <td><a href="refund-detail.html">三亚六日游</a></td>
                             <td>康辉旅行社-中兴路</td>
                             <td>北京供应商</td>

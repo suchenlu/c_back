@@ -208,4 +208,31 @@ $(function() {
         $('#myModal').show()
         window.parent.maskShow()
     })
+    //market_employee_add modal
+     function employeeDistribution() {
+        var title = '提示';
+        var content = '<p class="modal-info">将所勾选顾问分配至门市：<select name="" id=""><option value="">总部</option><option value="">门市1</option><option value="">门市2</option></select></p>';
+        $('.modal-title,.modal-body').html('');
+        $('.modal-title').append(title);
+        $('.modal-body').append(content);
+        $('#myModal').show()
+    }
+      $('.btn_query').click((function(event) {
+        window.parent.maskShow()
+        employeeDistribution()
+        var _this = $(this);
+    }));
+    function marketDistribution() {
+        var title = '提示';
+        var content = '<p class="modal-info">将顾问<span>李四</span>分配至门市：<select name="" id=""><option value="">总部</option><option value="">门市1</option><option value="">门市2</option></select></p>';
+        $('.modal-title,.modal-body').html('');
+        $('.modal-title').append(title);
+        $('.modal-body').append(content);
+        $('#myModal').show()
+    }
+      $('a.btn_query').click((function(event) {
+        window.parent.maskShow()
+        marketDistribution()
+        var _this = $(this);
+    }));
 })
